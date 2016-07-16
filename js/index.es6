@@ -1,5 +1,5 @@
 /***********************************************
- * Project: Jill Tucker Nursing Services
+ * Project: Project Name Goes Here
  * Developer: rolandolloyd@gmail.com
  * Copyright © 2015 GonzalesDesign
  * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
