@@ -2,6 +2,9 @@
   "name": "gd2016",
   "version": "1.0.3",
   "description": "Gonzales Design 2016 Website",
+  "engines": {
+    "node": "4.4.6"
+  },
   "main": "js/index.es6",
   "scripts": {
     "start": "webpack-dev-server ./js/index.es6",
