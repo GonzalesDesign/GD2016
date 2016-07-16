@@ -8,8 +8,8 @@ module.exports = {
 	entry: './js/index.es6',
 	output: {
 		path: __dirname,
-		filename: './js/webpacked/index.es6',
-		//filename: 'index.js',
+		//filename: './js/webpacked/index.es6',
+		filename: './js/index.js',
 		sourceMapFilename: "./bundle.map"
 	},
 	devtool: "#source-map",
