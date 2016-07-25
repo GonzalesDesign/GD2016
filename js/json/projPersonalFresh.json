@@ -1,0 +1,24 @@
+{
+	"ProjectData": [
+		{
+			"title": "PersonalFresh",
+			"subTitle": "eStore",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "This was my eStore for apparel tops and posters prints. Collection of my digital illustrations printed on t-shirts, hoodies and posters.",
+			"imagesWidth"    : "627",
+			"imagesHeight": "900",
+			"imgRightColumnPercent": "80",
+			"displayType": "image",
+			"projectImages": [
+				{"imgName": "RealFresh.jpg", "imgTitle": "PersonalFresh Promo Banner", "imgDescription": "PersonalFresh Promo Banner", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "DeffFresh.jpg", "imgTitle": "PersonalFresh Promo Banner", "imgDescription": "PersonalFresh Promo Banner", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "SpeakHoodieFemale.jpg", "imgTitle": "Speak Female Hoodies", "imgDescription": "Speak Female Hoodies", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "DreamcatcherPoster.jpg", "imgTitle": "Dreamcatcher Poster", "imgDescription": "Dreamcatcher Poster", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "TShirts.jpg", "imgTitle": "T-Shirts", "imgDescription": "T-Shirts", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "SpeakHoodieMale.jpg", "imgTitle": "Speak Male Hoodies", "imgDescription": "Speak Male Hoodies", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "SpeakPoster.jpg", "imgTitle": "Speak Poster", "imgDescription": "Speak Poster", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "UnfurlingPoster.jpg", "imgTitle": "Unfurling The Chrysalis Poster", "imgDescription": "Unfurling The Chrysalis Poster", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+			]
+		}
+	]
+}

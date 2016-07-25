@@ -4,40 +4,75 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>GD SITE 2016</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption:400,700|PT+Sans+Narrow' rel='stylesheet' type='text/css'> -->
 
-	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption:400,700|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+	<link href='css/fonts/Merriweather-Regular.ttf' rel='stylesheet' type='text/css'>
+	<link href='css/fonts/Oswald-Regular.ttf' rel='stylesheet' type='text/css'>
+	<link href='css/fonts/glyphicons-halflings-regular.ttf' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="localcdn/bootstrap.min.css">
 
 	<link href="css/ytpStyle.css" rel="stylesheet">
 	<!--<link href = "css/gdSite2016.min.css" rel = "stylesheet">-->
-	<link href="css/gdSite2016.nested.css" rel="stylesheet">
+	<!-- <link href="css/gdSite2016.nested.css" rel="stylesheet"> -->
+	<link href="css/gdSite2016.css" rel="stylesheet">
 	<!--==========| INLINE STYLE |==========-->
 
 </head>
 <!--==========| BODY START |==========-->
 
 <body>
-	<!--| The page layout on this site is all generated from JavaScript |-->
 
-	<!--| Use this container for dynamically generated intro divs |-->
-	<div class="container-fluid introFluidContainer" id="introFluidContainerId">
-		<div class="container introContainer"></div>
+	<!--| LANDING PAGE WITH RANDOMIZED POSTER IMAGES |-->
+	<div class="container-fluid introFluidContainer" id="introFluidContainerId"><a name="home"></a>
+		<div class="container introContainer menuContainer"></div>
 	</div>
 
-	<!--| Use this container for dynamically generated sections, projects, and images divs |-->
-	<div class="container gdContainer" id="gdContainerId"></div>
+	<!--| PROJECTS CONTAINER |-->
+	<div class="container gdContainer" id="gdContainerId">
+		<!-- WEB & GRAPHICS DESIGN PROJECTS -->
+		<div class="webGraphicsDesigns"><a name="webGraphicsDesigns"></a>
+			<div class="sectionWGDHeaderClass"></div>
+			<div class="ownPhonesContainer"></div>
+			<div class="ownPhonesVideoContainer"></div>
+			<div class="personalFreshContainer"></div>
+			<div class="HBCBSContainer"></div>
+		</div>
+		<!-- PAINTING & ILLUSTRATIONS PROJECTS -->
+		<div class="paintingDigitalIllustrations">
+			<div class="sectionIllustrationsHeaderClass"><a name="illustrations"></a></div>
+			<div class="filipinasContainer"></div>
+			<div class="digitalIllustrationsContainer"></div>
+		</div>
+		<!-- INTERACTIVE PROJECTS -->
+		<div class="interactive">
+			<div class="interactiveHeaderClass"><a name="interactive"></a></div>
+			<div class="akonContainer"></div>
+			<div class="staxGalleryContainer"></div>
+			<div class="playpenContainer"></div>
+		</div>
+	</div>
 
 	<!--==========| JAVASCRIPTS |==========-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="js/smoothscroll.min.js"></script>
-	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>-->
+
+
+	<script src="localcdn/jquery-2.0.3.min.js"></script>
+	<script src="localcdn/bootstrap.min.js"></script>
+	<script src="localcdn/TweenMax.min.js"></script>
+
+	<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
 	<script src="js/ytpScript.js"></script>
+
+	<script src="js/smoothscroll.min.js"></script>
 
 	<!-- <script src = "./js/gdSite2016Bundle.js"></script> -->
 

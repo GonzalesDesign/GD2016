@@ -1,0 +1,21 @@
+{
+	"ProjectData": [
+		{
+			"title"          : "Digital_Illustrations",
+			"subTitle": "3D Illustrations",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "3D illustrations done in ZBrush, 4D and composited in Adobe Photoshop.",
+			"imagesWidth"    : "1044",
+			"imagesHeight": "1080",
+			"imgRightColumnPercent": "80",
+			"displayType": "image",
+			"projectImages": [
+					{"imgName": "MeltingPot.jpg", "imgTitle": "MeltingPot", "imgDescription": "Melting Pot", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+					{"imgName": "SamsOrchids.jpg", "imgTitle": "SamsOrchids", "imgDescription": "Sam's Orchids", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+					{"imgName": "StarFish.jpg", "imgTitle": "StarFish", "imgDescription": "StarFish", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+					{"imgName": "Unfurling.jpg", "imgTitle": "Unfurling", "imgDescription": "Unfurling The Chrysalis", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+					{"imgName": "Speak.jpg", "imgTitle": "Speak", "imgDescription": "Speak", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+				]
+		}
+	]
+}

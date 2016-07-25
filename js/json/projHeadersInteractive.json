@@ -1,0 +1,12 @@
+{
+	"ProjectData": [
+		{
+			"title": "Interactive",
+            "sectionTitle": "Interactive",
+			"headerRightColumnPercent": "80",
+			"headerImage":[
+                {"imgName": "bannerBG.jpg"}
+            ]
+		}
+	]
+}

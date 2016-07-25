@@ -45,52 +45,125 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/***********************************************
-	 * Project: Project Name Goes Here
+	 * Project: GonzalesDesign 2016
 	 * Developer: rolandolloyd@gmail.com
-	 * Copyright © 2015 GonzalesDesign
+	 * Copyright © 2016 GonzalesDesign
 	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
 	 * Module: Index
 	 ***********************************************/
 	
 	( function() { /*IIFE:Immediately-Invoked Function Expression*/
 		"use strict";
+		console.log( "Module: index 072416" );
 	
-		/**----------===| MODULE: LANDING PAGE |===----------**/
-		const landingPage = __webpack_require__( 2 );
-		landingPage.fIntroAjax();
-		//
-		// /**----------===| MODULE: IMAGE CAROUSEL |===----------**/
-		// const imageCarousel = require( './imageCarousel.es6' );
-		// imageCarousel.fCarouselResize();
-		//
-		// /**----------===| MODULE: SERVICES |===----------**/
-		// const servicesList = require( './servicesList.es6' );
-		// servicesList.fServicesListAjax();
-		//
-		// /**----------===| MODULE: RESPONSES |===----------**/
-		// const responsesSection = require( './responses.es6' );
-		// responsesSection.fResponsesAjax();
-		//
-		// /**----------===| MODULE: HEALTH CARE |===----------**/
-		// const halthCareSection = require( './healthCare.es6' );
-		// halthCareSection.fHealthCareAjax();
-		//
-		// /**----------===| MODULE: ABOUT || EXPERIENCE |===----------**/
-		// const aboutSection = require( './about.es6' );
-		// aboutSection.fAboutAjax();
-		//
-		// /**----------===| FUNCTION: SCREEN RESIZE QUERIES |===----------**/
-		// let fOnWindowResize = function() {
-		//
-		// 	servicesList.fServicesResize();
-		//
-		// 	landingPage.fLandingPageResize();
-		//
-		// 	imageCarousel.fCarouselResize();
-		//
-		// }
-		//
-		// $( window ).on( 'resize', fOnWindowResize );
+	/**----------===| ******************************************************************************************** |===----------**/
+	
+		/**----------===||||| MODULE: MENU NAVIGATIONS |||||===----------**/
+		const menuProj = __webpack_require__( 11 );
+		let introContainer = $( ".introContainer" );
+		let menuContainer = $( ".menuContainer" );
+		const menuNav = new menuProj.CreateMenuNav( introContainer, "projMenuNav.json" ); //gdContainer  introContainer menuContainer
+		menuNav.fProjectAjax();
+	
+		/**----------===||||| MODULE: LANDING PAGE |||||===----------**/
+		const introProj = __webpack_require__( 7 );
+		//let introContainer = $( ".introContainer" );
+		const landingPage = new introProj.CreateProjectLandingPage( introContainer, "projLandingPage.json" );
+		landingPage.fProjectAjax();
+		//landingPage.fProjectQueries();
+	
+		/**----------===||||| MODULE: HEADER BANNER |||||===----------**/
+		const headerProj = __webpack_require__( 10 );
+	
+		/**----------===| INVOKE: HEADER BANNER WEB GRAPHICS DESIGN |===----------**/
+		let sectionWGDHeaderClass = $( ".sectionWGDHeaderClass" );
+		const projHeader = new headerProj.CreateProjectHeader( sectionWGDHeaderClass, "projHeaders.json" );
+		projHeader.fProjectAjax();
+		//projHeader.fProjectQueries();
+	
+		/**----------===||||| MODULE: CREATE PROJECT |||||===----------**/
+		const proj = __webpack_require__( 12 );
+	
+		/**----------===| INVOKE: CREATE PROJECT OWNPHONES |===----------**/
+		let ownPhonesContainer = $( ".ownPhonesContainer" );
+		const ownProj = new proj.CreateProject( ownPhonesContainer, "projOwnPhones.json" );
+		ownProj.fProjectAjax();
+		//ownProj.fProjectQueries();
+	
+		/**----------===| INVOKE: CREATE PROJECT PERSONALFRESH |===----------**/
+		//const pfProj = require( './plugins/CreateProject.es6' );
+		let personalFreshContainer = $( ".personalFreshContainer" );
+		const PersonalFreshProj = new proj.CreateProject( personalFreshContainer, "projPersonalFresh.json" );
+		PersonalFreshProj.fProjectAjax();
+	
+		/**----------===| INVOKE: CREATE PROJECT HBCBS |===----------**/
+		let HBCBSContainer = $( ".HBCBSContainer" );
+		const horizonBlueProj = new proj.CreateProject( HBCBSContainer, "projHBCBS.json" );
+		horizonBlueProj.fProjectAjax();
+	
+		/**----------===||||| MODULE: CREATE PROJECT YOUTUBE |||||===----------**/
+		const projVideo = __webpack_require__( 13 );
+	
+		/**----------===| INVOKE: CREATE PROJECT VIDEO OWNPHONES |===----------**/
+		let ownPhonesVideoContainer = $( ".ownPhonesVideoContainer" );
+		const ownVideoProj = new projVideo.CreateProject( ownPhonesVideoContainer, "projOwnPhonesYouTube.json" );
+		ownVideoProj.fProjectAjax();
+		ownVideoProj.fProjectQueries();
+	
+		/**----------===| INVOKE: HEADER BANNER ILLUSTRATIONS |===----------**/
+		let sectionIllustrationsHeaderClass = $( ".sectionIllustrationsHeaderClass" );
+		const projHeaderIllus = new headerProj.CreateProjectHeader( sectionIllustrationsHeaderClass, "projHeadersIllustrations.json" );
+		projHeaderIllus.fProjectAjax();
+	
+		/**----------===| INVOKE: CREATE PROJECT FILIPINAS |===----------**/
+		let filipinasContainer = $( ".filipinasContainer" );
+		const filipinasProj = new proj.CreateProject( filipinasContainer, "projFilipinas.json" );
+		filipinasProj.fProjectAjax();
+	
+		/**----------===| INVOKE: CREATE PROJECT DIGITAL ILLUSTRATIONS |===----------**/
+		let digitalIllustrationsContainer = $( ".digitalIllustrationsContainer" );
+		const digIllusProj = new proj.CreateProject( digitalIllustrationsContainer, "projDigitalIllustrations.json" );
+		digIllusProj.fProjectAjax();
+	
+		/**----------===| INVOKE: HEADER BANNER INTERACTIVE |===----------**/
+		let interactiveHeaderClass = $( ".interactiveHeaderClass" );
+		const projHeaderInteractive = new headerProj.CreateProjectHeader( interactiveHeaderClass, "projHeadersInteractive.json" );
+		projHeaderInteractive.fProjectAjax();
+	
+		/**----------===| INVOKE: CREATE PROJECT AKON |===----------**/
+		let akonContainer = $( ".akonContainer" );
+		const akonProj = new proj.CreateProject( akonContainer, "projAkon.json" );
+		akonProj.fProjectAjax();
+	
+		/**----------===| INVOKE: CREATE PROJECT STAX GALLERY |===----------**/
+		let staxGalleryContainer = $( ".staxGalleryContainer" );
+		const staxProj = new proj.CreateProject( staxGalleryContainer, "projStax.json" );
+		staxProj.fProjectAjax();
+	
+		/**----------===| INVOKE: CREATE PROJECT PLAYPEN |===----------**/
+		let playpenContainer = $( ".playpenContainer" );
+		const playpenProj = new proj.CreateProject( playpenContainer, "projPlaypen.json" );
+		playpenProj.fProjectAjax();
+	
+	/**----------===| ******************************************************************************************** |===----------**/
+	
+		/**----------===| EVENT LISTENER: ON RESIZE |===----------**/
+		let fOnWindowResize = function() {
+			menuNav.fProjectQueries();
+			landingPage.fProjectQueries();
+			projHeader.fProjectQueries();
+			ownProj.fProjectQueries();
+			ownVideoProj.fProjectQueries();
+		}
+		$( window ).on( 'resize', fOnWindowResize );
+	
+		/**----------===| EVENT LISTENER: ON SCROLL |===----------**/
+		let fOnScroll = () => {
+			menuNav.fProjectScrollTo();
+		}
+		$( window ).on( 'scroll', fOnScroll );
+	
+	/**----------===| ******************************************************************************************** |===----------**/
 	
 	}() );
 
@@ -99,17 +172,22 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	/**----------===| Created by Odee on 5/18/16.|===----------**/
-	
+	/***********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Animation Functions
+	 ***********************************************/
 	(function() { //IIFE:Immediately-Invoked Function Expression. Scope Encapsulation
-	
 	  "use strict";
-	  console.log("Filename: animationFunctions.js");
+	
+	  console.log("Module: animationFunctions");
+	
 	  /**-----------=====| TweenMax Reference Variables |=====-----------**/
 	  /** Description:
 	   ** Animation engine using GSAP TweenMax
 	   ********************************************************************/
-	  //let fTweenMax = function() {
 	  let tMx = TweenMax;
 	  let easeSine = Sine.easeOut;
 	  let power3 = Power3.easeOut;
@@ -120,13 +198,11 @@
 	  let expo = Expo.easeOut;
 	  let sloMo = SlowMo.ease.config(0.7, 0.7, false)
 	  let animTym = 1;
-	  let animTymSlow = 1;
+	  let animTymSlow = 2;
 	  let animTymFast = .25;
-	  //};
 	
 	  /**-----------=====| fOpacityAnim Function |=====-----------**/
-	  /** Description:
-	   ** Animates element's opacity from 0% to 100%
+	  /** Description: Animates element's opacity from 0% to 100%
 	   *************************************************************/
 	  let fOpacityAnim = function(elem) {
 	    elem.css({
@@ -146,12 +222,10 @@
 	   ** http://greensock.com/forums/topic/6963-tweenmax-tweening-css-x-vs-left/
 	   ****************************************************************/
 	  let fXSlider = function(elem, horizPos) {
-	    //fOpacityAnim(elem);
 	    tMx.to(elem, animTym, {
 	      left: horizPos,
 	      ease: back
 	    });
-	  //console.log("elem, horizPos: ", elem, horizPos);
 	  };
 	
 	  // /**-----------=====| fAnimateHeightWidth Function |=====-----------**/
@@ -166,12 +240,11 @@
 	  //     ease: power3
 	  //   });
 	  // };
+	
 	  /**-----------=====| fAnimateHeightWidth Function |=====-----------**/
-	  /** Descriptions:
-	   ** Animates element's height and width
+	  /** Descriptions: Animates element's height and width
 	   **----------------------------------------------------------------**/
 	  let fAnimateHeightWidth = function(elem, eHeight, eWidth, animTym) {
-	    //tMx.to (elem, animTym, {css: {height: eHeight, width: eWidth}, ease: power3});
 	    tMx.to(elem, animTym, {
 	      height: eHeight,
 	      width: eWidth,
@@ -196,193 +269,1499 @@
 	
 	
 	
-	  /**-----------=====| EXPORTS |=====-----------**/
-	  /** DESCRIPTIONS:
-	   ** ANIMATION MODULES
-	   ** Webpack: module.exports
-	   **----------------------------------------------------------------**/
-	  //module.exports.fTweenMax = fTweenMax;
+	  /**-----------=====| MODULE EXPORTS |=====-----------**/
 	  module.exports.fXSlider = fXSlider;
 	  module.exports.fAnimateHeightWidth = fAnimateHeightWidth;
 	  //module.exports.fImageHeightWidth = fImageHeightWidth;
 	  module.exports.fFontSizer = fFontSizer;
 	  //module.exports.animTym = animTym;
-	  /**----------------------------------------------------------------**/
-	  console.log(`
-	  Filename: animationFunctions.js
-	  module.exports.fXSlider = fXSlider
-	  `);
-	  /**----------------------------------------------------------------**/
+	  /**--------------------------------------------------**/
 	
 	}());
 
 
 /***/ },
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	/**----------===| Created by Odee on 5/17/16.|===----------**/
-	/****************************************
-	 * Project: R.Lloyd Gonzles Portfolio Website
-	 * URL: RLGonzales.com
-	 * Contact: rolandolloyd@gmail.com
-	 * Copyright © 2015 GonzalesDesign
-	 * Platform: ES2015, Webpack, Babel & Sass
-	 ****************************************/
+	/*-**********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Create Text Content
+	 **********************************************-*/
+	
 	( function() { /*IIFE:Immediately-Invoked Function Expression*/
 		"use strict";
-		/**-----------=====| IMPORT | REQUIRE |=====-----------**/
-		/** DESCRIPTIONS:
-		 ** FILES IMPORTED FROM OTHER JS FILES
-		 ** SEPERATE JS FILES FOR EASIER READABILITY AND MAINTENANCE
-		 **----------------------------------------------------------------**/
-		// let $ = require("jquery");
-		// require('bootstrap');
-		//const TweenMax = require('gsap');
-		//const YouTubeIframeLoader = require('youtube-iframe');
-		//let onYouTubeIframeAPIReady = require('./ytpScript');
-		//require('./smoothscroll');
-		/**----------=====| nextPreviousNav |=====----------**/
-		const nextPreviousNav = __webpack_require__( 3 );
-		// const nextPreviousImage = new nextPreviousNav.NextPreviousClass();
-		/**----------=====| anim |=====----------**/
-		const anim = __webpack_require__( 1 );
-		/**----------=====| twoKolumns |=====----------**/
-		const twoKolumns = __webpack_require__( 4 );
 	
-		//ANIMATION TIME
-		let animTymSlow = 1;
-		let animTymFast = .25;
-		//let anim = new anim.animationFunctions();
+		console.log( "Module: createTextContent" );
 	
-		/**----------------------------------------------------------------**/
-		console.log( `
-	    Filename: codeArchitecture_X.js);
-	    Import || Require: nextPreviousArrows.js
-	    Import || Require: animationFunctions.js
-	    Import || Require: twoColumns.js
-	    ` );
-		/**----------------------------------------------------------------**/
+		/**----------=====| CreateElementDiv Class |=====----------**/
+		/** Description:
+		 ** Parent class template for creating basic generic divs.
+		 ** To minimize the creation of multiple methods that are similar in functionalities.
+		 **--------------------------------------------------------**/
+		class CreateElementDiv {
+			constructor() {}
 	
-		/*
-		 console.log (`
-		 Things to do:
-		 - Activate the image navigations
-		 - Include the youTube video on OwnPhones
-		 - Modules: Seperate the class and function from the Ajax and animation
-		 - More research on Promise, Ajax & JSON
+			/** Generic method for creating div element **/
+			fCreateDiv( title, counter, appendedTo ) {
+				this.divName = document.createElement( "div" );
+				this.divName.id = title + counter; //set id // title + "Id_" + counter;
+				this.divName.className = title + "Class"; //set className
+				$( this.divName ).appendTo( appendedTo );
+			}
+		}
 	
-		 May 16, 2016:
-		 - Promise
-		 - Arrow function
-		 - String literals
-		 - Transferred JS code to external js file
+		/**----------=====| TextContent Class |=====----------**/
+		/** Description:
+		 ** TextContent class template is an extension
+		 ** of the CreateElementDiv class.
+		 ** For creating innerHTML divs. ************/
+		/**------------**/
+		class CreateTextContent extends CreateElementDiv {
+			constructor() {
+				super();
+			}
 	
-		 May 17, 2016:
-		 - Image arrow navigations
-		 - computer crashed @ 7pm. Restarted 5x.
+			fCreateSimpleTextDiv( name, counter, appendedTo, textString ) {
+				super.fCreateDiv( name, counter, appendedTo );
+				this.divName.innerHTML = textString;
+			}
+			fCreateTextDiv( name, counter, nameClass, appendedTo, textString, titleString ) {
+				super.fCreateDiv( name, counter, appendedTo );
+				//this.nameName = document.createElement("div");
+				//this.nameName.id = nameId + counter; //set id // name + "Id_" + counter;
+				this.divName.className = nameClass; //set className
+				//let nameNameId     = $ ("#" + name + "Id_" + counter); //get id
+				//$(this.nameName).appendTo(appendedTo);
+				this.divName.innerHTML = textString;
+				if ( titleString ) {
+					this.divName.title = titleString;
+				}
+			}
+		}
 	
-		 May 18, 2016:
-		 - Integrated YouTube video
-		 - Image slider
+		/**-----------=====| EXPORTS |=====-----------**/
+		module.exports.CreateTextContent = CreateTextContent;
 	
-		 May 19, 2016:
-		 - Image description
+	}() );
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	/*-**********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Create Basics
+	 **********************************************-*/
 	
-		 May 23 - 24:
-		 - Re-wrote class for generating div element
-		 - Seperated the class and style from each other. Make a separate calls in ajax for... of... loops
-		 - Easier to read and update
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
 	
-		May 25, Wednesday:
-		- Start working on the page animations
+		console.log( "Module: createBasics" );
 	
-		May 29, 30, 31 - June 6: NEXT PREVIOUS NAVIGATION
-		- Worked on the next previous image navigation.
-		- Finally got it to work by declaring class for each project
-		- and push them to an array to be used in the animation events
+		/**------------=====| CreateBasicElement Class |=====------------**/
+		/** Description: For creating basic elements
+		 **--------------------------------------------------------------**/
+		class CreateBasicElement {
+			constructor() {
+				this.titleName;
+			}
 	
-		June 7: Tuesday: VIDEO
-		- Started to work on the video
-		June 8 - 9:
-		- Video Height and Width:
-		June 10: Friday AM
-		- Video height and width working but code needs cleaning
-		- Everything seems to be working fine.
+			fCreateBasicElement( titleId, counter, titleClass, appendedTo ) {
+				this.titleName = document.createElement( "div" );
+				this.titleName.id = titleId + counter; //set id // title + "Id_" + counter;
+				this.titleName.className = titleClass; //set className
+				//let titleNameId     = $ ("#" + title + "Id_" + counter); //get id
+				$( this.titleName ).appendTo( appendedTo );
+				//fDivStyle(divClass, divHeight, divWidth, divOverflow, "grey");
+			}
+		};
 	
-		- TO DO:
-		  - START CLEANING CODE SO I CAN START BUILDING THE LANDING PAGE
-		    - DELETE FUNCTIONS THAT ARE NOT BEING USED
-		    - CLEAN UP ALL THE COMMENTS: KEEP JUST THE IMPORTANT ONES!
-		  - SCREEN QUERIES: FONT SIZE, DISPLAY PERCENTAGE
-		  - CONVERT ALL BOOTSTRAP DEPENDENCIES TO LOCAL JS
-		    - BEST TO NOT RELY ON BOOTSTRAP
+		/**----------=====| CreateElementAny Class |=====----------**/
+		/** Description: Class template for creating basic "a" tag.
+		 ************************************************************/
+		class CreateElementAny {
+			constructor() {}
 	
-		 `);
-		 */
+			/** Generic method for creating a tag element **/
+			fCreateTag( tagType, className, title, counter, appendedTo ) {
+				let divName = document.createElement( tagType );
+				//divName.id = title + "Id_" + counter; //set id
+				divName.id = title + counter; //set id
+				divName.className = className; //title + "Class";
+				divName.href = "#modalCarousel";
+				//let divNameId     = $ ("#" + title + "Id_" + counter); //get id
+				$( divName ).appendTo( appendedTo );
+			}
+		}
 	
-		/************ ANIMATION ENGINE ************/
-		var tMx = TweenMax;
-		var easeSine = Sine.easeOut;
-		var easePower = Power3.easeOut;
-		// var animTymSlow = .5;
-		// var zeroTym = 0;
+		/**----------=====| CreateElementVideo Class |=====-------------------------------**/
+		/** Description:Class template for creating div specifically for YouTube video.
+		 ***********************************************************************************/
+		class CreateElementVideo {
+			constructor() {}
 	
-		// let fLog = function(logTHis) {
-		//   console.log(logTHis);
-		// };
+			fCreateVideoDiv( videoId, appendedTo ) {
+				let divName = document.createElement( "div" );
+				divName.id = videoId; //set id
+				let divClass = $( "." + videoId + "Class" ); //get class
+				let divId = $( "#" + videoId ); //get id
+				//fDivStyle( divClass, divHeight, divWidth, "red" ); //DELETE COLOR
+				$( divName ).appendTo( appendedTo );
+			}
+		}
+		/**----------=====| CREATE BUTTON ELEMENT CLASS |=====-------------**/
+		/** Description: Class template for creating basic "BUTTON" tag.
+		 ********************************************************************/
+		class CreateElementButton {
+			constructor() {}
 	
-		// /**----------=====| fRoundToTwo Function |=====----------**/
-		// /** Description:
-		//  ** fRoundToTwo: rounds the decimals to two.
-		//  **------------------------------------------------------**/
+			/** Generic method for creating a tag element **/
+			fCreateBtn( className, idName, counter, appendedTo, label ) {
+				let divName = document.createElement( "BUTTON" );
+				divName.id = idName + "Id_" + counter; //set id
+				divName.className = className; //title + "Class";
+				//divName.href = "#modalCarousel";
+				//let divNameId     = $ ("#" + title + "Id_" + counter); //get id
+				$( divName ).appendTo( appendedTo );
+				let buttonLabel = document.createTextNode( label );
+				$( buttonLabel ).appendTo( divName );
+			}
+		}
+		/**----------=====| FUNCTION TO OPEN|CLOSE TOGGLE : CODING THIS SITE |=====----------**/
+		let fToggleBtn = ( btn, targetElem ) => {
+			btn.click( () => {
+				targetElem.slideToggle( "slow" );
+			} );
+		}
+	
+		/**----------=====| FUNCTION FOR ROLLOVER AND ROLLOUT |=====----------**/
+		function fRollEvents( elem, origColor ) {
+			//	console.log( "elem: ", elem );
+			elem.css( {
+				"color": origColor
+			} )
+			elem.mouseover( () => {
+				elem.css( {
+					"color": "Orange",
+					"cursor": "pointer",
+					"text-decoration": "none"
+				} )
+			} )
+			elem.mouseout( () => {
+				elem.css( {
+					"color": origColor,
+					"text-decoration": "none"
+				} )
+			} )
+		}
+	
 		// let fRoundToTwo = function(num) {
 		//   return +(Math.round(num + "e+2") + "e-2");
 		// };
 	
-		//let numero = 0;
-		// let fNxtPrvDosKolumn = function(rightArrow, leftArrow, imgContainer, imgContainerWidth, imgWidth) {
-		//   //let numero = 0;
-		//   rightArrow.click(function() {
-		//     numero++;
-		//     console.log(numero);
-		//   });
-		// }
+		let fRandomized = (elemLength) => {
+			//var randImg = introData.images[ Math.floor( introData.images.length * Math.random() ) ];
+			//let randImg = elem[ Math.floor( elem.length * Math.random() ) ];
+			//return elem[ Math.floor( elem.length * Math.random() ) ];
+			// randElem = elem[ Math.floor( elemLength * Math.random() ) ];
+			//console.log("elem: ", elem);
+			//return +(elem[ Math.floor( elem.length * Math.random() ) ])
+			return +(Math.floor( elemLength * Math.random() ))
+		}
 	
-		/**----------=====| DOM CACHING |=====----------**/
-		let outWindowWidth = window.outerWidth;
-		let inWindowWidth = window.innerWidth;
+		let RandNumero
+	
+		class CreateRandomNumber {
+			constructor() {}
+	
+			fRandomNumber( elemLength ) {
+				//return +(Math.floor( elemLength * Math.random() ))
+				//this.RandNum = Math.floor( elemLength * Math.random() );
+				this.RandNum = Math.floor( elemLength * Math.random() );
+				//module.exports.RandNumero = this.RandNum;
+				RandNumero = this.RandNum;
+				module.exports.TestXport = "TestExports";
+				//console.log("testX.TestFrLandingPage: ", testX.TestFrLandingPage);
+			}
+		}
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		module.exports.CreateBasicElement = CreateBasicElement;
+		module.exports.CreateElementAny = CreateElementAny;
+		module.exports.CreateElementVideo = CreateElementVideo;
+		module.exports.CreateElementButton = CreateElementButton;
+		module.exports.fToggleBtn = fToggleBtn;
+		module.exports.fRollEvents = fRollEvents;
+	
+		module.exports.fRandomized = fRandomized;
+		module.exports.CreateRandomNumber = CreateRandomNumber;
+		module.exports.RandNumero = RandNumero;
+	
+	}() );
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	/*-**********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Create Styles
+	 **********************************************-*/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: createStyles" );
+		
+		/**------------=====| FUnctions for css with dynamic values |=====------------**/
+		/** Description: For creating css styles
+		 **--------------------------------------------------------------**/
+	
+		/**------------=====| fBasicDivStyle CSS |=====------------*, "relative"*/
+		let fBasicDivStyle = function( divName, divHeight, divWidth, divPosition ) {
+			divName.css( {
+				"width": divWidth,
+				"height": divHeight,
+				"float": "left",
+				"position": divPosition //relative absolute
+			} );
+		};
+	
+	
+		/**------------=====| fBasicImageStyle CSS |=====------------**/
+		let fBasicImageStyle = function( divName, divHeight, divWidth, imgSrc ) {
+			divName.css( {
+				"width": divWidth,
+				"height": divHeight,
+				//"background": "url(" + imgSrc + ")  center center fixed",
+				"background": "url(" + imgSrc + ") no-repeat",
+				"background-size": "cover" //cover 100%
+					//"position": "relative", //relative absolute
+					//"float": "left"
+					//"overflow": divOverflow, //hidden; visible
+					//"border"  : "0px solid " + borderColor
+					//"border-top": "0px solid red"
+					//"border-color": borderColor
+			} );
+		};
+	
+		/**------------=====| TO DO: !!!! MERGE THESE TWO TOGETHER: fBasicImageStyle CSS |=====------------**/
+	
+		/**------------=====| fBasicImageStyle CSS |=====------------**/
+		let fIntroImageStyle = function( divName, divHeight, divWidth, imgSrc ) {
+			divName.css( {
+				"width": divWidth,
+				"height": divHeight,
+				"background": "url(" + imgSrc + ")  center center fixed",
+				//"background": "url(" + imgSrc + ") no-repeat",
+				"background-size": "cover", //cover 100%
+				"position": "relative", //relative absolute
+				"float": "left"
+					//"overflow": divOverflow, //hidden; visible
+					//"border"  : "0px solid " + borderColor
+					//"border-top": "0px solid red"
+					//"border-color": borderColor
+			} );
+		};
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		module.exports.fBasicDivStyle = fBasicDivStyle;
+		module.exports.fBasicImageStyle = fBasicImageStyle;
+		module.exports.fIntroImageStyle = fIntroImageStyle;
+	
+	}() );
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**----------===| Created by Odee on 06/17/16.|===----------**/
+	
+	(function() { //IIFE:Immediately-Invoked Function Expression
+	
+	  "use strict";
+	  //console.log("Filename: twoColumns.js");
+	
+	  let anim = __webpack_require__(1);
+	
+	  /**----------=====| fRoundToTwo Function |=====----------**/
+	  /** Description: fRoundToTwo: rounds the decimals to two.
+	   **------------------------------------------------------**/
+	  let fRoundToTwo = function(num) {
+	    return +(Math.round(num + "e+2") + "e-2");
+	  };
+	
+	  /**----------=====| TwoColumnsQueriesClass Class |=====----------------------------------------------------**/
+	  /** Description:
+	   ** Class to calculate the two columns within the container, in all screen sizes.
+	   ** The right column width uses the "rightColumnPercentage" argument when the screen width is small
+	      and uses the percentage pulled from json at larger screen width. Converted to pixel.
+	   ** The left column will have the container's width minus the right column width.
+	   **--------------------------------------------------------------------------------------------------**/
+	  class TwoColumnsQueriesClass {
+	    constructor() {}
+	
+	    fTwoColumnsQueries(contnrWidth, rightColumnPercentage, imgOrigWidth, imgOrigHeight) {
+	      //console.log("contnrWidth: ", contnrWidth);
+	      if (contnrWidth <= 400) {
+	        this.ColumnPercentage = 100;
+	        this.RightColumn = Math.round(contnrWidth * (this.ColumnPercentage / 100));
+	        this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
+	        this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
+	        this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
+	
+	      } else if (contnrWidth > 400 && contnrWidth <= 650) {
+	        this.ColumnPercentage = 100;
+	        this.RightColumn = Math.round(contnrWidth * (this.ColumnPercentage / 100));
+	        this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
+	        this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
+	        this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
+	
+	      } else {
+	        this.ColumnPercentage = rightColumnPercentage;
+	        this.RightColumn = Math.round(contnrWidth * (this.ColumnPercentage / 100));
+	        this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
+	        this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
+	        this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
+	      }
+	    }
+	  }
+	
+	  /**--------------------------------------------**/
+	  class ThreeColumnsClass {
+	    constructor() {}
+	
+	    fThreeColumns(contnrWidth) {
+	      //console.log("contnrWidth: ", contnrWidth);
+	      let oneThird = contnrWidth / 3;
+	      //console.log("oneThird: ", oneThird);
+	    }
+	  };
+	  /**--------------------------------------------**/
+	
+	  class TextQueriesClass {
+	    constructor() {}
+	
+	    fTextQueries(contnrWidth, elem, smlFntSize, midFntSize, lrgFntSize) {
+	      //console.log("contnrWidth: ", contnrWidth);
+	      //console.log("elem.height(): ", elem.height());
+	      if (contnrWidth <= 400) {
+	        anim.fFontSizer(elem, smlFntSize); //"4em"
+	        elem.css({
+	          "padding-left": "20px"
+	        })
+	      } else if (contnrWidth > 400 && contnrWidth <= 650) {
+	        anim.fFontSizer(elem, midFntSize); //"4em"
+	        elem.css({
+	          "padding-left": "20px"
+	        })
+	      } else {
+	        anim.fFontSizer(elem, lrgFntSize); //"4em"
+	        elem.css({
+	          "padding-left": "0px"
+	        })
+	      }
+	    }
+	  }
+	
+	  /**-----------=====| MODULE EXPORTS |=====-----------**/
+	
+	  module.exports.TwoColumnsQueriesClass = TwoColumnsQueriesClass;
+	  module.exports.TextQueriesClass = TextQueriesClass;
+	  module.exports.ThreeColumnsClass = ThreeColumnsClass;
+	  /**----------------------------------------------------------------**/
+	
+	}());
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	/*-**********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Open Window
+	 **********************************************-*/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: openWindow" );
+	
+		/**----------=====| fWindowOpen: FUNCTION FOR OPENING TEXT LINKS |=====----------**/
+		/**DESCRIPTION: To open page link from the image description link
+		--------------------------------------------------------------------**/
+		let glyphiconXpand2 = $( ".glyphicon-expand" );
+		let fWindowOpen = ( idName, pageToOpen, fs, scrnHt, scrnWt ) => {
+			if ( pageToOpen === "noLink" ) {
+				//link is null!
+			} else {
+				idName.mouseover( () => {
+					idName.css( {
+						"color": "Orange",
+						"cursor": "pointer",
+						"text-decoration": "none"
+					} )
+					glyphiconXpand2.css( {
+						"color": "Orange",
+						"cursor": "pointer",
+						"text-decoration": "none"
+					} )
+				} )
+				idName.mouseout( () => {
+					idName.css( {
+						"color": "white"
+					} )
+					glyphiconXpand2.css( {
+						"color": "white",
+						"opacity": ".90"
+					} )
+				} )
+				idName.click( () => {
+					if ( scrnHt === "screen.height" ) {
+						scrnHt = window.screen.height;
+					}
+					if ( scrnWt === "screen.width" ) {
+						scrnWt = window.screen.width;
+					}
+					//window.open(pageToOpen, '_blank'); //, "toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+					//window.open(pageToOpen, "_blank", "fs", "fullscreen=yes")
+					if ( fs === "yes" ) {
+						window.open( pageToOpen, '_blank', 'height=' + scrnHt + ', width=' + scrnWt );
+	
+					} else {
+						window.open( pageToOpen, '_blank' );
+					}
+				} )
+			}
+		}
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		module.exports.fWindowOpen = fWindowOpen;
+	
+	}() );
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/***********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Landing Page Template
+	 ***********************************************/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: CreateLandingPage" );
+	
+		/**----------===| CLASS: CREATE ELEMENTS |===----------**/
+		// const createElem = require( './CreateElementClass.es6' );
+		// let imageBasicDiv = new createElem.CreateElementAny();
+	
+		/**----------===| MODULE: CREATE BASICS |===----------**/
+		const createBasics = __webpack_require__( 3 );
+		//const imageBasicDiv = new createBasics.CreateBasicElement();
+		const imageBasicDiv = new createBasics.CreateBasicElement();
+		//let createStyle = new createBasics.myStyle.fBasicDivStyle();
+		const tagElement = new createBasics.CreateElementAny();
+		const createButton = new createBasics.CreateElementButton();
+	
+		const createRandNum = new createBasics.CreateRandomNumber();
+		// createRandNum.fRandomNumber(5);
+		// console.log("createRandNum.RandNum: ", createRandNum.RandNum);
+	
+		/**----------===| MODULE: CREATE STYLES |===----------**/
+		const myStyle = __webpack_require__( 4 );
+	
+		/**----------===| MODULE: CREATE TEXT CONTENT |===----------**/
+		const createTextContent = __webpack_require__( 2 );
+		let textDiv = new createTextContent.CreateTextContent();
+		const sectionHeaderText = new createTextContent.CreateTextContent();
+	
+		/**----------===| MODULE: OPEN WINDOW FUNCTION |===----------**/
+		const openWindow = __webpack_require__( 6 );
+		//let textDiv = new openWindow.CreateTextContent();
+	
+		/**----------=====| anim |=====----------**/
+		const anim = __webpack_require__( 1 );
+	
+		/**----------=====| CreateColor |=====----------**/
+		const convertHex = __webpack_require__( 9 );
+		let hex2RGBA = new convertHex.CreateColor();
+	
+	
+		/**----------===| MODULE: TWO COLUMNS |===----------**/
+		const twoKolumns = __webpack_require__( 5 );
+		let twoColumnsHeaderSection = new twoKolumns.TwoColumnsQueriesClass();
+	
+		let logoText = new twoKolumns.TextQueriesClass();
+		let headerText = new twoKolumns.TextQueriesClass();
+		let twoColumnsImages = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImgProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsParagProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
+	
+		let twoKolumnsGeneric = new twoKolumns.TwoColumnsQueriesClass();
+	
+		/**----------=====| MODULE: NEXT PREVIOUS ARROWS |=====----------**/
+		const nextPreviousNav = __webpack_require__( 8 );
+	
+		//const nxtPrv = new nextPreviousNav.NextPrevNavClass();
+	
+		/**-----------=====| DOM CACHING |=====-----------**/
+		//let mainContainer = $( ".mainContainer" );
+	
+		/**-----------=====| MISC VARS |=====-----------**/
+		const additionalHeight = 60;
+		const arbitraryNum = 10;
+		//ANIMATION TIME
+		let animTymSlow = 1;
+		let animTymFast = .25;
+		/**----------===| FONT SIZE VARIABLES |===----------**/
+		const logoTitleSmlFontSize = "4em";
+		const logoTitleMidFontSize = "7em";
+		const logoTitleLrgFontSize = "8em";
+	
+		const logoSubTitleSmlFontSize = "1em";
+		const logoSubTitleMidFontSize = "1.2em";
+		const logoSubTitleLrgFontSize = "1.6em";
+	
+		const introCalloutFontSize = "14px";
+		const codingBtnFontSize = ".9em";
+	
+		const headerSmlFontSize = "1.4em";
+		const headerMidFontSize = "1.6em";
+		const headerLrgFontSize = "1.8em";
+	
+		// const projTitleSmlFontSize = "1.6em";
+		// const projTitleMidFontSize = "1.8em";
+		// const projTitleLrgFontSize = "2em";
+		//
+		// const projSubTitleSmlFontSize = "1em";
+		// const projSubTitleMidFontSize = "1em";
+		// const projSubTitleLrgFontSize = "1.2em";
+		//
+		// const projDescSmlFontSize = "1em";
+		// const projDescMidFontSize = "1em";
+		// const projDescLrgFontSize = "1.2em";
+		//
+		// const imgDescSmlFontSize = "1em";
+		// const imgDescMidFontSize = "1em";
+		// const imgDescLrgFontSize = "1.2em";
+	
+		let jx = 0;
+		let ji = 0;
+		let i3 = 0;
+		let j1 = 0;
+	
+		//let projectContainer;
+		//let projectContainerWidth;
+		//let projContainrLeftColDivIds;
+		//let projRightColDivIds;
+		//let fluidContainerIds;
+	
+		/**----------===| ARRAYS |===----------**/
+		let aProjectCount = [];
+		let aProjectRightColumnPercent = [];
+		let aSectionHeaders = [];
+		let aSectionHeadrLeftColmn = [];
+		let aSectionHeadrRightColmn = [];
+		let aSectionHeadrTitles = [];
+	
+		// let aImagesOrigWidth = [];
+		// let aImagesOrigHeight = [];
+		// let aImageDescriptIds = [];
+		// let aProjContainrLeftColDivIds = [];
+		// let aProjRightColDivIds = [];
+		// let aProjImagesLength = [];
+		//
+		// let aFluidContainerIds = [];
+		// let aFluidContainerWidth = [];
+		// let aFluidContainerHeight = [];
+		//
+		// let aLeftShaderIds = [];
+		// let aRightShaderIds = [];
+		// let aNxtPrv = [];
+		//
+		// let aProjParagDivIds = [];
+		// let aParagLeftColDivIds = [];
+		// let aParagRightColDivIds = [];
+		// let aParaghProjTitleIds = [];
+		// let aParaghProjSubTitleIds = [];
+		// let aParaghProjlinkURLs = [];
+		// let aProjContainerIds = [];
+		//
+		// let aParagraphContainer = []; //aProjParagDivIds
+		// let aProjParagLeftDivIds = []; //aParagLeftColDivIds
+		// let aProjParagRightDivIds = []; //aParagRightColDivIds
+		//
+		// let aParagraphRightColumnPercent = [];
+		// let aParagraphLeftColumnWidth = [];
+		// let aParagraphRightColumnWidth = [];
+		//
+		// //let aParaghProjTitleIds = [];
+		// //let aParaghProjSubTitleIds = [];
+		// let aParagraphProjDescription = []; //aParaghProjlinkURLs
+		//
+		// let aImagesRightColumnPercent = [];
+		// let aImagesCount = [];
+		// let aImageIds = [];
+		// let aImages = [];
+		// let aImagesWidth = [];
+		// let aImagesHeight = [];
+		// //let aImageDescriptIds = [];
+	
+		let codingThisSiteId;
+		let logoContainerDivId;
+		let logoLeftColDivId;
+		let logoRightColDivId;
+		let logoTitleColumnPercent;
+		let logoTitleClass;
+		let logoSubTitleClass;
+		let logoTitleId;
+		let logoSubTitleId;
+		let introCalloutId;
+		let toggleBtn;
+		//let codingThisSiteId;
+	
+		let introImageIds;
+		let myIntroImageSrc;
+		let myIntroImage;
+		let introBackgroungImage;
+		let rightColumnHeight;
+	
+		let randNum;
+		let randColorTheme;
+		let aImages = [];
+		//let RandomNumero;
+	
+		class CreateProjectLandingPage {
+			constructor( projContainer, projectJSON ) {
+				this.ProjContainer = projContainer;
+				this.ProjJSON = projectJSON;
+				//console.log("CreateProjectLandingPage: constructor");
+			}
+	
+			fProjectAjax() {
+				//console.log("fProjectAjax: ");
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				/**----------===| FULL LANDING PAGE IMAGE DIV |===----------**/
+				let inWindowHeight = window.innerHeight; // / 2;
+				let inWindowWidth = window.innerWidth;
+	
+				let introFluidContainer = $(".introFluidContainer");
+	
+				let promise = $.get( "./js/json/" + this.ProjJSON );
+				promise.then( function( data ) {
+					for ( let introData of data.GDSiteIntro ) {
+						//console.log("introData: ", introData);
+	
+						/**----------===| CREATE CODING CONTAINER DIV INSIDE projectContainer |===----------**/
+						imageBasicDiv.fCreateBasicElement( introData.title + "_CodingContainer", jx, "codingContainer", projectContainer );
+						let codingContainerId = $( "#" + introData.title + "_CodingContainer" + jx ); //GET ID
+						//console.log("codingContainerId: ", codingContainerId);
+	
+						/**----------===| CREATE CODING TEXT DIV INSIDE CODINGCONTAINER |===----------**/
+						imageBasicDiv.fCreateBasicElement( introData.title + "_CodingThisSite", jx, "codingThisSite", codingContainerId );
+						codingThisSiteId = $( "#" + introData.title + "_CodingThisSite" + jx ); //GET ID
+						const codingThisSite = $( ".codingThisSite" ); //GET CLASSNAME
+						let codingThisSiteHeight = codingThisSiteId.height();
+						myStyle.fBasicDivStyle( codingThisSiteId, "auto", projectContainerWidth, "absolute" ); //CSS
+						let centerOnScreenY = ( inWindowHeight / 2 ) - ( codingThisSiteHeight / 2 );
+						codingThisSiteId.css( {
+								"margin-top": centerOnScreenY
+							} )
+	
+						/**----------===| CREATE CODING PARAGRAPHS |===----------**/
+						textDiv.fCreateTextDiv( "codingTitle", jx, "codingTitleClass", codingThisSiteId, introData.codingTitle );
+						textDiv.fCreateTextDiv( "codingDescription", jx, "codingDescriptionClass", codingThisSiteId, introData.codingThisSite );
+	
+						/**----------===| CREATE LOGO CONTAINER DIV INSIDE projectContainer DIV |===----------**/
+						imageBasicDiv.fCreateBasicElement( introData.title + "_LogoContainer", jx, "logoContainer", projectContainer );
+						logoContainerDivId = $( "#" + introData.title + "_LogoContainer" + jx ); //GET ID
+						/**----------===| LOGO TITLE CONTAINER COLUMNS PERCENTAGE |===----------**/
+						logoTitleColumnPercent = introData.logoTitleColumnPercent; //json supplied
+						twoKolumnsGeneric.fTwoColumnsQueries( projectContainerWidth, logoTitleColumnPercent, 0, 0 );
+	
+						/**----------===| CREATE LOGO TITLE LEFT COLUMNS |===----------**/
+						imageBasicDiv.fCreateBasicElement( introData.title + "_IntroLeftColmn", jx, "introLeftColumnClass", logoContainerDivId );
+						logoLeftColDivId = $( "#" + introData.title + "_IntroLeftColmn" + jx ); //GET ID
+						myStyle.fBasicDivStyle( logoLeftColDivId, arbitraryNum, twoKolumnsGeneric.LeftColumn, "relative" ); //CSS
+	
+						/**----------===| CREATE LOGO TITLE RIGHT COLUMNS |===----------**/
+						imageBasicDiv.fCreateBasicElement( introData.title + "_IntroRightColmn", jx, "introRightColumnClass", logoContainerDivId );
+						logoRightColDivId = $( "#" + introData.title + "_IntroRightColmn" + jx ); //GET ID
+						myStyle.fBasicDivStyle( logoRightColDivId, "auto", "auto", "relative" ); //CSS
+	
+						/**----------===| CREATE LOGO TITLES |===----------**/
+						textDiv.fCreateTextDiv( introData.title + "_LogoTitle", jx, "logoTitleClass", logoRightColDivId, introData.introTitle ); //R.LLOYD GONZALES
+						logoTitleId = $( "#" + introData.title + "_LogoTitle" + jx );
+						logoText.fTextQueries( projectContainerWidth, logoTitleId, logoTitleSmlFontSize, logoTitleMidFontSize, logoTitleLrgFontSize );
+	
+						/**----------===| CREATE INTRO SUB-TITLES |===----------**/
+						textDiv.fCreateTextDiv( introData.title + "_LogoSubTitle", jx, "logoSubTitleClass", logoRightColDivId, introData.introSubTitle ); //Passionate about Arts, Designs & Coding
+						logoSubTitleId = $( "#" + introData.title + "_LogoSubTitle" + jx );
+						logoText.fTextQueries( projectContainerWidth, logoSubTitleId, logoSubTitleSmlFontSize, logoSubTitleMidFontSize, logoSubTitleLrgFontSize );
+	
+						/**----------===| CREATE CALLOUT |===----------**/
+						textDiv.fCreateTextDiv( introData.title + "_Callout", jx, "calloutClass", logoRightColDivId, introData.callout ); //Portfolio: Scroll Down
+						introCalloutId = $( "#" + introData.title + "_Callout" + jx );
+						logoText.fTextQueries( projectContainerWidth, introCalloutId, introCalloutFontSize, introCalloutFontSize, introCalloutFontSize );
+						//console.log("introData.callout: ", introData.callout);
+	
+						/**----------===| TOGGLE "CODE THIS SITE" DESCRIPTION |===----------**/
+	
+						/**----------===| CREATE BUTTON ELEMENT |===----------**/
+						createButton.fCreateBtn( "btn btn-link codingBtn", "_Btn", jx, logoRightColDivId, "coding this site" ); //introFluidContainer
+						toggleBtn = $( ".codingBtn" ); //get clasname
+						const closeCoding = $( ".closeCoding" ); //get clasname
+						logoText.fTextQueries( projectContainerWidth, toggleBtn, codingBtnFontSize, codingBtnFontSize, codingBtnFontSize );
+						let toggleBtnId = $( "#" + introData.title + "_Btn" + jx );
+						logoText.fTextQueries( projectContainerWidth, toggleBtn, codingBtnFontSize, codingBtnFontSize, codingBtnFontSize );
+	
+						/**----------===| LOGO CONTAINER: BASIC CSS |===----------**/
+	
+						rightColumnHeight = logoRightColDivId.height(); // + 30;
+	
+						myStyle.fBasicDivStyle( logoContainerDivId, "auto", projectContainerWidth );
+						logoContainerDivId.css( {
+							//"border": "1px solid pink",
+							"margin-top": inWindowHeight - ( rightColumnHeight + 40 )
+						} )
+	
+						createBasics.fToggleBtn( toggleBtn, codingThisSite );
+						createBasics.fToggleBtn( closeCoding, codingThisSite );
+						createBasics.fRollEvents( toggleBtn, "#949494" );
+						createBasics.fRollEvents( closeCoding, "#5780a2" );
+	
+						/**----------===| CREATE IMAGE DIV INSIDE INTROFLUIDCONTAINER |===----------**/
+						imageBasicDiv.fCreateBasicElement( introData.title + "_IntroImg", jx, "introDivClass", introFluidContainer );
+						/**----------===| NEW IMAGE CREATION |===----------**/
+						myIntroImage = new Image();
+						let imagesPath = "./images/" + introData.title + "/";
+						/**-----====={ Load image randomly }=====-----**/
+						// let randImg = createBasics.fRandomized(introData.images);
+						// //var randImg = introData.images[ Math.floor( introData.images.length * Math.random() ) ];
+						// console.log("randImg: ", randImg.imgName);
+						// console.log("introData.images: ", introData.images);
+						// console.log("introData.images.length: ", introData.images.length);
+						randNum = createBasics.fRandomized(introData.images.length);
+						//RandomNumerox1 = createBasics.fRandomized(introData.images.length);
+						//console.log("randNumX: ", randNum);
+						var randImg = introData.images[ randNum ];
+						//console.log("randImg: ", randImg);
+	
+						module.exports.RandomNumero = randNum;
+						// console.log("module.exports.RandomNumero: ", module.exports.RandomNumero);
+	
+						// exports.RandomNumero2 = "randNum2";
+						// console.log("exports.RandomNumero2: ", exports.RandomNumero2);
+	
+						// console.log("createBasics.RandNumero: ", createBasics.RandNumero);
+						// console.log("createBasics.TestXport: ", createBasics.TestXport);
+						//module.exports.TestFrLandingPage = "TestFrLandingPage";
+	
+						myIntroImage.src = imagesPath + randImg.imgName; //introData.images[0].imgName; //randImg;
+						//myIntroImageSrc = imagesPath + randImg.imgName; //used for the queries
+						aImages[ aImages.length ] = myIntroImage.src; //PUSH
+						/**----------===| IMAGE DIV: IDS |===----------**/
+						introImageIds = $( "#" + introData.title + "_IntroImg" + jx );
+						// console.log( "introImageIds: ", introImageIds );
+						// console.log("myIntroImage: ", myIntroImage);
+						// console.log("myIntroImage: ", myIntroImage);
+	
+						/**----------===| COLOR THEME: INTRO SUB TITLE |===----------**/
+						randColorTheme = randImg.colorTheme;
+						logoSubTitleId.css( {
+								"color": randColorTheme
+							} )
+							/**----------===| COLOR THEME: INTRO LOGO CONTAINER |===----------**/
+						let hex2Rgb = hex2RGBA.fConvertHex( randColorTheme, 50 )
+						logoContainerDivId.css( {
+							"border-top": "4px double " + hex2Rgb,
+							"border-bottom": "6px double " + hex2Rgb
+						} );
+	
+						module.exports.RandomRGBA = hex2Rgb;
+	
+						myStyle.fIntroImageStyle( introImageIds, inWindowHeight, inWindowWidth, myIntroImage.src );
+					}
+				} )
+			};
+	
+			 fProjectQueries() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+	
+				/**----------===| FULL LANDING PAGE IMAGE DIV |===----------**/
+				let inWindowHeight = window.innerHeight; // / 2;
+				let inWindowWidth = window.innerWidth;
+	
+				// console.log("myIntroImage: ", myIntroImage);
+				// console.log("aImages[0]: ", aImages[0]);
+				myStyle.fIntroImageStyle( introImageIds, inWindowHeight, inWindowWidth, myIntroImage.src );
+				// console.log( "introImageIds: ", introImageIds );
+				// console.log( "myIntroImage.src: ", myIntroImage.src );
+	
+	
+				/**----------===| CALCULATE LEFT & RIGHT COLUMN WIDTHS |===----------**/
+				/** Description:
+				    Invoke fTwoColumnsQueries to  calculates Left and Right columns widths based on the percentage passed to the class
+				    Usage: twoKolumnsGeneric.LeftColumn, twoKolumnsGeneric.RightColumn... **/
+				twoKolumnsGeneric.fTwoColumnsQueries( projectContainerWidth, logoTitleColumnPercent, arbitraryNum, arbitraryNum );
+	
+				/**----------===| LOGO CONTAINER |===----------**/
+				//fBasicDivStyle(logoLeftColDivId, arbitraryNum, twoKolumnsGeneric.LeftColumn, "relative");
+				anim.fAnimateHeightWidth( logoLeftColDivId, arbitraryNum, twoKolumnsGeneric.LeftColumn, animTymSlow );
+				//fBasicDivStyle(logoRightColDivId, "auto", twoKolumnsGeneric.RightColumn - 20, "relative");
+				myStyle.fBasicDivStyle( logoRightColDivId, "auto", "auto", "relative" );
+				anim.fAnimateHeightWidth( logoContainerDivId, "auto", projectContainerWidth, animTymSlow );
+				//fBasicIntroStyle(logoContainerDivId, rightColumnHeight + 20, projectContainerWidth);
+				logoContainerDivId.css( {
+						"margin-top": inWindowHeight - ( rightColumnHeight + 40 ) // - 800 //(400 + (inWindowHeight / 5)) //"100px" //-(inWindowHeight / 4)
+					} )
+	
+				/**----------===| SCREEN QUERIES |===----------**/
+				logoText.fTextQueries( projectContainerWidth, logoTitleId, logoTitleSmlFontSize, logoTitleMidFontSize, logoTitleLrgFontSize );
+				logoText.fTextQueries( projectContainerWidth, logoSubTitleId, logoSubTitleSmlFontSize, logoSubTitleMidFontSize, logoSubTitleLrgFontSize );
+				logoText.fTextQueries( projectContainerWidth, introCalloutId, introCalloutFontSize, introCalloutFontSize, introCalloutFontSize );
+				logoText.fTextQueries( projectContainerWidth, toggleBtn, codingBtnFontSize, codingBtnFontSize, codingBtnFontSize );
+	
+				/**----------===| CODING CONTAINER |===----------**/
+				myStyle.fBasicDivStyle( codingThisSiteId, "auto", projectContainerWidth, "relative" );
+			 }
+	
+		}
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		//module.exports.fOwnPhonesAjax = fOwnPhonesAjax;
+		// console.log("randNum: ", randNum);
+		//module.exports.RandomNumerox1 = RandomNumerox1;
+		module.exports.CreateProjectLandingPage = CreateProjectLandingPage;
+	
+	
+	}() );
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**----------===| Created by Odee on 5/17/16.|===----------**/
+	
+	(function() { //IIFE:Immediately-Invoked Function Expression. Scope Encapsulation
+	
+	  "use strict";
+	
+	  /**-----------=====| IMPORT | REQUIRE |=====-----------**/
+	  /** DESCRIPTIONS:
+	   ** FILES IMPORTED FROM OTHER JS FILES
+	   ** SEPERATE JS FILES FOR EASIER READABILITY AND MAINTENANCE
+	   **----------------------------------------------------------------**/
+	  let anim = __webpack_require__(1);
+	
+	
+	  class NextPrevNavClass {
+	    constructor() {}
+	
+	    fNextPrevNavigation(
+	      rightArrow, leftArrow, imgContainer, imgContainerWidth, fluidContainerWidth) { //}, rightColumnPercentage, imgOrigWidth, imgOrigHeight) {
+	      this.String = "Hello from fNextPreviousTwoColumnsClass method";
+	      this.RightArrow = rightArrow;
+	      this.LeftArrow = leftArrow;
+	      this.ImgContainer = imgContainer;
+	      this.ImgContainerWidth = imgContainerWidth;
+	      this.fluidContainerWidth = fluidContainerWidth;
+	
+	      this.Num = 0;
+	      let num = 0;
+	      let containerXPos = 0;
+	      this.fluidContainerLeftPosition = 0;
+	      let fluidContainerLeftPosition;
+	
+	      /**-----------=====| Next button function |=====-----------**/
+	      rightArrow.click(() => {
+	        num++;
+	        this.Num = num;
+	        containerXPos = this.ImgContainerWidth * num;
+	        leftArrow.show();
+	        // console.log(`
+	        // 		    np:${imgContainer}-----------------------------------------
+	        // 		    image width:                    ${this.ImgContainerWidth}
+	        // 		    multiplied by numbr of clicks:  ${num}
+	        // 		                                    ------------------
+	        // 		    container x position:           ${containerXPos}
+	        // 		    fluid-container width:          ${this.fluidContainerWidth - (this.ImgContainerWidth * 2)}
+	        // 		    this.Num: same as clicks        ${this.Num}
+	        // 		    np:---------------------------------------------------`)
+	        /**-----| If the current x position greater or equals to the fluid-container width |-----**/
+	        this.fluidContainerLeftPosition = (this.fluidContainerWidth - (this.ImgContainerWidth * 2))
+	        if (containerXPos >= this.fluidContainerLeftPosition) {
+	          rightArrow.hide();
+	        }
+	        /**-----| fXSlider: Slides the image container to the left |-----**/
+	        anim.fXSlider(imgContainer, -(containerXPos));
+	        //console.log(rightArrow, num, ":np---------------------------------------------------");
+	      });
+	
+	      /**-----------=====| Previous button function |=====-----------**/
+	      leftArrow.click(() => {
+	        num--;
+	        this.Num = num;
+	        containerXPos = this.ImgContainerWidth * num;
+	        rightArrow.show();
+	        // console.log(`
+	        //     image width:                    ${this.ImgContainerWidth}
+	        //     multiplied by numbr of clicks:  ${num}
+	        //                                     ------------------
+	        //     container x position:           ${containerXPos}
+	        //     fluid-container width:          ${this.fluidContainerWidth - (this.ImgContainerWidth * 2)}
+	        //     this.Num: same as clicks        ${this.Num}
+	        // `)
+	        /**-----| when it hits the beginning of the image container |-----**/
+	        if (containerXPos <= 0) {
+	          leftArrow.hide();
+	        }
+	        /**-----| fXSlider: Slides the image container to the right |-----**/
+	        anim.fXSlider(imgContainer, -(containerXPos));
+	      });
+	    }
+	  }
+	
+	  /**-----------=====| MODULE EXPORTS |=====-----------**/
+	  /**--------------------------------------------------**/
+	  module.exports.NextPrevNavClass = NextPrevNavClass;
+	  /**--------------------------------------------------**/
+	
+	
+	}());
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	/*-**********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Create Color
+	 **********************************************-*/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: CreateColor" );
+	
+	    /**----------=====| FUNCTION FOR CONVERTING HEX COLOR TO RGBA |=====----------**/
+	    /** http://jsfiddle.net/subodhghulaxe/t568u/ **/
+	    //function fConvertHex(hex, opacity) {
+	    class CreateColor {
+	        constructor( ) {
+	        }
+	
+	        fConvertHex(hex, opacity) {
+	            hex = hex.replace( '#', '' );
+	    		let r = parseInt( hex.substring( 0, 2 ), 16 );
+	    		let g = parseInt( hex.substring( 2, 4 ), 16 );
+	    		let b = parseInt( hex.substring( 4, 6 ), 16 );
+	
+	    		let result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+	    		return result;
+	        }
+	    }
+	
+	
+	/**-----------=====| EXPORTS |=====-----------**/
+	//module.exports.fOwnPhonesAjax = fOwnPhonesAjax;
+	module.exports.CreateColor = CreateColor;
+	
+	
+	}() );
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/***********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Project Header Template
+	 ***********************************************/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: CreateHeader" );
+	
+		/**----------===| MODULE: CREATE BASICS |===----------**/
+		const createBasics = __webpack_require__( 3 );
+		const createDiv = new createBasics.CreateBasicElement();
+		//const imageBasicDiv = new createBasics.CreateBasicElement();
+		//let createStyle = new createBasics.fBasicDivStyle();
+		//const tagElement = new createBasics.CreateElementAny();
+	
+		/**----------===| MODULE: CREATE STYLES |===----------**/
+		const myStyle = __webpack_require__( 4 );
+	
+		/**----------===| MODULE: CREATE TEXT CONTENT |===----------**/
+		const createTextContent = __webpack_require__( 2 );
+		let textDiv = new createTextContent.CreateTextContent();
+		const sectionHeaderText = new createTextContent.CreateTextContent();
+	
+		/**----------=====| anim |=====----------**/
+		const anim = __webpack_require__( 1 );
+	
+		/**----------===| MODULE: TWO COLUMNS |===----------**/
+		const twoKolumns = __webpack_require__( 5 );
+		let twoColumnsHeaderSection = new twoKolumns.TwoColumnsQueriesClass();
+	
+		let logoText = new twoKolumns.TextQueriesClass();
+		let headerText = new twoKolumns.TextQueriesClass();
+		let twoColumnsImages = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImgProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsParagProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
+	
+		/**----------===| MODULE: LANDING PAGE |===----------**/
+		const introProjX = __webpack_require__( 7 );
+	
+		/**-----------=====| DOM CACHING |=====-----------**/
+		//let mainContainer = $( ".mainContainer" );
+	
+		/**-----------=====| MISC VARS |=====-----------**/
+		const additionalHeight = 60;
+		const arbitraryNum = 10;
+		//ANIMATION TIME
+		let animTymSlow = 1;
+		let animTymFast = .25;
+	
+		/**----------===| FONT SIZE VARIABLES |===----------**/
+		const headerSmlFontSize = "1.4em";
+		const headerMidFontSize = "1.6em";
+		const headerLrgFontSize = "1.8em";
+	
+		let jx = 0;
+		let ji = 0;
+		let i3 = 0;
+		let j1 = 0;
+	
+		/**----------===| ARRAYS |===----------**/
+		let aProjectCount = [];
+		let aProjectRightColumnPercent = [];
+		let aSectionHeaders = [];
+		let aSectionHeadrLeftColmn = [];
+		let aSectionHeadrRightColmn = [];
+		let aSectionHeadrTitles = [];
+	
+		class CreateProjectHeader {
+			constructor( projContainer, projectJSON ) {
+				this.ProjContainer = projContainer;
+				this.ProjJSON = projectJSON;
+			}
+	
+			fProjectAjax() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				//console.log("projectContainerWidth: ", projectContainerWidth);
+				let promise = $.get( "./js/json/" + this.ProjJSON );
+				promise.then( function( data ) {
+					for ( let proj of data.ProjectData ) {
+	
+						//const randNumFrLandingPage = introProjX.RandomNumero;
+						//console.log("randNumFrLandingPage: ", randNumFrLandingPage);
+	
+						const randRGBAFrLandingPage = introProjX.RandomRGBA;
+						//console.log("randRGBAFrLandingPage: ", randRGBAFrLandingPage);
+	
+						aProjectCount[ aProjectCount.length ] = proj; //PUSH
+	
+						/**----------===| INVOKE TWO COLUMNS |===----------**/
+						twoColumnsHeaderSection.fTwoColumnsQueries( projectContainerWidth, proj.headerRightColumnPercent, arbitraryNum, arbitraryNum );
+						aProjectRightColumnPercent[ aProjectRightColumnPercent.length ] = proj.headerRightColumnPercent;
+	
+						/**----------===| CREATE SECTION HEADER CONTAINER |===----------------------------------------**/
+						createDiv.fCreateBasicElement( proj.title, j1, "sectionHeaderClass", projectContainer );
+						let sectDivIds = $( "#" + proj.title + j1 );
+						myStyle.fBasicDivStyle( sectDivIds, "auto", projectContainerWidth, "relative" );
+						aSectionHeaders[ aSectionHeaders.length ] = sectDivIds;
+	
+						/**----------===| CREATE SECTION HEADER DIVIDER |===----------------------------------------**/
+						createDiv.fCreateBasicElement( "sectDivider", j1, "sectionDividerClass", sectDivIds );
+						let sectDividerIds = $( "#" + "sectDivider" + j1 );
+						let sectionDividerClass = $( ".sectionDividerClass" );
+						/**----------===| COLOR THEME: DIVIDER |===----------**/
+						sectionDividerClass.css( {
+							"background-color": randRGBAFrLandingPage //"yellowGreen" //randColorTheme
+						} )
+	
+						/**----------===| CREATE HEADER LEFT COLUMN |===------------------------------------------------------------**/
+						createDiv.fCreateBasicElement( proj.title + "_Left", j1, "sectionHeaderLeftColmnClass", sectDivIds );
+						let sectLeftIds = $( "#" + proj.title + "_Left" + j1 );
+						myStyle.fBasicDivStyle( sectLeftIds, arbitraryNum, twoColumnsHeaderSection.LeftColumn, "relative" );
+						aSectionHeadrLeftColmn[ aSectionHeadrLeftColmn.length ] = sectLeftIds;
+	
+						/**----------===| CREATE HEADER RIGHT COLUMN |===-------------------------------------------------------------**/
+						createDiv.fCreateBasicElement( proj.title + "_Right", j1, "sectionHeaderRightColmnClass", sectDivIds );
+						let sectRightIds = $( "#" + proj.title + "_Right" + j1 );
+						myStyle.fBasicDivStyle( sectRightIds, "auto", twoColumnsHeaderSection.RightColumn, "relative" );
+						aSectionHeadrRightColmn[ aSectionHeadrRightColmn.length ] = sectRightIds;
+	
+						/**----------===| Sections Header Title Text |===----------**/
+						//sectionHeaderText.fBasicTextContent( proj.title + "_Text", j1, "sectionHeaderTxtContentClass", sectRightIds, proj.sectionTitle );
+						sectionHeaderText.fCreateTextDiv( proj.title + "_Text", j1, "sectionHeaderTxtContentClass", sectRightIds, proj.sectionTitle );
+						//fCreateTextDiv( name, counter, nameClass, appendedTo, textString, titleString );
+						let sectionTitleIds = $( "#" + proj.title + "_Text" + j1 );
+						myStyle.fBasicDivStyle( sectionTitleIds, "auto", twoColumnsHeaderSection.RightColumn, "relative" );
+						headerText.fTextQueries( projectContainerWidth, sectionTitleIds, headerSmlFontSize, headerMidFontSize, headerLrgFontSize );
+						aSectionHeadrTitles[ aSectionHeadrTitles.length ] = sectionTitleIds;
+					}
+				} )
+			};
+	
+			 fProjectQueries() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				for ( let e1 = 0; e1 < aProjectCount.length; e1++ ) {
+					//console.log("e1: ", e1);
+					/**----------===| PROJECT COLUMNS PERCENTAGE |===----------**/
+					twoColumnsHeaderSection.fTwoColumnsQueries( projectContainerWidth, aProjectRightColumnPercent[ e1 ], arbitraryNum, arbitraryNum );
+					anim.fAnimateHeightWidth( aSectionHeadrLeftColmn[ e1 ], arbitraryNum, twoColumnsHeaderSection.LeftColumn, animTymSlow );
+					anim.fAnimateHeightWidth( aSectionHeaders[ e1 ], "auto", projectContainerWidth, animTymSlow );
+					anim.fAnimateHeightWidth( aSectionHeadrRightColmn[ e1 ], "auto", "auto", animTymSlow ); //twoColumnsHeaderSection.RightColumn
+					anim.fAnimateHeightWidth( aSectionHeadrTitles[ e1 ], "auto", "auto", animTymSlow );
+					headerText.fTextQueries( projectContainerWidth, aSectionHeadrTitles[ e1 ], headerSmlFontSize, headerMidFontSize, headerLrgFontSize );
+				}
+			 }
+		}
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		//module.exports.fOwnPhonesAjax = fOwnPhonesAjax;
+		module.exports.CreateProjectHeader = CreateProjectHeader;
+	
+	}() );
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/***********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Project Menu Navigation Template
+	 ***********************************************/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: CreateHeader" );
+	
+		/**----------===| MODULE: CREATE BASICS |===----------**/
+		const createBasics = __webpack_require__( 3 );
+		const createDiv = new createBasics.CreateBasicElement();
+		const imageBasicDiv = new createBasics.CreateBasicElement();
+		//let createStyle = new createBasics.fBasicDivStyle();
+		const tagElement = new createBasics.CreateElementAny();
+	
+		/**----------===| MODULE: CREATE STYLES |===----------**/
+		const myStyle = __webpack_require__( 4 );
+	
+		/**----------===| MODULE: CREATE TEXT CONTENT |===----------**/
+		const createTextContent = __webpack_require__( 2 );
+		let textDiv = new createTextContent.CreateTextContent();
+		const menuNavText = new createTextContent.CreateTextContent();
+	
+		/**----------===| MODULE: OPEN WINDOW FUNCTION |===----------**/
+		const openWindow = __webpack_require__( 6 );
+		//let textDiv = new openWindow.CreateTextContent();
+	
+		/**----------=====| anim |=====----------**/
+		const anim = __webpack_require__( 1 );
+	
+		/**----------===| MODULE: TWO COLUMNS |===----------**/
+		const twoKolumns = __webpack_require__( 5 );
+		let twoColumnsHeaderSection = new twoKolumns.TwoColumnsQueriesClass();
+		let logoText = new twoKolumns.TextQueriesClass();
+		let headerText = new twoKolumns.TextQueriesClass();
+		let twoColumnsImages = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImgProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsParagProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
+	
+		/**----------===| MODULE: LANDING PAGE |===----------**/
+		const introProjX = __webpack_require__( 7 );
+	
+		/**-----------=====| DOM CACHING |=====-----------**/
+		//let mainContainer = $( ".mainContainer" );
+	
+		/**-----------=====| MISC VARS |=====-----------**/
+		const additionalHeight = 60;
+		const arbitraryNum = 10;
+		//ANIMATION TIME
+		let animTymSlow = 1;
+		let animTymFast = .25;
+	
 		let inWindowHeight = window.innerHeight;
-		let container = $( ".container" );
-		let containerWidth = ( container.width() );
-		//let containerId = $("#containerId");
-		//console.log(`containerWidth: ${containerWidth}`);
 	
-		let introFluidContainer = $( ".introFluidContainer" );
-		let introFluidContainerWidth = ( introFluidContainer.width() );
-		//console.log(`introFluidContainerWidth: ${introFluidContainerWidth}`);
+		/**----------===| FONT SIZE VARIABLES |===----------**/
+		const headerSmlFontSize = "1.4em";
+		const headerMidFontSize = "1.6em";
+		const headerLrgFontSize = "1.8em";
 	
-		let introContainer = $( ".introContainer" );
-		let introContainerWidth = ( introContainer.width() );
+		let jx = 0;
+		let ji = 0;
+		let i3 = 0;
+		let j1 = 0;
 	
-		let logoContainer = $( ".logoContainer" );
-		//let logoContainerHeight = logoContainer.height();
-		//let heightPercentage = inWindowHeight * .05;
-		//console.log(`logoContainerHeight: ${logoContainerHeight}`);
-		//console.log(`heightPercentage: ${heightPercentage}`);
+		/**----------===| ARRAYS |===----------**/
+		let aProjectCount = [];
+		let aProjectRightColumnPercent = [];
+		let aMenuNav = [];
+		let aMenuNavLeftColmn = [];
+		let aMenuNavRightColmn = [];
+		let aMenuNavTitles = [];
 	
-		let mainContainer = $( ".mainContainer" );
-		let mainContainerWidth = ( mainContainer.width() );
-		let mainContainerId = $( "#mainContainerId" );
-		//console.log (`mainContainerWidth: `);
+		/**----------===| FUNCTION: ANCHOR LINK |===----------**/
+		const fGoTo = ( link ) => {
+			location.href = "#" + link;
+		}
 	
-		/**----------===| use for dynamically populated |===----------**/
-		let gdContainer = $( ".gdContainer" );
-		let gdContainerWidth = ( gdContainer.width() );
-		let gdContainerId = $( "#gdContainerId" );
+		const fHideMenu = (leftKolumn, elem) => {
+			if(leftKolumn === 0){
+				elem.css({
+					"display": "none"
+				})
+			} else {
+				elem.css({
+					"display": "inline-block"
+				})
+			}
+		};
 	
-		let glyphicon;
+		const fScrollHideShow = (scrlAmount, elem, leftKolumn) => {
+			if(scrlAmount >= inWindowHeight && leftKolumn > 0){
+				elem.css({
+					"display": "inline-block"
+				})
+			} else {
+				elem.css({
+					"display": "none"
+				})
+			}
+		};
 	
+	
+		class CreateMenuNav {
+			constructor( projContainer, projectJSON ) {
+				this.ProjContainer = projContainer;
+				this.ProjJSON = projectJSON;
+			}
+	
+			fProjectAjax() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				//console.log("projectContainerWidth: ", projectContainerWidth);
+				let promise = $.get( "./js/json/" + this.ProjJSON );
+				promise.then( function( data ) {
+	
+					for ( let proj of data.ProjectData ) {
+	
+						//let scrollAmount = $(window).scrollTop()*2.5;
+						let scrollAmount = $(window).scrollTop();
+						console.log("scrollAmount: ", scrollAmount);
+	
+						aProjectCount[ aProjectCount.length ] = proj; //PUSH
+	
+						/**----------===| INVOKE TWO COLUMNS |===----------**/
+						twoColumnsHeaderSection.fTwoColumnsQueries( projectContainerWidth, proj.rightColumnPercent, arbitraryNum, arbitraryNum );
+						aProjectRightColumnPercent[ aProjectRightColumnPercent.length ] = proj.rightColumnPercent;
+	
+						// console.log("proj.rightColumnPercent: ", proj.rightColumnPercent);
+						// console.log("twoColumnsHeaderSection.LeftColumn: ", twoColumnsHeaderSection.LeftColumn);
+	
+						/**----------===| CREATE MENU CONTAINER |===------------------------------------------------------------**/
+						createDiv.fCreateBasicElement( proj.title + "menuNavContainer", jx, "menuNavContainerClass", projectContainer );
+						//let menuNavContainerId = document.getElementById( "menuNavContainer" + "Id_" + jx );
+						let menuNavContainerId = $( "#" + proj.title + "menuNavContainer" + jx );
+						aMenuNav[ aMenuNav.length ] = menuNavContainerId;
+	
+						// if(twoColumnsHeaderSection.LeftColumn === 0){
+						// 	menuNavContainerId.css({
+						// 		"display": "none"
+						// 	})
+						// }
+	
+						fHideMenu(twoColumnsHeaderSection.LeftColumn, menuNavContainerId);
+						fScrollHideShow(scrollAmount, menuNavContainerId, twoColumnsHeaderSection.LeftColumn);
+	
+						/**----------===| CREATE MENU LEFT COLUMN |===------------------------------------------------------------**/
+						createDiv.fCreateBasicElement( proj.title + "_Left", j1, "menuNavLeftColmnClass", menuNavContainerId );
+						let sectLeftIds = $( "#" + proj.title + "_Left" + j1 );
+						myStyle.fBasicDivStyle( sectLeftIds, "auto", twoColumnsHeaderSection.LeftColumn, "relative" );
+						aMenuNavLeftColmn[ aMenuNavLeftColmn.length ] = sectLeftIds;
+	
+						/**----------===| CREATE MENU RIGHT COLUMN |===-------------------------------------------------------------**/
+						createDiv.fCreateBasicElement( proj.title + "_Right", j1, "menuNavRightColmnClass", menuNavContainerId );
+						let sectRightIds = $( "#" + proj.title + "_Right" + j1 );
+						myStyle.fBasicDivStyle( sectRightIds, "auto", twoColumnsHeaderSection.RightColumn, "relative" );
+						aMenuNavRightColmn[ aMenuNavRightColmn.length ] = sectRightIds;
+	
+						/**----------===| CREATE MENU NAVIGATIONS |===-------------------------------------------------------------**/
+						for ( let menus of proj.mainMenuNavs ) {
+							ji++;
+							//createDiv.fCreateTag( "div", "menu", "menuClass", ji, menuNavContainerId );
+							createDiv.fCreateBasicElement( proj.title + "menu", ji, "menuClass", sectLeftIds );
+							//let menuId = document.getElementById( proj.title + "menu" + ji );
+							let menuId = $( "#" + proj.title + "menu" + ji );
+							//let menuId = $("#menu" + "Id_" + ji);
+							//let menuId = $("#menuId_" + ji);
+							//let menuClass = $( ".menuClass" );
+							menuId.innerHTML = menus.menu;
+							// console.log("menuId: ", menuId);
+							// console.log("menuId.innerHTML: ", menuId.innerHTML);
+							// console.log("menus.menu: ", menus.menu);
+	
+							menuNavText.fCreateTextDiv( proj.title + "_Text", ji, "menuNavTxtContentClass", menuId, menus.menu );
+	
+							const randRGBAFrLandingPage = introProjX.RandomRGBA;
+							menuId.css({
+								"color": randRGBAFrLandingPage
+							})
+							/**-----| Menu anchor links |-----**/
+							$( menuId ).click( () => {
+								fGoTo( menus.link );
+							} );
+						}
+					}
+				} )
+			};
+	
+			 fProjectQueries() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				for ( let e1 = 0; e1 < aProjectCount.length; e1++ ) {
+					//console.log("e1: ", e1);
+					/**----------===| PROJECT COLUMNS PERCENTAGE |===----------**/
+					twoColumnsHeaderSection.fTwoColumnsQueries( projectContainerWidth, aProjectRightColumnPercent[ e1 ], arbitraryNum, arbitraryNum );
+					anim.fAnimateHeightWidth( aMenuNavLeftColmn[ e1 ], "auto", twoColumnsHeaderSection.LeftColumn, animTymSlow );
+					anim.fAnimateHeightWidth( aMenuNav[ e1 ], "auto", projectContainerWidth, animTymSlow );
+					anim.fAnimateHeightWidth( aMenuNavRightColmn[ e1 ], "auto", "auto", animTymSlow ); //twoColumnsHeaderSection.RightColumn
+					fHideMenu(twoColumnsHeaderSection.LeftColumn, aMenuNav[e1]);
+				}
+			 }
+	
+			 fProjectScrollTo(){
+				 let scrollAmount = $(window).scrollTop();
+				 //console.log("scrollAmount: ", scrollAmount);
+				 let projectContainer = this.ProjContainer;
+	 			let projectContainerWidth = this.ProjContainer.width();
+				//  let scrollto = window.scrollTo();
+				//  console.log("scrollto: ", scrollto);
+				for ( let e1 = 0; e1 < aProjectCount.length; e1++ ) {
+					twoColumnsHeaderSection.fTwoColumnsQueries( projectContainerWidth, aProjectRightColumnPercent[ e1 ], arbitraryNum, arbitraryNum );
+					fScrollHideShow(scrollAmount, aMenuNav[e1], twoColumnsHeaderSection.LeftColumn);
+				}
+			 }
+		}
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		//module.exports.fOwnPhonesAjax = fOwnPhonesAjax;
+		module.exports.CreateMenuNav = CreateMenuNav;
+	
+	
+	}() );
+
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/***********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Project Template
+	 ***********************************************/
+	
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
+	
+		console.log( "Module: CreateProject" );
+	
+		/**----------===| MODULE: CREATE BASICS |===----------**/
+		const createBasics = __webpack_require__( 3 );
+		const createDiv = new createBasics.CreateBasicElement();
+		const imageBasicDiv = new createBasics.CreateBasicElement();
+		//let createStyle = new createBasics.fBasicDivStyle();
+		const tagElement = new createBasics.CreateElementAny();
+	
+		/**----------===| MODULE: CREATE STYLES |===----------**/
+		const myStyle = __webpack_require__( 4 );
+	
+		/**----------===| MODULE: CREATE TEXT CONTENT |===----------**/
+		const createTextContent = __webpack_require__( 2 );
+		let textDiv = new createTextContent.CreateTextContent();
+	
+		/**----------===| MODULE: OPEN WINDOW FUNCTION |===----------**/
+		const openWindow = __webpack_require__( 6 );
+		//let textDiv = new openWindow.CreateTextContent();
+	
+		/**----------=====| anim |=====----------**/
+		const anim = __webpack_require__( 1 );
+	
+		/**----------===| MODULE: TWO COLUMNS |===----------**/
+		const twoKolumns = __webpack_require__( 5 );
+		let logoText = new twoKolumns.TextQueriesClass();
+		let headerText = new twoKolumns.TextQueriesClass();
+		let twoColumnsImages = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImgProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsParagProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
+	
+		/**----------=====| MODULE: NEXT PREVIOUS ARROWS |=====----------**/
+		const nextPreviousNav = __webpack_require__( 8 );
+	
+		//const nxtPrv = new nextPreviousNav.NextPrevNavClass();
+	
+		/**-----------=====| DOM CACHING |=====-----------**/
+		//let mainContainer = $( ".mainContainer" );
+	
+		/**-----------=====| MISC VARS |=====-----------**/
+		const additionalHeight = 60;
+		const arbitraryNum = 10;
+		//ANIMATION TIME
+		let animTymSlow = 1;
+		let animTymFast = .25;
 		/**----------===| FONT SIZE VARIABLES |===----------**/
 		const logoTitleSmlFontSize = "4em";
 		const logoTitleMidFontSize = "7em";
@@ -414,1950 +1793,548 @@
 		const imgDescSmlFontSize = "1em";
 		const imgDescMidFontSize = "1em";
 		const imgDescLrgFontSize = "1.2em";
-		// const imgDescSmlFontSize = "12px";
-		// const imgDescMidFontSize = "12px";
-		// const imgDescLrgFontSize = "16px";
 	
-		/**----------===| ARRAYS: USE FOR ANIMATIONS |===----------**/
-		let aIntroImages = [];
+		let jx = 0;
+		let ji = 0;
+		let i3 = 0;
 	
-		let aSectionsCount = [];
-		let aSectionsRightColumnPercent = [];
-		let aSectionHeaders = [];
-		let aSectionHeadrLeftColmn = [];
-		let aSectionHeadrRightColmn = [];
-		let aSectionHeadrTitles = [];
+		//let projectContainer;
+		//let projectContainerWidth;
+		let projContainrLeftColDivIds;
+		let projRightColDivIds;
+		let fluidContainerIds;
 	
-		let aProjectsCount = [];
+		/**----------===| ARRAYS |===----------**/
+		let aProjectCount = [];
 		let aProjectRightColumnPercent = [];
-		let aProjContainerIds = [];
-		let aProjLeftColDivIds = [];
+		let aImagesOrigWidth = [];
+		let aImagesOrigHeight = [];
+		let aImageDescriptIds = [];
+		let aProjContainrLeftColDivIds = [];
 		let aProjRightColDivIds = [];
-	
 		let aProjImagesLength = [];
 	
-		let aProjectDisplay = [];
+		let aFluidContainerIds = [];
+		let aFluidContainerWidth = [];
+		let aFluidContainerHeight = [];
 	
 		let aLeftShaderIds = [];
 		let aRightShaderIds = [];
-		let aCarouselControl = [];
+		let aNxtPrv = [];
 	
-		let aParagraphContainer = [];
-		//let aProjParagDivIds = [];
-		let aProjParagLeftDivIds = [];
-		let aProjParagRightDivIds = [];
+		let aProjParagDivIds = [];
+		let aParagLeftColDivIds = [];
+		let aParagRightColDivIds = [];
+		let aParaghProjTitleIds = [];
+		let aParaghProjSubTitleIds = [];
+		let aParaghProjlinkURLs = [];
+		let aProjContainerIds = [];
+	
+		let aParagraphContainer = []; //aProjParagDivIds
+		let aProjParagLeftDivIds = []; //aParagLeftColDivIds
+		let aProjParagRightDivIds = []; //aParagRightColDivIds
 	
 		let aParagraphRightColumnPercent = [];
 		let aParagraphLeftColumnWidth = [];
 		let aParagraphRightColumnWidth = [];
 	
-		let aParaghProjTitleIds = [];
-		let aParaghProjSubTitleIds = [];
-		let aParagraphProjDescription = [];
-	
-		let aImagesCount = [];
-		let aFluidContainerIds = [];
-		let aImageFluidContainerIds = [];
+		//let aParaghProjTitleIds = [];
+		//let aParaghProjSubTitleIds = [];
+		let aParagraphProjDescription = []; //aParaghProjlinkURLs
 	
 		let aImagesRightColumnPercent = [];
-		let aFluidContainerWidth = [];
-		let aFluidContainerHeight = [];
-		let aImagesOrigWidth = [];
-		let aImagesOrigHeight = [];
-	
-		//TEST
-		let a2ColImgProjRightCol = [];
-		let a2ColImgProjCount = [];
-	
-		//let aTempClickedCount = [1, 2, 3, 4]
-		let aImages = [];
+		let aImagesCount = [];
 		let aImageIds = [];
+		let aImages = [];
 		let aImagesWidth = [];
 		let aImagesHeight = [];
-		let aImageDescriptIds = [];
-	
-		let aVideoColumnPercent = [];
-		let aVideoWidth = [];
-		let aVideoHeight = [];
-	
-		let aKounter = [];
-		let aKontainer = [];
-	
-		let fluidContainerW;
-		let imageW;
-	
-		let aNextNum = [];
-	
-		//class instances array:
-		let aNxtPrv = [];
-	
-		/**----------=====| JS CSS STYLE |=====----------**/
-		/** Description:
-		 ** CSS within the ES6.
-		 ** Usage:
-		 ** Provides for a dynamic parameters referencing.
-		 **----------------------------------------------**/
-		class CSSStyle {
-			constructor() {}
-	
-			fCSSstyle( elemId, elemWidth, elemHeight ) {
-				elemId.css( {
-					/*"padding-left"    : "-15px",
-					 "padding-right"   : "-15px",*/
-					//"background"      : "url(" + imgSrc + ") no-repeat",
-					//"background-size" : "cover", //cover 100%
-					"width": elemWidth, //"1300px", //containerWidth,
-					"height": elemHeight, //ImageHeight(origWt, origHt), "100%", //
-					"border": "0px solid red",
-					"background-color": "teal",
-					"position": "relative" //relative absolute
-						//"float"           : "left"
-						/*"overflow"        : "hidden"//hidden; visible*/
-				} );
-			}
-		}
-	
-		let mainContainerCSS = new CSSStyle();
-		mainContainerCSS.fCSSstyle( mainContainerId, mainContainerWidth, "200px" );
+		//let aImageDescriptIds = [];
 	
 	
-		let fDivStyle = function( divClassName, divHeight, divWidth, divOverflow = "visible", borderColor ) {
-			//twoColTest.fTwoColumnsQueries (90, 544);
-			//console.log ("twoColTest.LeftColumn2: ", twoColTest.LeftColumn);
-			//console.log ("twoColTest.RightColumn2: ", twoColTest.RightColumn);
-			divClassName.css( {
-				"width": divWidth,
-				"height": divHeight,
-				"position": "relative", //relative absolute
-				"float": "left",
-				"overflow": divOverflow, //hidden; visible
-				//"border"  : "0px solid " + borderColor
-				//"border-bottom" : "10px solid",
-				"border-color": borderColor
-			} );
-		};
-	
-		let fImgDivStyle = function( divNameId, imgSrc, divHeight, divWidth, divOverflow ) {
-			divNameId.css( {
-				//"padding-left"    : "-15px",
-				//"padding-right"   : "-15px",
-				"background": "url(" + imgSrc + ") no-repeat",
-				"background-size": "cover", //cover 100%
-				"width": divWidth,
-				"height": divHeight,
-				"background-color": "teal",
-				"position": "relative", //relative absolute
-				"float": "left",
-				"display": "block",
-				"overflow": divOverflow, //"hidden", //hidden; visible
-				//"border"          : "0px solid red"
-				"border-color": "red"
-			} );
-		};
-	
-		let fParagStyle = function( divClassName ) {
-			divClassName.css( {
-				"width": "100%",
-				//"height"          : "100%",
-				/*"font-family"     : "Open Sans",
-				 "font-weight"     : "300",
-				 "font-size"       : "1.2em",*/
-				"background-color": "beige",
-				"position": "relative", //relative absolute
-				"float": "left"
-					//"display"         : "block",
-					//"border"          : "1px solid red"
-			} );
-		};
-		let fImgDescriptIdStyle = function( divNameId, imgHeight ) {
-			divNameId.css( {
-				"font-size": "2em",
-				"width": "100%",
-				"padding-top": "0px",
-				"height": "50px",
-				"padding-right": "30px",
-				"letter-spacing": "1px",
-				"text-shadow": "2px 2px 2px rgba(0, 0, 0, .3)",
-				"margin-top": imgHeight + "px"
-			} );
-		};
-	
-		/***************************| CLASS DECLARATIONS |***************************/
-	
-		/**----------=====| TwoColumnsQueriesClass Class |=====----------------------------------------------------**/
-		/** Description:
-		 ** Class to calculate the two columns within the container.
-		 ** Provided percentage argument is pulled from json and is use for the right column converted to pixel.
-		 ** The left column will have the container's width minus the right column width.
-		 **--------------------------------------------------------------------------------------------------**/
-		// class TwoColumnsQueriesClass {
-		//   constructor() {}
-		//
-		//   fTwoColumnsQueries(rightColumnPercentage, imgOrigWidth, imgOrigHeight) {
-		//     if (gdContainerWidth <= 600) {
-		//       rightColumnPercentage = 95;
-		//       this.RightColumn = Math.round(gdContainerWidth * (rightColumnPercentage / 100));
-		//     // this.LeftColumn = Math.round(gdContainerWidth - this.RightColumn);
-		//     // this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-		//     // this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-		//     } else {
-		//       rightColumnPercentage = rightColumnPercentage;
-		//       this.RightColumn = Math.round(gdContainerWidth * (rightColumnPercentage / 100));
-		//     // this.LeftColumn = Math.round(gdContainerWidth - this.RightColumn);
-		//     // this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-		//     // this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-		//     }
-		//     this.LeftColumn = Math.round(gdContainerWidth - this.RightColumn);
-		//     this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-		//     this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-		//   }
-		// }
-	
-		/**----------===| Columns: Class Instances |===----------**/
-		let twoColumnsIntroSection = new twoKolumns.TwoColumnsQueriesClass();
-		let twoColumnsHeaderSection = new twoKolumns.TwoColumnsQueriesClass();
-		let twoColumnsImgProjects = new twoKolumns.TwoColumnsQueriesClass();
-		let twoColumnsParagProjects = new twoKolumns.TwoColumnsQueriesClass();
-		let twoColumnsImages = new twoKolumns.TwoColumnsQueriesClass();
-		let twoColumnsVideo = new twoKolumns.TwoColumnsQueriesClass();
-		//let twoColumnsImgProjectsAnim = new twoKolumns.TwoColumnsQueriesClass();
-		let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
-	
-		//TEMP: THREE COLUMNS TEST
-		console.log( "inWindowWidth: ", inWindowWidth );
-		let oneThirdTest = new twoKolumns.ThreeColumnsClass();
-		oneThirdTest.fThreeColumns( gdContainerWidth );
-	
-		/**----------=====| CreateElementDiv Class |=====----------**/
-		/** Description:
-		 ** Parent class template for creating basic generic divs.
-		 ** To minimize the creation of multiple methods that are similar in functionalities.
-		 **--------------------------------------------------------**/
-		class CreateElementDiv {
-			constructor() {
-				//this.divName;
-				//elemNameClass, elemNameId, divName) {
-				//this.InstanceVarOrProperty = instanceVar;
-				//this.RightColumn           = rightColumn;
-				//this.LeftColumn            = columnDiv;
-				//this.ElemNameClass;// = elemNameClass;
-				//this.ElemNameId;//    = elemNameId;
-				//this.DivName;// = divName;
-				/**---------- To access these properties outside, use classInstance.property ----------**/
+		class CreateProject {
+			constructor( projContainer, projectJSON ) {
+				this.ProjContainer = projContainer;
+				this.ProjJSON = projectJSON;
 			}
 	
-			/** Generic method for creating div element **/
-			fCreateDiv( title, counter, appendedTo ) {
-				this.divName = document.createElement( "div" );
-				this.divName.id = title + counter; //set id // title + "Id_" + counter;
-				this.divName.className = title + "Class"; //set className
-				//let divNameId     = $ ("#" + title + "Id_" + counter); //get id
-				$( this.divName ).appendTo( appendedTo );
-				//divName.innerHTML = ("<!--/*****************/-->"); //for testing
-			}
-		}
-	
-		/**------------=====| CreateBasicElement Class |=====------------**/
-		/** Description:
-		 ** CreateBasicElement class: For creating basic elements like divs.
-		 **--------------------------------------------------------------**/
-		class CreateBasicElement {
-			constructor() {
-				this.titleName;
-			}
-	
-			fCreateBasicElement( titleId, counter, titleClass, appendedTo ) {
-				this.titleName = document.createElement( "div" );
-				this.titleName.id = titleId + counter; //set id // title + "Id_" + counter;
-				this.titleName.className = titleClass; //set className
-				//let titleNameId     = $ ("#" + title + "Id_" + counter); //get id
-				$( this.titleName ).appendTo( appendedTo );
-				//fDivStyle(divClass, divHeight, divWidth, divOverflow, "grey");
-			}
-		}
-	
-		class BasicTextContent extends CreateBasicElement {
-			constructor() {
-				super();
-			}
-	
-			fBasicTextContent( titleId, counter, titleClass, appendedTo, textString ) {
-				super.fCreateBasicElement( titleId, counter, titleClass, appendedTo );
-				this.titleName.innerHTML = textString;
-			}
-		}
-	
-		/**------------=====| fBasicDivStyle CSS |=====------------*, "relative"*/
-		let fBasicDivStyle = function( divName, divHeight, divWidth, divPosition ) {
-			//console.log("divName: ", divName);
-			divName.css( {
-				"width": divWidth,
-				"height": divHeight,
-				"position": divPosition, //relative absolute
-				"float": "left"
-					//"overflow": divOverflow, //hidden; visible
-					//"border": "0px solid red" //+ borderColor
-					//"border-bottom" : "10px solid",
-					//"border-color": borderColor
-			} );
-			//anim.fAnimateHeightWidth(divName, divHeight, divHeight, animTymSlow);
-		};
-		/**------------=====| fBasicIntroStyle CSS |=====------------**/
-		let fBasicIntroStyle = function( divName, divHeight, divWidth ) {
-			//console.log("divName: ", divName);
-			divName.css( {
-				"width": divWidth,
-				"height": divHeight
-					//"position": "absolute", //relative absolute
-					//"float": "left",
-					//"z-index": "100",
-					//"margin-top": inWindowHeight - (divHeight + heightPercentage),
-					//"border": "1px solid yellow"
-			} );
-			//anim.fAnimateHeightWidth(divName, divHeight, divHeight, animTymSlow);
-		};
-		let fLogoContainer = function( borderColor ) {
-			let logoContainer = $( ".logoContainer" );
-			//let logoContainerHeight = logoContainer.height();
-			//let heightPercentage = inWindowHeight * .05;
-			//console.log ("winHeight: ", winHeight);
-			//console.log ("heightPercentage: ", heightPercentage);
-			//logoContainer.css ({"top": (winHeight + (logoContainerHeight - 300))});
-			logoContainer.css( {
-				//"margin-top": inWindowHeight - (logoContainerHeight + heightPercentage)
-				"border-top": "4px double" + borderColor,
-				"border-bottom": "6px double" + borderColor
-			} );
-		};
-		/**-----{ fLogoContainer: Adjust the logo container's top position }-----**/
-		//fLogoContainer();
-	
-		/**------------=====| fBasicImageStyle CSS |=====------------**/
-		let fBasicImageStyle = function( divName, divHeight, divWidth, imgSrc ) {
-			divName.css( {
-				"width": divWidth,
-				"height": divHeight,
-				//"background": "url(" + imgSrc + ")  center center fixed",
-				"background": "url(" + imgSrc + ") no-repeat",
-				"background-size": "cover", //cover 100%
-				"position": "relative", //relative absolute
-				"float": "left"
-					//"overflow": divOverflow, //hidden; visible
-					//"border"  : "0px solid " + borderColor
-					//"border-top": "0px solid red"
-					//"border-color": borderColor
-			} );
-		};
-		/**------------=====| fBasicImageStyle CSS |=====------------**/
-		let fIntroImageStyle = function( divName, divHeight, divWidth, imgSrc ) {
-			divName.css( {
-				"width": divWidth,
-				"height": divHeight,
-				"background": "url(" + imgSrc + ")  center center fixed",
-				//"background": "url(" + imgSrc + ") no-repeat",
-				"background-size": "cover", //cover 100%
-				"position": "relative", //relative absolute
-				"float": "left"
-					//"overflow": divOverflow, //hidden; visible
-					//"border"  : "0px solid " + borderColor
-					//"border-top": "0px solid red"
-					//"border-color": borderColor
-			} );
-		};
-	
-		const createDiv = new CreateBasicElement();
-		const sectionHeaderText = new BasicTextContent();
-	
-		//const createDiv = new CreateBasicElement();
-		const imageBasicDiv = new CreateBasicElement();
-	
-		/**------------=====| End CreateBasicElement Class |=====------------**/
-	
-		/**----------=====| ProjectDiv Class |=====----------**/
-		/** Description:
-		 ** ProjectDiv class template is an extension of the CreateElementDiv class.
-		 ** For creating project container divs.
-		 ***********************/
-		class ProjectDiv extends CreateElementDiv {
-			constructor() {
-				super();
-			}
-	
-			fCreateProjDiv( title, counter, appendedTo, divHeight, divWidth, divOverflow ) {
-				super.fCreateDiv( title, counter, appendedTo );
-				let divClass = $( "." + title + "Class" ); //get class
-				fDivStyle( divClass, divHeight, divWidth, divOverflow, "grey" );
-			}
-		}
-	
-		/**----------=====| ColumnDiv Class |=====----------**/
-		/** Description:
-		 ** ColumnDiv class template is an extension of the CreateElementDiv class.
-		 ** For creating column divs.
-		 ***********************/
-		class ColumnDiv extends CreateElementDiv {
-			constructor() {
-				super();
-			}
-	
-			fCreateColumnDiv( title, counter, appendedTo, divHeight, divWidth, divOverflow ) {
-				super.fCreateDiv( title, counter, appendedTo );
-				let divClass = $( "." + title + "Class" ); //get class
-				let divNameId = $( "#" + title + counter ); //get id
-				fDivStyle( divNameId, divHeight, divWidth, divOverflow, "black" ); //DELETE COLOR
-				//divClass.css({"height": "250px"}); //testing
-			}
-		}
-	
-		/**----------=====| ImgDiv Class |=====----------**/
-		/** Description:
-		 ** ImgDiv class template is an extension
-		 ** of the CreateElementDiv class.
-		 ** For creating image divs.
-		 **----------------------------------------------**/
-		class ImgDiv extends CreateElementDiv {
-			constructor() {
-				super();
-			}
-	
-			fCreateImgDiv( title, counter, appendedTo, imgSrc, divHeight, divWidth, divOverflow ) {
-				super.fCreateDiv( title, counter, appendedTo );
-				//let divClass = $ ("." + title + "Class"); //get class
-				/** getting the div id name has to follow the same convention
-				 ** as it was set on the parent class.
-				 ** this.divName.id        = title + "Id_" + counter; //set id name
-				 ** let divNameId = $ ("#" + title + "Id_" + counter); //get id name
-				 ** additional id name customization has to be set at the instance level.
-				 ** see: imgDiv.fCreateImgDiv (proj.title+"_Image", i3, fluidContainerIds...
-				 ****************************************************************************/
-				let divNameId = $( "#" + title + counter ); //get id //("#" + title + "Id_" + counter)
-				fImgDivStyle( divNameId, imgSrc, divHeight, divWidth, divOverflow );
-			}
-		}
-	
-		/**----------=====| TextContent Class |=====----------**/
-		/** Description:
-		 ** TextContent class template is an extension
-		 ** of the CreateElementDiv class.
-		 ** For creating innerHTML divs. ************/
-		/**------------**/
-		class TextContent extends CreateElementDiv {
-			constructor() {
-				super();
-			}
-	
-			fCreateSimpleTextDiv( name, counter, appendedTo, textString ) {
-				super.fCreateDiv( name, counter, appendedTo );
-				this.divName.innerHTML = textString;
-			}
-			fCreateTextDiv( name, counter, nameClass, appendedTo, textString, titleString ) {
-				super.fCreateDiv( name, counter, appendedTo );
-				//this.nameName = document.createElement("div");
-				//this.nameName.id = nameId + counter; //set id // name + "Id_" + counter;
-				this.divName.className = nameClass; //set className
-				//let nameNameId     = $ ("#" + name + "Id_" + counter); //get id
-				//$(this.nameName).appendTo(appendedTo);
-				this.divName.innerHTML = textString;
-				if ( titleString ) {
-					this.divName.title = titleString;
-				}
-	
-				//fDivStyle(divClass, divHeight, divWidth, divOverflow, "grey");
-			}
-		}
-	
-		/**----------=====| CreateElementVideo Class |=====----------**/
-		/** Description:
-		 ** Class template for creating div specifically for YouTube video.
-		 ***********************/
-		class CreateElementVideo {
-			constructor() {}
-	
-			fCreateVideoDiv( videoId, appendedTo, divHeight, divWidth ) {
-				let divName = document.createElement( "div" );
-				divName.id = videoId; //set id
-				let divClass = $( "." + videoId + "Class" ); //get class
-				let divId = $( "#" + videoId ); //get id
-				fDivStyle( divClass, divHeight, divWidth, "red" ); //DELETE COLOR
-				$( divName ).appendTo( appendedTo );
-			}
-		}
-	
-		/**----------=====| CreateElementAny Class |=====----------**/
-		/** Description:
-		 ** Class template for creating basic "a" tag.
-		 ***********************/
-		class CreateElementAny {
-			constructor() {}
-	
-			/** Generic method for creating a tag element **/
-			fCreateTag( tagType, className, title, counter, appendedTo ) {
-				let divName = document.createElement( tagType );
-				divName.id = title + "Id_" + counter; //set id
-				divName.className = className; //title + "Class";
-				divName.href = "#modalCarousel";
-				//let divNameId     = $ ("#" + title + "Id_" + counter); //get id
-				$( divName ).appendTo( appendedTo );
-			}
-		}
-		/**----------=====| CREATE BUTTON ELEMENT CLASS |=====----------**/
-		/** Description:
-		 ** Class template for creating basic "BUTTON" tag.
-		 ***********************/
-		class CreateElementButton {
-			constructor() {}
-	
-			/** Generic method for creating a tag element **/
-			fCreateBtn( className, idName, counter, appendedTo, label ) {
-				let divName = document.createElement( "BUTTON" );
-				divName.id = idName + "Id_" + counter; //set id
-				divName.className = className; //title + "Class";
-				//divName.href = "#modalCarousel";
-				//let divNameId     = $ ("#" + title + "Id_" + counter); //get id
-				$( divName ).appendTo( appendedTo );
-				let buttonLabel = document.createTextNode( label );
-				$( buttonLabel ).appendTo( divName );
-			}
-		}
-		const createButton = new CreateElementButton();
-	
-		//TEST QUERIES
-		// console.log("outWindowWidth: ", outWindowWidth);
-		// console.log("inWindowWidth: ", inWindowWidth);
-		// console.log("gdContainerWidth: ", gdContainerWidth);
-	
-		// let fScreenQueriesX = () => {
-		//   //console.log("gdContainerWidth:2 ", gdContainerWidth);
-		//   //let projTitleClass = document.getElementsbyClassName(projTitleClass)
-		//   if (gdContainerWidth >= "200px") {
-		//     //console.log("gdContainerWidth:3 ", gdContainerWidth);
-		//     //className = $("." + className);
-		//     //let className = document.getElementsbyClassName(className)
-		//     let projTitleClass = $(".projTitleClass");
-		//     //console.log("projTitleClass: ", projTitleClass);
-		//     projTitleClass.css({
-		//       "font-size": "1em",
-		//       "color": "red"
-		//     })
-		//   } else {
-		//     //console.log("gdContainerWidth:4 ", gdContainerWidth);
-		//     let projTitleClass = $(".projTitleClass");
-		//     projTitleClass.css({
-		//       "font-size": "3em",
-		//       "color": "red"
-		//     })
-		//   }
-		// }
-		//fScreenQueries();
-		//projTitleClass = $(".projTitleClass");
-		// fScreenQueries(projTitleClass);
-		// projTitleClass.css({
-		//   "font-size": "1em",
-		//   "color": "red"
-		// })
-		//console.log("projTitleClass: ", projTitleClass);
-	
-		/**----------===| COLUMNS PERCENTAGE |===----------**/
-		let fIntroColumnQueriesXX = ( screenWidth, elemWidth, columnPercentage ) => {
-			// console.log("screenWidth: ", screenWidth);
-			// console.log("elemWidth: ", elemWidth);
-			// console.log("columnPercentage: ", columnPercentage);
-			if ( screenWidth <= 500 ) {
-				elemWidth = 95;
-			} else {
-				elemWidth = columnPercentage
-			}
-		};
-		// /**-----------=====| anim.fAnimateHeightWidth Function |=====-----------**/
-		// /** Descriptions:
-		//  ** Animates element's height and width
-		//  **----------------------------------------------------------------**/
-		// let anim.fAnimateHeightWidth = function(elem, eHeight, eWidth, animTym) {
-		//   //tMx.to (elem, animTym, {css: {height: eHeight, width: eWidth}, ease: easePower});
-		//   tMx.to(elem, animTym, {
-		//     height: eHeight,
-		//     width: eWidth,
-		//     ease: easePower
-		//   });
-		// };
-	
-		// let fFontSizer = function(elem, sizeFont) {
-		//   tMx.to(elem, animTymSlow, {
-		//     fontSize: sizeFont,
-		//     ease: easePower
-		//   });
-		// // tMx.to(elem, animTymSlow, {
-		// //   scale: sizeFont,
-		// //   ease: easePower
-		// // });
-		// };
-	
-		// class TextQueriesClass {
-		//   constructor() {
-		//     //   this.gdContnrWidth = gdContnrWidth;
-		//     //   this.elem = elem;
-		//     //   this.smlFntSize = smlFntSize;
-		//     //   this.midFntSize = midFntSize;
-		//     //   this.lrgFntSize = lrgFntSize;
-		//   }
-		//
-		//   fTextQueries(gdContnrWidth, elem, smlFntSize, midFntSize, lrgFntSize) {
-		//     //console.log("gdContnrWidth: ", gdContnrWidth);
-		//     if (gdContnrWidth <= 400) {
-		//       fFontSizer(elem, smlFntSize); //"4em"
-		//       elem.css({
-		//         "padding-left": "20px"
-		//       })
-		//     //fFontSizer(logoSubTitle, ".8em");
-		//     } else if (gdContnrWidth > 400 && gdContnrWidth <= 600) {
-		//       fFontSizer(elem, midFntSize); //"4em"
-		//       elem.css({
-		//         "padding-left": "20px"
-		//       })
-		//     // fFontSizer(logoTitle, "7em");
-		//     // fFontSizer(logoSubTitle, "1.2em");
-		//     } else {
-		//       fFontSizer(elem, lrgFntSize); //"4em"
-		//       elem.css({
-		//         "padding-left": "0px"
-		//       })
-		//     // fFontSizer(logoTitle, "8em");
-		//     // fFontSizer(logoSubTitle, "1.4em");
-		//     }
-		//   }
-		// }
-		let logoText = new twoKolumns.TextQueriesClass();
-		let headerText = new twoKolumns.TextQueriesClass();
-	
-		// class ScreenQueriesClass {
-		//   constructor() {
-		//     //this.ColumnPercentage;
-		//     //console.log("constructor: this.ColumnPercentage: ", this.ColumnPercentage);
-		//   }
-		//   fScreenQueries(gdContnrWidth, divName) {
-		//     //console.log("fScreenQueries: this.ColumnPercentage: ", this.ColumnPercentage);
-		//     // if (gdContnrWidth < 400) {
-		//     //   fFontSizer(logoTitle, "4em");
-		//     //   fFontSizer(logoSubTitle, ".8em");
-		//     //   this.ColumnPercentage = 95;
-		//     // } else if (gdContnrWidth >= 400 && gdContnrWidth <= 500) {
-		//     //   fFontSizer(logoTitle, "7em");
-		//     //   fFontSizer(logoSubTitle, "1.2em");
-		//     //   this.ColumnPercentage = 90;
-		//     // } else {
-		//     //   fFontSizer(logoTitle, "8em");
-		//     //   fFontSizer(logoSubTitle, "1.4em");
-		//     //   this.ColumnPercentage = columnPercentage;
-		//     // }
-		//     //console.log("this.ColumnPercentage: ", this.ColumnPercentage);
-		//     console.log("gdContnrWidth: ", gdContnrWidth);
-		//     if (gdContnrWidth <= 600) {
-		//       console.log("<= 600");
-		//       this.ColumnPercentage = 95;
-		//     // let rightColumnDivWidth = Math.round(gdContnrWidth * (this.ColumnPercentage / 100));
-		//     // console.log("rightColumnDivWidth: ", rightColumnDivWidth);
-		//     // divNameWidth = divName
-		//     } else {
-		//       console.log("else > 600");
-		//       this.ColumnPercentage = logoTitleColumnPercent;
-		//     }
-		//   }
-		// }
-		// let logoColumn = new ScreenQueriesClass();
-	
-		/**----------=====| OPEN TO NEW WINDOW CLASS |=====----------**/
-		/** DESCRIPTION:
-		 *  To open new html blank window
-		 *  Instead of using href
-		 *  location.href doesn't offer opening to a seperate window
-		 *  window.open does but it's a pop-up window and end users can filter it
-		 *------------------------------------------------------------------------*/
-		class OpenWindow {
-			constructor() {}
-	
-			fWindowOpen( idName, pageToOpen ) {
-				idName.click( () => {
-					//console.log("clicked!")
-					// location.href = "http://www.google.com";
-					window.open( pageToOpen, '_blank' ); //, "toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
-				} )
-			}
-		}
-		const openLink = new OpenWindow();
-	
-		//openLink.fWindowOpen(idName, pageToOpen)
-	
-		/**----------=====| fWindowOpen2: FUNCTION FOR OPENING TEXT LINKS |=====----------**/
-		/**DESCRIPTION: To open page link from the image description link
-		--------------------------------------------------------------------**/
-		let glyphiconXpand;
-		let fWindowOpen2 = ( idName, pageToOpen, fs, scrnHt, scrnWt ) => {
-			//console.log("idName: ", idName);
-			//console.log("pageToOpen: ", pageToOpen);
-			if ( pageToOpen === "noLink" ) {
-				//link is null!
-			} else {
-				idName.mouseover( () => {
-					idName.css( {
-						"color": "Orange",
-						"cursor": "pointer",
-						"text-decoration": "none"
-					} )
-					glyphiconXpand.css( {
-						"color": "Orange",
-						"cursor": "pointer",
-						"text-decoration": "none"
-					} )
-				} )
-				idName.mouseout( () => {
-					idName.css( {
-						"color": "white"
-					} )
-					glyphiconXpand.css( {
-						"color": "white",
-						"opacity": ".90"
-					} )
-				} )
-				idName.click( () => {
-					if ( scrnHt === "screen.height" ) {
-						scrnHt = window.screen.height;
-						console.log( "scrnHt: ", scrnHt );
-						console.log( typeof scrnHt );
-					}
-					if ( scrnWt === "screen.width" ) {
-						scrnWt = window.screen.width;
-						console.log( "scrnWt: ", scrnWt );
-					}
-					//console.log("clicked!")
-					// location.href = "http://www.google.com";
-					//window.open(pageToOpen, '_blank'); //, "toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
-					//window.open(pageToOpen, "_blank", "fs", "fullscreen=yes")
-					if ( fs === "yes" ) {
-						//window.open(pageToOpen, '_blank', 'height=' + screen.height + ', width=' + screen.width);
-						window.open( pageToOpen, '_blank', 'height=' + scrnHt + ', width=' + scrnWt );
-						console.log( "scrnHt: ", scrnHt );
-						console.log( "scrnWt: ", scrnWt );
-	
-					} else {
-						window.open( pageToOpen, '_blank' );
-						console.log( "scrnHt: ", scrnHt );
-						console.log( "scrnWt: ", scrnWt );
-					}
-				} )
-			}
-		}
-	
-		/**----------=====| FUNCTION FOR ROLLOVER AND ROLLOUT |=====----------**/
-		function fRollEvents( elem, origColor ) {
-			console.log( "elem: ", elem );
-			elem.css( {
-				"color": origColor
-			} )
-			elem.mouseover( () => {
-				elem.css( {
-					"color": "Orange",
-					"cursor": "pointer",
-					"text-decoration": "none"
-				} )
-			} )
-			elem.mouseout( () => {
-				elem.css( {
-					"color": origColor,
-					"text-decoration": "none"
-				} )
-			} )
-		}
-	
-		/**------------=====| fTempBorderStyle CSS |=====------------**/
-		let fTempBorderStyle = function( divName ) {
-			//console.log("divName: ", divName);
-			divName.css( {
-				"border": "1px solid red"
-			} );
-		};
-	
-	
-	
-	
-		/**----------=====| END OF CLASS DECLARATIONS |=====----------**/
-	
-		/**----------=====| CLASS INSTANCES |=====----------**/
-		//const projectContainer = new ProjectDiv();
-		//const columnDiv = new ColumnDiv();
-		//let rightColumn = new ColumnDiv ();
-		//let imgContainer = new ColumnDiv ();
-		//const imgDiv = new ImgDiv();
-		const textDiv = new TextContent();
-	
-		const tagElement = new CreateElementAny();
-		//const rightArrowShader = new CreateElementAny();
-		//const leftArrow = new CreateElementAny();
-		//const rightArrow = new CreateElementAny();
-	
-		const youTubeVideo = new CreateElementVideo();
-	
-		/**----------=====| FUNCTION TO OPEN|CLOSE TOGGLE : CODING THIS SITE |=====----------**/
-		let fToggleBtn = ( btn, targetElem ) => {
-			btn.click( () => {
-				targetElem.slideToggle( "slow" );
-			} );
-		}
-	
-		/**----------=====| FUNCTION FOR CONVERTING HEX COLOR TO RGBA |=====----------**/
-		/** http://jsfiddle.net/subodhghulaxe/t568u/ **/
-		//function fConvertHex(hex, opacity) {
-		let fConvertHex = ( hex, opacity ) => {
-			hex = hex.replace( '#', '' );
-			let r = parseInt( hex.substring( 0, 2 ), 16 );
-			let g = parseInt( hex.substring( 2, 4 ), 16 );
-			let b = parseInt( hex.substring( 4, 6 ), 16 );
-	
-			let result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
-			return result;
-		}
-	
-		/*********************( PROMISE AJAX • START •  JSON )*********************/
-		if ( window.Promise ) {
-			console.log( 'Promise found' );
-		}
-	
-		/**----------===| Miscellaneous variables: Clean up later |===----------**/
-		const additionalHeight = 60;
-		const arbitraryNum = 10;
-	
-		let date = new Date();
-		console.log( date );
-	
-		/**----------------------------------------------------------------------------------------------**/
-		/**--------------------============| ~ PROMISE • AJAX • JSON ~  |============--------------------**/
-		/**----------------------------------------------------------------------------------------------**/
-		// console.log(`
-		// /**|======================================================|**/
-		// /**|               PROMISE • AJAX • JSON                  |**/
-		// /**|        ELEMENTS CREATION & DATA ACQUISITIONS         |**/
-		// /**|======================================================|**/
-		// `);
-		let codingThisSiteId;
-		let logoContainerDivId;
-		let logoLeftColDivId;
-		let logoRightColDivId;
-		let logoTitleColumnPercent;
-		let logoTitleClass;
-		let logoSubTitleClass;
-		let logoTitleId;
-		let logoSubTitleId;
-		let introCalloutId;
-		let toggleBtn;
-		//let codingThisSiteId;
-	
-	
-		let introImageIds;
-		let myIntroImage;
-		let introBackgroungImage;
-		let rightColumnHeight;
-	
-		let randColorTheme;
-	
-		const fIntroAjax = () => {
-				let promise = $.get( "./js/json/introImages.json" );
+			fProjectAjax() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				let promise = $.get( "./js/json/" + this.ProjJSON );
 				promise.then( function( data ) {
-					let jx = 0;
-					for ( let introData of data.GDSiteIntro ) {
-						/**----------===| CREATE CODING CONTAINER DIV INSIDE INTROCONTAINER |===----------**/
-						createDiv.fCreateBasicElement( introData.title + "_CodingContainer", jx, "codingContainer", introContainer );
-						let codingContainerId = $( "#" + introData.title + "_CodingContainer" + jx ); //GET ID
-						/**----------===| CREATE CODING TEXT DIV INSIDE CODINGCONTAINER |===----------**/
-						createDiv.fCreateBasicElement( introData.title + "_CodingThisSite", jx, "codingThisSite", codingContainerId );
-						codingThisSiteId = $( "#" + introData.title + "_CodingThisSite" + jx ); //GET ID
-						const codingThisSite = $( ".codingThisSite" ); //GET CLASSNAME
-						let codingThisSiteHeight = codingThisSiteId.height();
-						fBasicDivStyle( codingThisSiteId, "auto", gdContainerWidth, "absolute" ); //CSS
-						let centerOnScreenY = ( inWindowHeight / 2 ) - ( codingThisSiteHeight / 2 );
-						codingThisSiteId.css( {
-								"margin-top": centerOnScreenY
-							} )
-							/**----------===| CREATE CODING PARAGRAPHS |===----------**/
-						textDiv.fCreateTextDiv( "codingTitle", jx, "codingTitleClass", codingThisSiteId, introData.codingTitle );
-						textDiv.fCreateTextDiv( "codingDescription", jx, "codingDescriptionClass", codingThisSiteId, introData.codingThisSite );
-	
-						/**----------===| CREATE LOGO CONTAINER DIV INSIDE INTROCONTAINER DIV |===----------**/
-						createDiv.fCreateBasicElement( introData.title + "_LogoContainer", jx, "logoContainer", introContainer );
-						logoContainerDivId = $( "#" + introData.title + "_LogoContainer" + jx ); //GET ID
-						/**----------===| LOGO TITLE CONTAINER COLUMNS PERCENTAGE |===----------**/
-						logoTitleColumnPercent = introData.logoTitleColumnPercent; //json supplied
-						twoColumnsIntroSection.fTwoColumnsQueries( gdContainerWidth, logoTitleColumnPercent, 0, 0 );
-	
-						/**----------===| CREATE LOGO TITLE LEFT COLUMNS |===----------**/
-						createDiv.fCreateBasicElement( introData.title + "_IntroLeftColmn", jx, "introLeftColumnClass", logoContainerDivId );
-						logoLeftColDivId = $( "#" + introData.title + "_IntroLeftColmn" + jx ); //GET ID
-						fBasicDivStyle( logoLeftColDivId, arbitraryNum, twoColumnsIntroSection.LeftColumn, "relative" ); //CSS
-	
-						/**----------===| CREATE LOGO TITLE RIGHT COLUMNS |===----------**/
-						createDiv.fCreateBasicElement( introData.title + "_IntroRightColmn", jx, "introRightColumnClass", logoContainerDivId );
-						logoRightColDivId = $( "#" + introData.title + "_IntroRightColmn" + jx ); //GET ID
-						fBasicDivStyle( logoRightColDivId, "auto", "auto", "relative" ); //CSS
-	
-						// let introRightColumnClass = $(".introRightColumnClass");
-						// console.log("introRightColumnClass :", introRightColumnClass);
-						// let introRightColumnHeight = introRightColumnClass.height();
-						// console.log("introRightColumnHeight :", introRightColumnHeight);
-						//TEMP
-						// logoLeftColDivId.css({
-						//   "border-top": "2px solid red"
-						// })
-						// logoRightColDivId.css({
-						//   "border-top": "2px solid yellowGreen",
-						//   "border-bottom": "1px solid cyan"
-						// })
-	
-						/**----------===| CREATE LOGO TITLES |===----------**/
-						textDiv.fCreateTextDiv( introData.title + "_LogoTitle", jx, "logoTitleClass", logoRightColDivId, introData.introTitle ); //R.LLOYD GONZALES
-						logoTitleId = $( "#" + introData.title + "_LogoTitle" + jx );
-						logoText.fTextQueries( gdContainerWidth, logoTitleId, logoTitleSmlFontSize, logoTitleMidFontSize, logoTitleLrgFontSize );
-	
-						/**----------===| CREATE INTRO SUB-TITLES |===----------**/
-						textDiv.fCreateTextDiv( introData.title + "_LogoSubTitle", jx, "logoSubTitleClass", logoRightColDivId, introData.intoSubTitle ); //Passionate about Arts, Designs & Coding
-						logoSubTitleId = $( "#" + introData.title + "_LogoSubTitle" + jx );
-						logoText.fTextQueries( gdContainerWidth, logoSubTitleId, logoSubTitleSmlFontSize, logoSubTitleMidFontSize, logoSubTitleLrgFontSize );
-	
-						/**----------===| CREATE CALLOUT |===----------**/
-						textDiv.fCreateTextDiv( introData.title + "_Callout", jx, "calloutClass", logoRightColDivId, introData.callout ); //Portfolio: Scroll Down
-						introCalloutId = $( "#" + introData.title + "_Callout" + jx );
-						logoText.fTextQueries( gdContainerWidth, introCalloutId, introCalloutFontSize, introCalloutFontSize, introCalloutFontSize );
-	
-						/**----------===| TOGGLE "CODE THIS SITE" DESCRIPTION |===----------**/
-	
-						/**----------===| CREATE BUTTON ELEMENT |===----------**/
-						createButton.fCreateBtn( "btn btn-link codingBtn", "_Btn", jx, logoRightColDivId, "coding this site" ); //introFluidContainer
-						toggleBtn = $( ".codingBtn" ); //get clasname
-						const closeCoding = $( ".closeCoding" ); //get clasname
-						logoText.fTextQueries( gdContainerWidth, toggleBtn, codingBtnFontSize, codingBtnFontSize, codingBtnFontSize );
-						let toggleBtnId = $( "#" + introData.title + "_Btn" + jx );
-						logoText.fTextQueries( gdContainerWidth, toggleBtn, codingBtnFontSize, codingBtnFontSize, codingBtnFontSize );
-	
-						/**----------===| LOGO CONTAINER: BASIC CSS |===----------**/
-	
-						rightColumnHeight = logoRightColDivId.height(); // + 30;
-	
-						fBasicIntroStyle( logoContainerDivId, "auto", gdContainerWidth );
-						logoContainerDivId.css( {
-							//"border": "1px solid pink",
-							"margin-top": inWindowHeight - ( rightColumnHeight + 40 )
-						} )
-	
-						fToggleBtn( toggleBtn, codingThisSite );
-						fToggleBtn( closeCoding, codingThisSite );
-						fRollEvents( toggleBtn, "#949494" );
-						fRollEvents( closeCoding, "#5780a2" );
-	
-						/**----------===| CREATE IMAGE DIV INSIDE INTROFLUIDCONTAINER |===----------**/
-						imageBasicDiv.fCreateBasicElement( introData.title + "_IntroImg", jx, "introDivClass", introFluidContainer );
-						/**----------===| NEW IMAGE CREATION |===----------**/
-						myIntroImage = new Image();
-						let imagesPath = "./images/" + introData.title + "/";
-						/**-----====={ Load image randomly }=====-----**/
-						var randImg = introData.images[ Math.floor( introData.images.length * Math.random() ) ];
-						myIntroImage.src = imagesPath + randImg.imgName; //introData.images[0].imgName; //randImg;
-						/**----------===| IMAGE DIV: IDS |===----------**/
-						introImageIds = $( "#" + introData.title + "_IntroImg" + jx );
-						console.log( "introImageIds: ", introImageIds );
-	
-						/**----------===| COLOR THEME: INTRO SUB TITLE |===----------**/
-						randColorTheme = randImg.colorTheme;
-						logoSubTitleId.css( {
-								"color": randColorTheme
-							} )
-							/**----------===| COLOR THEME: INTRO LOGO CONTAINER |===----------**/
-						let hex2Rgb = fConvertHex( randColorTheme, 50 )
-						logoContainerDivId.css( {
-							"border-top": "4px double " + hex2Rgb,
-							"border-bottom": "6px double " + hex2Rgb
-						} );
-	
-						/**----------===| IMAGE DIV: CSS |===----------**/
-						/*        Populating the div with image        *
-						 **--------------------------------------------**/
-						// let inWindowHeight = window.innerHeight; // / 2;
-						// let inWindowWidth = window.innerWidth;
-						// let inWindowWidth = window.innerWidth;
-						// let inWindowHeight = window.innerHeight;
-						fIntroImageStyle( introImageIds, inWindowHeight, inWindowWidth, myIntroImage.src );
-					}
-				} )
-			}
-			/**----------===| INVOKE FUNCTION |===----------**/
-			//fIntroAjax();
-	
-		//let logoContainer = $(".logoContainer");
-		// function toggleClass() {
-		//   //$("." + divClass).toggle();
-		//   logoContainer.toggle();
-		//   logoContainer.css({
-		//     "display": "inline"
-		//   });
-		// }
-	
-	
-	
-		const fRunAjax = () => {
-			let promise = $.get( "./js/json/ajaxData2_simple.json" );
-			//let promise = $.get("./js/json/ajaxData2_2ProjectsV.json");
-			//let promise = $.get("./js/json/ajaxData2_EvenSimpler.json");
-			//let promise = $.get("./js/json/ajaxData2_1Project.json");
-			//let promise = $.get("./js/json/ajaxData2_2Projects.json");
-	
-			promise.then( function( data ) {
-					let j1 = 0;
-					let j2 = 0;
-					let j3 = 0;
-	
-					console.log( `
-	      /**|===============================|**/
-	      /**|      SECTIONS JSON LOOP       |**/
-	      /**|===============================|**/
-	      data.GDSite: ${data.GDSite[0].projects[0].images[0].linkURL}
-	      ` );
-					/**----------===| LINKS TO OPEM TO ANOTHER WINDOW |===----------**/
-					//   let nycBikeFlashSampleXX = $('#nycBikeFlashSampleXX');
-					//   //let nycBikeFlashSampleX = $("#" + data.GDSite[0].projects[0].images[0].linkURL);
-					//   //   let nycBikeFlashSample = $(nycBikeFlashSampleX)
-					//   //   console.log("nycBikeFlashSample: ", nycBikeFlashSample);
-					//   //fRollEvents(nycBikeFlashSample, "white");
-					//   fWindowOpen2(nycBikeFlashSampleXX, "http://www.google.com");
-					//
-					//   let idTest = (data.GDSite[0].projects[0].images[0].linkURL);
-					//   //let idTest2 = idTest.toString();
-					//   let idTest2 = new String(idTest);
-					//   console.log("idTest: ", idTest);
-					//   console.log(idTest2 instanceof String);
-					//   //let nycBikeFlashSampleX = document.getElementById(idTest2);
-					//   let nycBikeFlashSampleX = $("#" + idTest2);
-					//   console.log("nycBikeFlashSampleX: ", nycBikeFlashSampleX);
-					//   let imgDescription_1 = $("#imgDescription_1")
-					//   imgDescription_1.css({
-					//     "border": "1px solid white"
-					//   })
-					//   let nycBikeFlashSample = $(data.GDSite[0].projects[0].images[0].linkURL);
-					//   fRollEvents(nycBikeFlashSample, "white");
-	
-					//   let personalFreshLinkId = $("#personalFreshLinkId");
-					//   let personalFreshLink = data.GDSite[0].projects[2].images[0].linkURL;
-					//   console.log("personalFreshLinkId: ", personalFreshLinkId);
-					//   console.log("personalFreshLink: ", personalFreshLink);
-					//   fWindowOpen2(personalFreshLinkId, personalFreshLink);
-	
-					//TEMP fScreenQueries();
-					for ( let sect of data.GDSite ) {
-						j1++;
-						console.log( `Section j1: ${j1} ${sect.title}` );
-						// /**----------===| LINKS TO OPEM TO ANOTHER WINDOW |===----------**/
-						// let nycBikeFlashSample = $('#nycBikeFlashSample');
-						// fRollEvents(nycBikeFlashSample, "white");
-						//
-						// let akonFlashSample = $('#akonFlashSample');
-						// fRollEvents(akonFlashSample, "white");
-	
-						//openLink.fWindowOpen(nycBikeFlashSample, "http://www.google.com");
-						//fWindowOpen2(nycBikeFlashSample, "http://www.google.com");
-	
-						// let akonFlashSample = $('#akonFlashSample');
-						// console.log("akonFlashSample: ", akonFlashSample);
-						// fRollEvents(akonFlashSample, "white");
-						// fWindowOpen2(akonFlashSample, "http://www.rlgonzales.com/Scroll/images/ANIMATIONS/Flash/Akon/");
-	
-						aSectionsCount[ aSectionsCount.length ] = sect; //PUSH
-	
-						/**----------===| INVOKE SECTION COLUMNS |===----------**/
-						twoColumnsHeaderSection.fTwoColumnsQueries( gdContainerWidth, sect.headerRightColumnPercent, arbitraryNum, arbitraryNum );
-						aSectionsRightColumnPercent[ aSectionsRightColumnPercent.length ] = sect.headerRightColumnPercent;
-	
-						/**----------===| CREATE SECTION HEADER CONTAINER |===----------------------------------------**/
-						createDiv.fCreateBasicElement( sect.title, j1, "sectionHeaderClass", gdContainer );
-						let sectDivIds = $( "#" + sect.title + j1 );
-						fBasicDivStyle( sectDivIds, "auto", gdContainerWidth, "relative" );
-						aSectionHeaders[ aSectionHeaders.length ] = sectDivIds;
-	
-						/**----------===| CREATE SECTION HEADER DIVIDER |===----------------------------------------**/
-						createDiv.fCreateBasicElement( "sectDivider", j1, "sectionDividerClass", sectDivIds );
-						let sectDividerIds = $( "#" + "sectDivider" + j1 );
-						/**----------===| COLOR THEME: DIVIDER |===----------**/
-						sectDividerIds.css( {
-							"background-color": randColorTheme
-						} )
-	
-						/**----------===| CREATE HEADER LEFT COLUMN |===------------------------------------------------------------**/
-						createDiv.fCreateBasicElement( sect.title + "_Left", j1, "sectionHeaderLeftColmnClass", sectDivIds );
-						let sectLeftIds = $( "#" + sect.title + "_Left" + j1 );
-						fBasicDivStyle( sectLeftIds, arbitraryNum, twoColumnsHeaderSection.LeftColumn, "relative" );
-						aSectionHeadrLeftColmn[ aSectionHeadrLeftColmn.length ] = sectLeftIds;
-	
-						/**----------===| CREATE HEADER RIGHT COLUMN |===-------------------------------------------------------------**/
-						createDiv.fCreateBasicElement( sect.title + "_Right", j1, "sectionHeaderRightColmnClass", sectDivIds );
-						let sectRightIds = $( "#" + sect.title + "_Right" + j1 );
-						fBasicDivStyle( sectRightIds, "auto", twoColumnsHeaderSection.RightColumn, "relative" );
-						aSectionHeadrRightColmn[ aSectionHeadrRightColmn.length ] = sectRightIds;
-	
-						/**----------===| Sections Header Title Text |===----------**/
-						sectionHeaderText.fBasicTextContent( sect.title + "_Text", j1, "sectionHeaderTxtContentClass", sectRightIds, sect.sectionTitle );
-						let sectionTitleIds = $( "#" + sect.title + "_Text" + j1 );
-						fBasicDivStyle( sectionTitleIds, "auto", twoColumnsHeaderSection.RightColumn, "relative" );
-						headerText.fTextQueries( gdContainerWidth, sectionTitleIds, headerSmlFontSize, headerMidFontSize, headerLrgFontSize );
-						aSectionHeadrTitles[ aSectionHeadrTitles.length ] = sectionTitleIds;
-	
-						for ( let proj of sect.projects ) {
-							j2++;
-							console.log( `
-	              Project j2: ${j2} ${proj.title}` );
-							/**----------===| Divider tag for DOM and style inspection in the browser dev view for testing |===----------**/
-							tagElement.fCreateTag( "i", "Divider:-------------------====•", proj.title, j2, gdContainer );
-							/**----------===| PUSH TO ARRAY: PROJECT COUNT |===----------**/
-							aProjectsCount[ aProjectsCount.length ] = proj;
-							/**----------===| INVOKE PROJECT COLUMNS |===----------**/
-							twoColumnsImgProjects.fTwoColumnsQueries( gdContainerWidth, proj.imgRightColumnPercent, proj.imagesWidth, proj.imagesHeight );
-							/**----------===| PUSH TO ARRAY: PROJECT RIGHT COLUMNS |===----------**/
-							aProjectRightColumnPercent[ aProjectRightColumnPercent.length ] = proj.imgRightColumnPercent;
-							aImagesOrigWidth[ aImagesOrigWidth.length ] = proj.imagesWidth;
-							aImagesOrigHeight[ aImagesOrigHeight.length ] = proj.imagesHeight;
-	
-							/**----------===| CREATE PROJECT IMAGE CONTAINER |===----------**/
-							createDiv.fCreateBasicElement( proj.title + "_ProjContainer", j2, "projectContainerClass", gdContainer );
-							/**----------===| Project Container Ids |===----------**/
-							const projContainerIds = $( "#" + proj.title + "_ProjContainer" + j2 );
-							/**p----------===| Project Container: Basic Style |===----------**/
-							fBasicDivStyle( projContainerIds, "auto", gdContainerWidth ); // ID, HEIGHT, WID, "relative"TH
-							/**----------===| push to array use for animation |===----------**/
-							aProjContainerIds[ aProjContainerIds.length ] = projContainerIds;
-	
-							/**----------===| CREATE PROJECT IMAGE CONTAINER: LEFT COLUMN |===----------**/
-							createDiv.fCreateBasicElement( proj.title + "_Left", j2, "projectLeftColmnClass", projContainerIds );
-							/**----------===| Left Column Ids |===----------**/
-							let projContainrLeftColDivIds = $( "#" + proj.title + "_Left" + j2 );
-							/**p----------===| Left Column: Basic Style |===----------**/
-							fBasicDivStyle( projContainrLeftColDivIds, arbitraryNum, twoColumnsImgProjects.LeftColumn ); // other css properties: ".projectLeftColmnClass" in css fil, "relative"e.
-							/**----------===| push to array |===----------**/
-							aProjLeftColDivIds[ aProjLeftColDivIds.length ] = projContainrLeftColDivIds;
-	
-							/**----------===| CREATE PROJECT IMAGE CONTAINER: RIGHT COLUMN |===----------**/
-							/** function parameters:(Id, Class, appendTo)
-							 **--------------------------------------------------------------------**/
-							createDiv.fCreateBasicElement( proj.title + "_ProjRight", j2, "projectRightColmnClass", projContainerIds );
-							/**----------===| Right Column: Ids |===----------**/
-							let projRightColDivIds = $( "#" + proj.title + "_ProjRight" + j2 );
-							/**----------===| Right Column: Basic CSS |===----------------------------------**/
-							fBasicDivStyle( projRightColDivIds, twoColumnsImgProjects.NewHeight + additionalHeight, twoColumnsImgProjects.RightColumn, "relative" );
-							aProjRightColDivIds[ aProjRightColDivIds.length ] = projRightColDivIds; //push
-							aProjectDisplay[ aProjectDisplay.length ] = proj.displayType; //push
-							aProjImagesLength[ aProjImagesLength.length ] = proj.images.length + 1; //push
-	
-							/**----------===| CREATE FLUID-CONTAINER INSIDE RIGHT COLUMN |===----------**/
-							createDiv.fCreateBasicElement( proj.title + "_FluidContainer_", j2, "fluidContainerClass", projRightColDivIds );
-							/**----------===| FLUID-CONTAINER: IDS |===----------**/
-							const fluidContainerIds = $( "#" + proj.title + "_FluidContainer_" + j2 );
-							/**----------===| push to array |===----------**/
-							aFluidContainerIds[ aFluidContainerIds.length ] = fluidContainerIds;
-							/**----------===| FLUID-CONTAINER WIDTH |===----------**/
-							const fluidContainerWidth = twoColumnsImgProjects.RightColumn * ( proj.images.length + 1 );
-							/**----------===| FLUID-CONTAINER HEIGHT |===----------**/
-							const fluidContainerHeight = twoColumnsImgProjects.NewHeight + additionalHeight;
-							/**----------===| push to array |===----------**/
-							aFluidContainerWidth[ aFluidContainerWidth.length ] = fluidContainerWidth;
-							aFluidContainerHeight[ aFluidContainerHeight.length ] = fluidContainerHeight;
-							/**----------===| FLUID-CONTAINER: BASIC CSS |===----------**/
-							fBasicDivStyle( fluidContainerIds, fluidContainerHeight, fluidContainerWidth, "relative" );
-	
-							/**----------===| CAROUSEL CONTROL: LEFT |===----------**/
-							tagElement.fCreateTag( "a", "carousel-control left", "leftCarousel", j2, projRightColDivIds );
-							//   let carouselControl = $(".carousel-control");
-							//   carouselControl.css({
-							//     "height": imageDivClass.height()
-							//   })
-	
-							const leftShaderIds = $( "#leftCarouselId_" + j2 ); //get ids
-	
-							/**----------===| push to array |===----------**/
-							aLeftShaderIds[ aLeftShaderIds.length ] = leftShaderIds; //push to array
-							//   console.log("leftShaderIds: ", leftShaderIds, j2);
-							//   console.log("aLeftShaderIds: ", aLeftShaderIds);
-							/**----------===| CREATE GLYPHICON LEFT ARROW |===----------**/
-							tagElement.fCreateTag( "i", "glyphicon glyphicon-menu-left", "leftArrow", j2, leftShaderIds ); //glyphicon glyphicon-menu-left glyphicon-chevron-left
-	
-							/**----------===| CAROUSEL CONTROL: RIGHT |===----------**/
-							tagElement.fCreateTag( "a", "carousel-control right", "rightCarousel", j2, projRightColDivIds );
-							const rightShaderIds = $( "#rightCarouselId_" + j2 ); //GET IDS
-							aRightShaderIds[ aRightShaderIds.length ] = rightShaderIds; //PUSH
-	
-							/**----------===| KEEPING THE CAROUSELCONTROL HEIGHT SAME AS THE IMAGE HEIGHT |===----------**/
-							fBasicDivStyle( leftShaderIds, twoColumnsImgProjects.NewHeight, "null", "absolute" );
-							fBasicDivStyle( rightShaderIds, twoColumnsImgProjects.NewHeight, "null", "absolute" );
-	
-							/**----------===| CREATE NEW NEXT PREVIOUS CLASS INSTANCES |===----------**/
-							const nxtPrv = new nextPreviousNav.NextPrevNavClass();
-							/**----------===| push to array |===----------**/
-							aNxtPrv[ aNxtPrv.length ] = nxtPrv;
-							/**----------===| INVOKE NEXT PREVIOUS CLASS INSTANCE |===----------**/
-							nxtPrv.fNextPrevNavigation( rightShaderIds, leftShaderIds, fluidContainerIds, twoColumnsImgProjects.RightColumn, fluidContainerWidth );
-	
-							/**----------===| CREATE GLYPHICON RIGHT ARROW |===----------**/
-							tagElement.fCreateTag( "i", "glyphicon glyphicon-menu-right", "rightArrow", j2, rightShaderIds ); ////glyphicon glyphicon-menu-right  glyphicon-chevron-right  glyphicons-fit-image-to-frame
-	
-							/**----------===| On first enter the site all left image arrows are hidden |===----------**/
-							leftShaderIds.hide();
-	
-							glyphicon = $( ".glyphicon" ); //GET CLASSNAME
-	
-							/**----------===| J2: VIDEO ONLY  |===----------**/
-							if ( proj.displayType === "video" ) {
-								rightShaderIds.hide();
-								/**----------===| Right Column: CSS Height & Width |===----------------------------------**/
-								fBasicDivStyle( projRightColDivIds, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
-							}
-	
-							/**----------==========| PROJECT PARAGRAPHS |==========----------**/
-							/**----------===| PARAGRAPH COLUMNS PERCENTAGE |===----------**/
-							twoColumnsParagProjects.fTwoColumnsQueries( gdContainerWidth, proj.paragraphRightColumnPercent, 0, 0 );
-							/**----------===| push to aray |===----------**/
-							aParagraphRightColumnPercent[ aParagraphRightColumnPercent.length ] = proj.paragraphRightColumnPercent;
-							aParagraphLeftColumnWidth[ aParagraphLeftColumnWidth.length ] = twoColumnsParagProjects.LeftColumn;
-	
-							/**----------===| CREATE PARAGRAPH CONTAINER |===----------**/
-							createDiv.fCreateBasicElement( proj.title + "_Paragraph", j2, "paragraphContainerClass", gdContainer );
-							/**----------===| Project Paragraph Container: Ids |===----------**/
-							let projParagDivIds = $( "#" + proj.title + "_Paragraph" + j2 );
-							/**----------===| Project Paragraph Container: Basic CSS |===----------**/
-							fBasicDivStyle( projParagDivIds, "auto", gdContainerWidth, "relative" );
-							/**----------===| Push to array |===----------**/
-							aParagraphContainer[ aParagraphContainer.length ] = projParagDivIds;
-	
-							/**----------===| CREATE PARAGRAPH LEFT COLUMNS |===----------**/
-							createDiv.fCreateBasicElement( proj.title + "_ParagLeftColmn", j2, "paragraphLeftColumnClass", projParagDivIds );
-							/**----------===| Project Paragraph Left Column: Ids |===----------**/
-							let paragLeftColDivIds = $( "#" + proj.title + "_ParagLeftColmn" + j2 );
-	
-							/**----------===| Project Paragraph Left Column: Basic CSS |===----------**/
-							fBasicDivStyle( paragLeftColDivIds, arbitraryNum, twoColumnsParagProjects.LeftColumn, "relative" );
-							/**----------===| Project Paragraph Left Column:: Push to array |===----------**/
-							aProjParagLeftDivIds[ aProjParagLeftDivIds.length ] = paragLeftColDivIds;
-	
-							/**----------===| CREATE PARAGRAPH RIGHT COLUMNS |===----------**/
-							createDiv.fCreateBasicElement( proj.title + "_ParagRightColmn", j2, "paragraphRightColumnClass", projParagDivIds );
-							/**----------===| Project Paragraph Right Column: Ids |===----------**/
-							let paragRightColDivIds = $( "#" + proj.title + "_ParagRightColmn" + j2 );
-							aProjParagRightDivIds[ aProjParagRightDivIds.length ] = paragRightColDivIds;
-							/**----------===| Project Paragraph Right Column: Basic CSS |===----------**/
-							fBasicDivStyle( paragRightColDivIds, "auto", twoColumnsParagProjects.RightColumn, "relative" );
-	
-							/**----------===| Project Paragraph Right Column:: Push to array |===----------**/
-							aParagraphRightColumnWidth[ aParagraphRightColumnWidth.length ] = twoColumnsParagProjects.RightColumn;
-							//console.log("aParagraphRightColumnWidth: ", aParagraphRightColumnWidth);
-	
-							/**----------===| CREATE PROJECT TITLES |===----------**/
-							textDiv.fCreateTextDiv( proj.title + "_ProjTitle", j2, "projTitleClass", paragRightColDivIds, proj.title );
-							// Get Id
-							let paraghProjTitleIds = $( "#" + proj.title + "_ProjTitle" + j2 );
-							// Pust to array
-							aParaghProjTitleIds[ aParaghProjTitleIds.length ] = paraghProjTitleIds;
-							// Apply text screen queries
-							headerText.fTextQueries( gdContainerWidth, paraghProjTitleIds, projTitleSmlFontSize, projTitleMidFontSize, projTitleLrgFontSize );
-	
-							/**----------===| CREATE PROJECT SUB-TITLES |===----------**/
-							textDiv.fCreateTextDiv( proj.title + "_ProjSubTitle", j2, "projSubTitleClass", paragRightColDivIds, proj.subTitle );
-							// Get Id
-							let paraghProjSubTitleIds = $( "#" + proj.title + "_ProjSubTitle" + j2 );
-							// Pust to array
-							aParaghProjSubTitleIds[ aParaghProjSubTitleIds.length ] = paraghProjSubTitleIds;
-							// Apply text screen queries
-							headerText.fTextQueries( gdContainerWidth, paraghProjSubTitleIds, projSubTitleSmlFontSize, projSubTitleMidFontSize, projSubTitleLrgFontSize );
-	
-	
-							/**----------===| CREATE PROJECT DESCRIPTIONS |===----------**/
-							textDiv.fCreateTextDiv( proj.title + "_ProjDescription", j2, "projDescriptionClass", paragRightColDivIds, proj.projDescription );
-							// Get Id
-							let paraghProjlinkURLs = $( "#" + proj.title + "_ProjDescription" + j2 );
-							// Pust to array
-							aParagraphProjDescription[ aParagraphProjDescription.length ] = paraghProjlinkURLs;
-							// Apply text screen queries
-							headerText.fTextQueries( gdContainerWidth, paraghProjlinkURLs, projDescSmlFontSize, projDescMidFontSize, projDescLrgFontSize );
-	
-	
-							//console.log("gdContainerWidth:3 ", gdContainerWidth);
-							let projTitleClass = $( ".projTitleClass" );
-							//console.log("projTitleClass: ", projTitleClass);
-							//fScreenQueries();
-	
-							// console.log(`
-							// /**|===============================|**/
-							// /**|       IMAGES JSON LOOP        |**/
-							// /**|===============================|**/
-							// `);
-	
-							for ( let imgs of proj.images ) {
-								j3++;
-								// console.log(`
-								//   <•----------------------------------•>
-								//   aImagesCount.length:j3 :  ${aImagesCount.length}
-								//   ${imgs.imgTitle}
-								//   <•----------------------------------•>
-								//   `);
-								if ( proj.displayType === "image" ) {
-									glyphiconXpand = $( ".glyphicon-expand" );
-									/**----------===| push to array use for animation |===----------**/
-									aImagesCount[ aImagesCount.length ] = imgs;
-									/**----------===| RIGHT COLUMN PERCENTAGE |===----------**/
-									twoColumnsImages.fTwoColumnsQueries( gdContainerWidth, proj.imgRightColumnPercent, proj.imagesWidth, proj.imagesHeight );
-									/**----------===| push to array |===----------**/
-									aImagesRightColumnPercent[ aImagesRightColumnPercent.length ] = proj.imgRightColumnPercent;
-									aImagesWidth[ aImagesWidth.length ] = twoColumnsImages.RightColumn;
-									aImagesHeight[ aImagesHeight.length ] = twoColumnsImages.NewHeight;
-	
-									/**----------===| CREATE IMAGE DIV INSIDE FLUID-CONTAINER |===----------**/
-									imageBasicDiv.fCreateBasicElement( proj.title + "_Image", j3, "imageDivClass", fluidContainerIds );
-									let imageIds = $( "#" + proj.title + "_Image" + j3 ); //GET IDS
-									aImageIds[ aImageIds.length ] = imageIds; //PUSH
-	
-									/**----------===| IMAGE CREATION |===----------**/
-									let myImage = new Image();
-									let imagesPath = "./images/" + proj.title + "/"; //FILEPATH
-									myImage.src = imagesPath + imgs.imgName; //CONCAT
-									aImages[ aImages.length ] = myImage.src; //PUSH
-									/**----------===| IMAGE DIV: CSS |===----------**/
-									/*        Populating the div with image        *
-									 **--------------------------------------------**/
-									let columnHeight = twoColumnsImages.NewHeight;
-									let columnWidth = twoColumnsImages.RightColumn;
-									fBasicImageStyle( imageIds, columnHeight, columnWidth, myImage.src ); //
-	
-									/**----------===| IMAGE DESCRIPTIONS |===----------**/
-									textDiv.fCreateTextDiv( "imgDescription_", j3, "imgDescription_Class", imageIds, imgs.imgDescription, imgs.hoverTitle );
-	
-									/*** TEST: Put this outside ajax and into a class **/
-									let imageDescriptIds = $( "#imgDescription_" + j3 ); //id = imgDescription_j3
-									aImageDescriptIds[ aImageDescriptIds.length ] = imageDescriptIds;
-									//let imageDescriptClass = $(".imgDescription_Class"); // + proj.title + "_Class");
-									//fImgDescriptIdStyle(imageDescriptIds, twoColumnsImgProjects.NewHeight);
-									//.imgDescription_Class
-									imageDescriptIds.css( {
-										"margin-top": twoColumnsImgProjects.NewHeight + "px"
-									} );
-									headerText.fTextQueries( gdContainerWidth, imageDescriptIds, imgDescSmlFontSize, imgDescMidFontSize, imgDescLrgFontSize );
-	
-									/**----------===| OPEN DESCRIPTION LINK |===----------**/
-									let fullScreen = imgs.fullScreen;
-									let linkToOpen = imgs.linkURL;
-									//console.log(typeof imgs.scrnHeight)
-									//console.log(typeof screen.height);
-									//   let screenHeight = parseInt(imgs.scrnHeight);
-									//   let screenWidth = parseInt(imgs.scrnWidth);
-									//console.log(imgs.scrnWidth);
-									//console.log(screenWidth);
-									let screenHeight = imgs.scrnHeight;
-									let screenWidth = imgs.scrnWidth;
-	
-	
-	
-									fWindowOpen2( imageDescriptIds, linkToOpen, fullScreen, screenHeight, screenWidth );
-	
-								} else {
-									/**----------===| J3: VIDEO ONLY  |===----------**/
-									/**----------===| push to array |===----------**/
-									aVideoColumnPercent[ aVideoColumnPercent.length ] = proj.imgRightColumnPercent;
-									/**----------===| FLUID-CONTAINER: CSS: VIDEO |===----------**/
-									fBasicDivStyle( fluidContainerIds, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
-									/**----------===| CREATE YOUTUBE VIDEO PLACEHOLDER  |===----------**/
-									//instanceName.fCreateVideoDiv(videoId, appendedTo, divHeight, divWidth)
-									youTubeVideo.fCreateVideoDiv( "video-placeholder", fluidContainerIds, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn );
-									let videoPlaceholder = $( "#video-placeholder" );
-									/**----------===| videoPlaceholder: Height & Width CSS |===----------**/
-									fBasicDivStyle( videoPlaceholder, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
-								} //END VIDEO
-							}
+					for ( let proj of data.ProjectData ) {
+	
+						aProjectCount[ aProjectCount.length ] = proj; //PUSH
+						//console.log("aProjectCount: ", aProjectCount);
+	
+						/**----------===| TWO COLUMNS: IMAGE PROJECTS |===----------**/
+	
+	
+						twoColumnsImgProjects.fTwoColumnsQueries( projectContainerWidth, proj.imgRightColumnPercent, proj.imagesWidth, proj.imagesHeight );
+						aProjectRightColumnPercent[ aProjectRightColumnPercent.length ] = proj.imgRightColumnPercent; //PUSH
+						aImagesOrigWidth[ aImagesOrigWidth.length ] = proj.imagesWidth; //PUSH
+						aImagesOrigHeight[ aImagesOrigHeight.length ] = proj.imagesHeight; //PUSH
+	
+						/**----------===| CREATE PROJECT IMAGE CONTAINER |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_ProjContainer", jx, "projectContainerClass", projectContainer );
+						const projContainerIds = $( "#" + proj.title + "_ProjContainer" + jx );
+						myStyle.fBasicDivStyle( projContainerIds, "auto", projectContainerWidth ); // ID, HEIGHT, WID, "relative"TH
+						aProjContainerIds[ aProjContainerIds.length ] = projContainerIds; //PUSH
+	
+						/**----------===| CREATE PROJECT IMAGE CONTAINER: LEFT COLUMN |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_Left", jx, "projectLeftColmnClass", projectContainer );
+						projContainrLeftColDivIds = $( "#" + proj.title + "_Left" + jx );
+						myStyle.fBasicDivStyle( projContainrLeftColDivIds, "50px", twoColumnsImgProjects.LeftColumn );
+						aProjContainrLeftColDivIds[ aProjContainrLeftColDivIds.length ] = projContainrLeftColDivIds; //PUSH
+	
+						/**----------===| CREATE PROJECT IMAGE CONTAINER: RIGHT COLUMN |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_ProjRight", jx, "projectRightColmnClass", projectContainer );
+						projRightColDivIds = $( "#" + proj.title + "_ProjRight" + jx );
+						myStyle.fBasicDivStyle( projRightColDivIds, twoColumnsImgProjects.NewHeight + additionalHeight, twoColumnsImgProjects.RightColumn );
+	
+						aProjRightColDivIds[ aProjRightColDivIds.length ] = projRightColDivIds; //PUSH
+						aProjImagesLength[ aProjImagesLength.length ] = proj.projectImages.length + 1; //push
+	
+						/**----------===| CREATE FLUID-CONTAINER INSIDE RIGHT COLUMN |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_FluidContainer_", jx, "fluidContainerClass", projRightColDivIds );
+						//createDiv.fCreateBasicElement( proj.title + "_FluidContainer_", jx, "fluidContainerClass", projectContainer );
+						fluidContainerIds = $( "#" + proj.title + "_FluidContainer_" + jx );
+						aFluidContainerIds[ aFluidContainerIds.length ] = fluidContainerIds; //PUSH
+	
+						/**----------===| FLUID-CONTAINER WIDTH |===----------**/
+						const fluidContainerWidth = twoColumnsImgProjects.RightColumn * ( proj.projectImages.length + 1 );
+						aFluidContainerWidth[ aFluidContainerWidth.length ] = fluidContainerWidth; //PUSH
+	
+						/**----------===| FLUID-CONTAINER HEIGHT |===----------**/
+						const fluidContainerHeight = twoColumnsImgProjects.NewHeight + additionalHeight;
+						aFluidContainerHeight[ aFluidContainerHeight.length ] = fluidContainerHeight; //PUSH
+	
+						/**----------===| FLUID-CONTAINER: BASIC CSS |===----------**/
+						myStyle.fBasicDivStyle( fluidContainerIds, fluidContainerHeight, fluidContainerWidth );
+	
+						/**----------===| CAROUSEL CONTROL: LEFT |===----------**/
+						tagElement.fCreateTag( "a", "carousel-control left", proj.title + "leftCarousel", jx, projRightColDivIds );
+						const leftShaderIds = $( "#" + proj.title + "leftCarousel" + jx ); //GET IDS
+						aLeftShaderIds[ aLeftShaderIds.length ] = leftShaderIds; //PUSH
+	
+						/**----------===| CREATE GLYPHICON LEFT ARROW |===----------**/
+						tagElement.fCreateTag( "i", "glyphicon glyphicon-menu-left", "leftArrow", jx, leftShaderIds ); //glyphicon glyphicon-menu-left glyphicon-chevron-left
+						/**----------===| CAROUSEL CONTROL: RIGHT |===----------**/
+						tagElement.fCreateTag( "a", "carousel-control right", proj.title + "rightCarousel", jx, projRightColDivIds );
+						const rightShaderIds = $( "#" + proj.title + "rightCarousel" + jx ); //GET IDS
+						aRightShaderIds[ aRightShaderIds.length ] = rightShaderIds; //PUSH
+	
+						/**----------===| KEEPING THE CAROUSELCONTROL HEIGHT SAME AS THE IMAGE HEIGHT |===----------**/
+						myStyle.fBasicDivStyle( leftShaderIds, twoColumnsImgProjects.NewHeight, "null", "absolute" );
+						myStyle.fBasicDivStyle( rightShaderIds, twoColumnsImgProjects.NewHeight, "null", "absolute" );
+	
+						/**----------===| CREATE NEW NEXT PREVIOUS CLASS INSTANCES |===----------**/
+						const nxtPrv = new nextPreviousNav.NextPrevNavClass();
+						aNxtPrv[ aNxtPrv.length ] = nxtPrv;
+						/**----------===| INVOKE NEXT PREVIOUS CLASS INSTANCE |===----------**/
+						nxtPrv.fNextPrevNavigation( rightShaderIds, leftShaderIds, fluidContainerIds, twoColumnsImgProjects.RightColumn, fluidContainerWidth );
+						/**----------===| CREATE GLYPHICON RIGHT ARROW |===----------**/
+						tagElement.fCreateTag( "i", "glyphicon glyphicon-menu-right", "rightArrow", jx, rightShaderIds ); ////glyphicon glyphicon-menu-right  glyphicon-chevron-right  glyphicons-fit-image-to-frame
+						/**----------===| On first enter the site all left image arrows are hidden |===----------**/
+						leftShaderIds.hide();
+						let glyphicon = $( ".glyphicon" ); //GET CLASSNAME
+	
+						/**----------==========| PROJECT PARAGRAPHS |==========----------**/
+						/**----------===| PARAGRAPH COLUMNS PERCENTAGE |===----------**/
+						twoColumnsParagProjects.fTwoColumnsQueries( projectContainerWidth, proj.paragraphRightColumnPercent, 0, 0 );
+						aParagraphRightColumnPercent[ aParagraphRightColumnPercent.length ] = proj.paragraphRightColumnPercent;
+						aParagraphLeftColumnWidth[ aParagraphLeftColumnWidth.length ] = twoColumnsParagProjects.LeftColumn;
+	
+						/**----------===| CREATE PARAGRAPH CONTAINER |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_Paragraph", jx, "paragraphContainerClass", projectContainer );
+						let projParagDivIds = $( "#" + proj.title + "_Paragraph" + jx );
+						myStyle.fBasicDivStyle( projParagDivIds, "auto", projectContainerWidth );
+						aProjParagDivIds[ aProjParagDivIds.length ] = projParagDivIds; //PUSH
+	
+						/**----------===| CREATE PARAGRAPH LEFT COLUMNS |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_ParagLeftColmn", jx, "paragraphLeftColumnClass", projParagDivIds );
+						let paragLeftColDivIds = $( "#" + proj.title + "_ParagLeftColmn" + jx );
+						myStyle.fBasicDivStyle( paragLeftColDivIds, arbitraryNum, twoColumnsParagProjects.LeftColumn );
+						aParagLeftColDivIds[ aParagLeftColDivIds.length ] = paragLeftColDivIds; //PUSH
+	
+						/**----------===| CREATE PARAGRAPH RIGHT COLUMNS |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_ParagRightColmn", jx, "paragraphRightColumnClass", projParagDivIds );
+						let paragRightColDivIds = $( "#" + proj.title + "_ParagRightColmn" + jx );
+						myStyle.fBasicDivStyle( paragRightColDivIds, "auto", twoColumnsParagProjects.RightColumn );
+						aParagRightColDivIds[ aParagRightColDivIds.length ] = paragRightColDivIds; //PUSH
+	
+						/**----------===| CREATE PROJECT TITLES |===----------**/
+						textDiv.fCreateTextDiv( proj.title + "_ProjTitle", jx, "projTitleClass", paragRightColDivIds, proj.title );
+						let paraghProjTitleIds = $( "#" + proj.title + "_ProjTitle" + jx );
+						headerText.fTextQueries( projectContainerWidth, paraghProjTitleIds, projTitleSmlFontSize, projTitleMidFontSize, projTitleLrgFontSize );
+						aParaghProjTitleIds[ aParaghProjTitleIds.length ] = paraghProjTitleIds; //PUSH
+	
+						/**----------===| CREATE PROJECT SUB-TITLES |===----------**/
+						textDiv.fCreateTextDiv( proj.title + "_ProjSubTitle", jx, "projSubTitleClass", paragRightColDivIds, proj.subTitle );
+						let paraghProjSubTitleIds = $( "#" + proj.title + "_ProjSubTitle" + jx );
+						headerText.fTextQueries( projectContainerWidth, paraghProjSubTitleIds, projSubTitleSmlFontSize, projSubTitleMidFontSize, projSubTitleLrgFontSize );
+						aParaghProjSubTitleIds[ aParaghProjSubTitleIds.length ] = paraghProjSubTitleIds; //PUSH
+	
+						/**----------===| CREATE PROJECT DESCRIPTIONS |===----------**/
+						textDiv.fCreateTextDiv( proj.title + "_ProjDescription", jx, "projDescriptionClass", paragRightColDivIds, proj.projDescription );
+						let paraghProjlinkURLs = $( "#" + proj.title + "_ProjDescription" + jx );
+						headerText.fTextQueries( projectContainerWidth, paraghProjlinkURLs, projDescSmlFontSize, projDescMidFontSize, projDescLrgFontSize );
+						aParaghProjlinkURLs[ aParaghProjlinkURLs.length ] = paraghProjlinkURLs; //PUSH
+	
+						let projTitleClass = $( ".projTitleClass" );
+	
+						for ( let imgs of proj.projectImages ) {
+							ji++;
+							//glyphiconXpand = $( ".glyphicon-expand" );
+	
+							aImagesCount[ aImagesCount.length ] = imgs;
+	
+							/**----------===| RIGHT COLUMN PERCENTAGE |===----------**/
+							twoColumnsImages.fTwoColumnsQueries( projectContainerWidth, proj.imgRightColumnPercent, proj.imagesWidth, proj.imagesHeight );
+							aImagesRightColumnPercent[ aImagesRightColumnPercent.length ] = proj.imgRightColumnPercent;
+							aImagesWidth[ aImagesWidth.length ] = twoColumnsImages.RightColumn;
+							aImagesHeight[ aImagesHeight.length ] = twoColumnsImages.NewHeight;
+	
+							/**----------===| CREATE IMAGE DIV INSIDE FLUID-CONTAINER |===----------**/
+							imageBasicDiv.fCreateBasicElement( proj.title + "_Image", ji, "imageDivClass", fluidContainerIds );
+							let imageIds = $( "#" + proj.title + "_Image" + ji );
+							aImageIds[ aImageIds.length ] = imageIds; //PUSH
+	
+							/**----------===| IMAGE CREATION |===----------**/
+							let myImage = new Image();
+							let imagesPath = "./images/" + proj.title + "/"; //FILEPATH
+							myImage.src = imagesPath + imgs.imgName; //CONCAT
+							aImages[ aImages.length ] = myImage.src; //PUSH
+	
+							/**----------===| IMAGE DIV: CSS |===----------**/
+							/*        Populating the div with image        *
+							 **--------------------------------------------**/
+							let columnHeight = twoColumnsImages.NewHeight;
+							let columnWidth = twoColumnsImages.RightColumn;
+							myStyle.fBasicImageStyle( imageIds, columnHeight, columnWidth, myImage.src ); //
+							/**----------===| IMAGE DESCRIPTIONS |===----------**/
+							textDiv.fCreateTextDiv( "imgDescription_", ji, "imgDescription_Class", imageIds, imgs.imgDescription, imgs.hoverTitle );
+							/*** TEST: Put this outside ajax and into a class **/
+							let imageDescriptIds = $( "#imgDescription_" + ji ); //id = imgDescription_ji
+							imageDescriptIds.css( {
+								"margin-top": twoColumnsImages.NewHeight + 6 //+ "px"
+									//"margin-top": columnHeight //400 + "px"
+							} );
+							aImageDescriptIds[ aImageDescriptIds.length ] = imageDescriptIds; //PUSH
+	
+							headerText.fTextQueries( projectContainerWidth, imageDescriptIds, imgDescSmlFontSize, imgDescMidFontSize, imgDescLrgFontSize );
+							/**----------===| OPEN DESCRIPTION LINK |===----------**/
+							let fullScreen = imgs.fullScreen;
+							let linkToOpen = imgs.linkURL;
+							let screenHeight = imgs.scrnHeight;
+							let screenWidth = imgs.scrnWidth;
+							openWindow.fWindowOpen( imageDescriptIds, linkToOpen, fullScreen, screenHeight, screenWidth );
 						}
 					}
-	
-					console.log( "--------------------| AJAX • END •  JSON |--------------------" );
-	
-				} ) // End Promise
-	
-			/** promise failure **/
-			// function(data) {
-			//   console.log("Request Failed!")
-			// }
-	
-		}
-	
-		/**----------===| INVOKE fRunAjax  |===----------**/
-		fRunAjax();
-	
-		// console.log(`
-		// /**|======================================================|**/
-		// /**|                      ANIMATION:                      |**/
-		// /**|                 ARRAY STATIC EVENTS                  |**/
-		// /**|======================================================|**/
-		// `);
-	
-		/***----------=====| INTRO ANIMATION |=====----------***/
-		let fEventIntro = () => {
-			/**----------===| FULL LANDING PAGE IMAGE DIV |===----------**/
-			let inWindowHeight = window.innerHeight; // / 2;
-			let inWindowWidth = window.innerWidth;
-			fIntroImageStyle( introImageIds, inWindowHeight, inWindowWidth, myIntroImage.src );
-	
-			/**----------===| CALCULATE LEFT & RIGHT COLUMN WIDTHS |===----------**/
-			/** Description:
-			    Invoke fTwoColumnsQueries to  calculates Left and Right columns widths based on the percentage passed to the class
-			    Usage: twoColumnsIntroSection.LeftColumn, twoColumnsIntroSection.RightColumn... **/
-			twoColumnsIntroSection.fTwoColumnsQueries( gdContainerWidth, logoTitleColumnPercent, arbitraryNum, arbitraryNum );
-	
-			/**----------===| LOGO CONTAINER |===----------**/
-			//fBasicDivStyle(logoLeftColDivId, arbitraryNum, twoColumnsIntroSection.LeftColumn, "relative");
-			anim.fAnimateHeightWidth( logoLeftColDivId, arbitraryNum, twoColumnsIntroSection.LeftColumn, animTymSlow );
-			//fBasicDivStyle(logoRightColDivId, "auto", twoColumnsIntroSection.RightColumn - 20, "relative");
-			fBasicDivStyle( logoRightColDivId, "auto", "auto", "relative" );
-			//anim.fAnimateHeightWidth(logoRightColDivId, "auto", "auto", animTymSlow);
-	
-			// rightColumnHeight = logoRightColDivId.height() + 30;
-			// let rightColumnWidth = logoRightColDivId.width();
-	
-			//introRightColumnClass
-			//let rightColumnHeightFrTwoColumns = twoColumnsIntroSection.NewHeight;
-			// console.log("rightColumnHeight: ", rightColumnHeight);
-			// console.log("rightColumnWidth: ", rightColumnWidth);
-			//console.log("rightColumnHeightFrTwoColumns: ", rightColumnHeightFrTwoColumns);
-	
-	
-			//fBasicIntroStyle(logoContainerDivId, 400, gdContainerWidth);
-			//let marginTop = inWindowHeight - rightColumnHeight
-			//anim.fAnimateHeightWidth(logoContainerDivId, rightColumnHeight, gdContainerWidth, animTymSlow);
-			anim.fAnimateHeightWidth( logoContainerDivId, "auto", gdContainerWidth, animTymSlow );
-			//fBasicIntroStyle(logoContainerDivId, rightColumnHeight + 20, gdContainerWidth);
-			logoContainerDivId.css( {
-					"margin-top": inWindowHeight - ( rightColumnHeight + 40 ) // - 800 //(400 + (inWindowHeight / 5)) //"100px" //-(inWindowHeight / 4)
 				} )
-				//anim.fAnimateHeightWidth(logoContainerDivId, rightColumnHeightFrTwoColumns, gdContainerWidth, animTymSlow);
+			};
 	
-			console.log( "logoTitleId.height(): ", logoTitleId.height() );
-			console.log( "logoSubTitleId.height(): ", logoSubTitleId.height() );
-			console.log( "introCalloutId.height(): ", introCalloutId.height() );
-			console.log( "toggleBtn.height(): ", toggleBtn.height() );
+			fProjectQueries() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				for ( let ax = 0; ax < aProjectCount.length; ax++ ) {
+					/**----------===| PROJECT COLUMNS PERCENTAGE |===----------**/
+					twoColumnsImgProjects.fTwoColumnsQueries( projectContainerWidth, aProjectRightColumnPercent[ ax ], aImagesOrigWidth[ ax ], aImagesOrigHeight[ ax ] );
+					myStyle.fBasicDivStyle( aProjContainerIds[ ax ], "auto", projectContainerWidth );
+					myStyle.fBasicDivStyle( aProjContainrLeftColDivIds[ ax ], arbitraryNum, twoColumnsImgProjects.LeftColumn );
+					myStyle.fBasicDivStyle( aProjRightColDivIds[ ax ], twoColumnsImgProjects.NewHeight + additionalHeight, twoColumnsImgProjects.RightColumn );
+					myStyle.fBasicDivStyle( aFluidContainerIds[ ax ], twoColumnsImgProjects.NewHeight + additionalHeight, twoColumnsImgProjects.RightColumn * aProjImagesLength[ ax ] );
 	
-			/**----------===| SCREEN QUERIES |===----------**/
-			/** logoTitleColumnPercent = introData.logoTitleColumnPercent;
-			 *  Calculates the percentage width for the Left & Right Columns based on gdContainerWidth
-			    If gdContainerWidth is < 600 the Right Column should be 95% wide and 80% wide if >. **/
-			//logoColumn.fScreenQueries(gdContainerWidth);
-			//console.log("logoColumn.ColumnPercentage: ", logoColumn.ColumnPercentage);
-			//console.log("twoColumnsIntroSection.LeftColumn: ", twoColumnsIntroSection.LeftColumn);
-			//console.log("twoColumnsIntroSection.RightColumn: ", twoColumnsIntroSection.RightColumn);
-			//console.log("logoTitleColumnPercent: ", logoTitleColumnPercent);
-			//logoText.fTextQueries(gdContainerWidth, logoTitleClass, logoSubTitleClass);
-			logoText.fTextQueries( gdContainerWidth, logoTitleId, logoTitleSmlFontSize, logoTitleMidFontSize, logoTitleLrgFontSize );
-			logoText.fTextQueries( gdContainerWidth, logoSubTitleId, logoSubTitleSmlFontSize, logoSubTitleMidFontSize, logoSubTitleLrgFontSize );
-			logoText.fTextQueries( gdContainerWidth, introCalloutId, introCalloutFontSize, introCalloutFontSize, introCalloutFontSize );
-			logoText.fTextQueries( gdContainerWidth, toggleBtn, codingBtnFontSize, codingBtnFontSize, codingBtnFontSize );
+					aNxtPrv[ ax ].ImgContainer = aFluidContainerIds[ ax ];
+					aNxtPrv[ ax ].ImgContainerWidth = twoColumnsImgProjects.RightColumn;
+					aNxtPrv[ ax ].fluidContainerWidth = twoColumnsImgProjects.RightColumn * aProjImagesLength[ ax ];
+					myStyle.fBasicDivStyle( aLeftShaderIds[ ax ], twoColumnsImgProjects.NewHeight, "null", "absolute" );
+					myStyle.fBasicDivStyle( aRightShaderIds[ ax ], twoColumnsImgProjects.NewHeight, "null", "absolute" );
+					anim.fXSlider( aFluidContainerIds[ ax ], -( aNxtPrv[ ax ].ImgContainerWidth * aNxtPrv[ ax ].Num ) );
 	
-			//logoColumn.fScreenQueries(gdContainerWidth, logoColumn.ColumnPercentage, logoTitleClass, logoSubTitleClass)
+					/**----------===| Project Paragraph Columns |===----------**/
+					twoColumnsParagProjects.fTwoColumnsQueries( projectContainerWidth, aParagraphRightColumnPercent[ ax ], 0, 0 );
+					myStyle.fBasicDivStyle( aProjParagDivIds[ ax ], "auto", projectContainerWidth );
+					myStyle.fBasicDivStyle( aParagLeftColDivIds[ ax ], arbitraryNum, twoColumnsParagProjects.LeftColumn );
+					myStyle.fBasicDivStyle( aParagRightColDivIds[ ax ], "auto", twoColumnsParagProjects.RightColumn );
 	
-			// // anim.fAnimateHeightWidth(logoContainerDivId, 400, gdContainerWidth, animTymSlow);
-	
-			//anim.fAnimateHeightWidth(logoRightColDivId, "auto", twoColumnsIntroSection.RightColumn - 50, animTymSlow);
-			//anim.fAnimateHeightWidth(logoRightColDivId, "auto", "auto", animTymSlow);
-	
-			// // console.log("logoRightColDivId.height(): ", logoRightColDivId.height());
-			// // let rightColumnHeight = logoRightColDivId.height();
-			// anim.fAnimateHeightWidth(logoLeftColDivId, arbitraryNum, twoColumnsIntroSection.LeftColumn, animTymSlow);
-	
-			// //TEMP
-			// logoLeftColDivId.css({
-			//   "border-top": "2px solid red"
-			// })
-			// logoRightColDivId.css({
-			//   "border-top": "2px solid yellowGreen"
-			// })
-			/**----------===| CODING CONTAINER |===----------**/
-			fBasicDivStyle( codingThisSiteId, "auto", gdContainerWidth, "relative" );
-		}
-	
-		/***----------=====| SECTION HEADER ANIMATION |=====----------***/
-		let fEventHeaders = () => {
-			/**----------===| IMAGE DIV: IDS |===----------**/
-			//introImageIds = $("#" + introData.title + "_IntroImg" + 1);
-			/**----------===| IMAGE DIV: CSS |===----------**/
-			/*        Populating the div with image        *
-			 **--------------------------------------------**/
-			// let inWindowHeight = window.innerHeight / 2;
-			// let inWindowWidth = window.innerWidth;
-			// fBasicImageStyle(introImageIds, inWindowHeight, inWindowWidth, myIntroImage.src);
-	
-			// let projTitleClass = $(".projTitleClass");
-			// console.log("projTitleClass: ", projTitleClass);
-	
-			for ( let e1 = 0; e1 < aSectionsCount.length; e1++ ) {
-				/**----------===| INVOKE SECTION COLUMNS |===----------**/
-				twoColumnsHeaderSection.fTwoColumnsQueries( gdContainerWidth, aSectionsRightColumnPercent[ e1 ], arbitraryNum, arbitraryNum );
-				/**----------===| Basic CSS: (id, height, width) |===----------**/
-				//fBasicDivStyle(aSectionHeaders[e1], "auto", gdContainerWidth, "relative");
-	
-				//logoColumn.fScreenQueries(gdContainerWidth);
-	
-				/**----------===| Left Column: Basic CSS |===----------**/
-				//fBasicDivStyle(aSectionHeadrLeftColmn[e1], arbitraryNum, twoColumnsHeaderSection.LeftColumn, "relative");
-				anim.fAnimateHeightWidth( aSectionHeadrLeftColmn[ e1 ], arbitraryNum, twoColumnsHeaderSection.LeftColumn, animTymSlow );
-				/**----------===| Sections Header Right Column: Basic Style |===----------**/
-				//fBasicDivStyle(aSectionHeadrRightColmn[e1], "auto", twoColumnsHeaderSection.RightColumn, "relative");
-				/**----------===| Sections Header Title Text: Basic Style |===----------**/
-				//fBasicDivStyle(aSectionHeadrTitles[e1], "auto", twoColumnsHeaderSection.RightColumn, "relative");
-				//gdContainerWidth = (gdContainer.width());
-				anim.fAnimateHeightWidth( aSectionHeaders[ e1 ], "auto", gdContainerWidth, animTymSlow );
-	
-				//anim.fAnimateHeightWidth(aSectionHeadrLeftColmn[e1], arbitraryNum, twoColumnsHeaderSection.LeftColumn, animTymFast);
-				anim.fAnimateHeightWidth( aSectionHeadrRightColmn[ e1 ], "auto", "auto", animTymSlow ); //twoColumnsHeaderSection.RightColumn
-				anim.fAnimateHeightWidth( aSectionHeadrTitles[ e1 ], "auto", "auto", animTymSlow );
-				headerText.fTextQueries( gdContainerWidth, aSectionHeadrTitles[ e1 ], headerSmlFontSize, headerMidFontSize, headerLrgFontSize );
-	
-	
-				//TEMP
-				//   aSectionHeadrLeftColmn[e1].css({
-				//     //"background-color": "cyan",
-				//     "border-top": "4px solid red"
-				//   })
-				//   aSectionHeadrRightColmn[e1].css({
-				//     //"background-color": "cyan",
-				//     "border-top": "4px solid yellowGreen"
-				//   })
-	
-				// TEMP
-				// aSectionHeadrTitles[e1].css({
-				//   "border-bottom": "1px solid white"
-				// })
-	
-			} // end of aSectionsCount.length
-		}
-	
-		/***----------=====| PROJECTS ANIMATION |=====----------***/
-		let fEventProjects = () => {
-			for ( let e2 = 0; e2 < aProjectsCount.length; e2++ ) {
-				/**----------===| PROJECT COLUMNS PERCENTAGE |===----------**/
-				twoColumnsImgProjects.fTwoColumnsQueries( gdContainerWidth, aProjectRightColumnPercent[ e2 ], aImagesOrigWidth[ e2 ], aImagesOrigHeight[ e2 ] );
-				fBasicDivStyle( aProjContainerIds[ e2 ], "auto", gdContainerWidth, "relative" );
-				fBasicDivStyle( aProjLeftColDivIds[ e2 ], arbitraryNum, twoColumnsImgProjects.LeftColumn, "relative" );
-				fBasicDivStyle( aProjRightColDivIds[ e2 ], twoColumnsImgProjects.NewHeight + additionalHeight, twoColumnsImgProjects.RightColumn, "relative" );
-				fBasicDivStyle( aFluidContainerIds[ e2 ], twoColumnsImgProjects.NewHeight + additionalHeight, twoColumnsImgProjects.RightColumn * aProjImagesLength[ e2 ], "relative" );
-	
-				/**----------===| E2: VIDEO |===----------**/
-				if ( aProjectDisplay[ e2 ] === "video" ) {
-					fBasicDivStyle( aProjRightColDivIds[ e2 ], twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
-					fBasicDivStyle( aFluidContainerIds[ e2 ], twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
-					let videoPlaceholder = $( "#video-placeholder" );
-					fBasicDivStyle( videoPlaceholder, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
+					headerText.fTextQueries( projectContainerWidth, aParaghProjTitleIds[ ax ], projTitleSmlFontSize, projTitleMidFontSize, projTitleLrgFontSize );
+					headerText.fTextQueries( projectContainerWidth, aParaghProjSubTitleIds[ ax ], projSubTitleSmlFontSize, projSubTitleMidFontSize, projSubTitleLrgFontSize );
+					headerText.fTextQueries( projectContainerWidth, aParaghProjlinkURLs[ ax ], projDescSmlFontSize, projDescMidFontSize, projDescLrgFontSize );
 				}
-				aNxtPrv[ e2 ].ImgContainer = aFluidContainerIds[ e2 ];
-				aNxtPrv[ e2 ].ImgContainerWidth = twoColumnsImgProjects.RightColumn;
-				aNxtPrv[ e2 ].fluidContainerWidth = twoColumnsImgProjects.RightColumn * aProjImagesLength[ e2 ];
-				fBasicDivStyle( aLeftShaderIds[ e2 ], twoColumnsImgProjects.NewHeight, "null", "absolute" );
-				fBasicDivStyle( aRightShaderIds[ e2 ], twoColumnsImgProjects.NewHeight, "null", "absolute" );
-				anim.fXSlider( aFluidContainerIds[ e2 ], -( aNxtPrv[ e2 ].ImgContainerWidth * aNxtPrv[ e2 ].Num ) );
-				/**----------===| Project Paragraph Columns |===----------**/
-				twoColumnsParagProjects.fTwoColumnsQueries( gdContainerWidth, aParagraphRightColumnPercent[ e2 ], 0, 0 );
-				fBasicDivStyle( aParagraphContainer[ e2 ], "auto", gdContainerWidth, "relative" );
-				fBasicDivStyle( aProjParagLeftDivIds[ e2 ], arbitraryNum, twoColumnsParagProjects.LeftColumn, "relative" );
-				fBasicDivStyle( aProjParagRightDivIds[ e2 ], "auto", twoColumnsParagProjects.RightColumn, "relative" );
 	
-				headerText.fTextQueries( gdContainerWidth, aParaghProjTitleIds[ e2 ], projTitleSmlFontSize, projTitleMidFontSize, projTitleLrgFontSize );
-				headerText.fTextQueries( gdContainerWidth, aParaghProjSubTitleIds[ e2 ], projSubTitleSmlFontSize, projSubTitleMidFontSize, projSubTitleLrgFontSize );
-				headerText.fTextQueries( gdContainerWidth, aParagraphProjDescription[ e2 ], projDescSmlFontSize, projDescMidFontSize, projDescLrgFontSize );
-	
-			}
-		}
-	
-		/***----------=====| IMAGES ANIMATION |=====----------***/
-		let fEventVisualContent = () => {
 				for ( let i3 = 0; i3 < aImagesCount.length; i3++ ) {
 					/**----------===| INVOKE PROJECTS IMAGES COLUMNS |===----------**/
-					twoColumnsImagesAnim.fTwoColumnsQueries( gdContainerWidth, aImagesRightColumnPercent[ i3 ], aImagesWidth[ i3 ], aImagesHeight[ i3 ] );
-					//console.log("aImagesRightColumnPercent[i3]: ", aImagesRightColumnPercent[i3]);
+					twoColumnsImagesAnim.fTwoColumnsQueries( projectContainerWidth, aImagesRightColumnPercent[ i3 ], aImagesWidth[ i3 ], aImagesHeight[ i3 ] );
 					/***----------=====| Images divs height and width |=====-------------------***/
 					anim.fAnimateHeightWidth( aImageIds[ i3 ], twoColumnsImagesAnim.NewHeight, twoColumnsImagesAnim.RightColumn, animTymSlow );
-					//console.log("twoColumnsImagesAnim.RightColumn:i3 ", twoColumnsImagesAnim.RightColumn);
 					aImageDescriptIds[ i3 ].css( {
 						"margin-top": twoColumnsImagesAnim.NewHeight + "px"
 					} );
-					headerText.fTextQueries( gdContainerWidth, aImageDescriptIds[ i3 ], imgDescSmlFontSize, imgDescMidFontSize, imgDescLrgFontSize );
-	
-					twoColumnsVideo.fTwoColumnsQueries( gdContainerWidth, aVideoColumnPercent[ i3 ], aVideoWidth[ i3 ], aVideoHeight[ i3 ] );
-					/**----------===| VIDEO ONLY  |===----------**/
-					if ( aProjectDisplay[ i3 ] === "video" ) {
-						//rightShaderIds.hide();
-						//console.log("video----------------------------------------", i3);
-						//console.dir("twoColumnsVideo: ", twoColumnsVideo);
-						//twoColumnsVideo.fTwoColumnsQueries(100, 1280, 720); //aImagesWidth[i3], aImagesHeight[i3]);
-						//twoColumnsVideo.fTwoColumnsQueries(aVideoColumnPercent[i3], aVideoWidth[i3], aVideoHeight[i3]);
-						//let videoPlaceholder = $("#video-placeholder");
-						/**----------===| videoPlaceholder: Height & Width CSS |===----------**/
-						//fBasicDivStyle(videoPlaceholder, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative");
-						//fBasicDivStyle(videoPlaceholder, twoColumnsVideo.NewHeight, twoColumnsVideo.RightColumn, "relative");
-	
-						// videoPlaceholder.css({
-						//   "height": twoColumnsImgProjects.NewHeight + "px",
-						//   "width": twoColumnsVideo.RightColumn + "px"
-						// });
-						// console.log("aVideoColumnPercent[1]: ", aVideoColumnPercent[1]);
-						// console.log("aVideoWidth[i3]: ", aVideoWidth[i3]);
-						// console.log("twoColumnsVideo: ", twoColumnsVideo);
-						// console.log("videoPlaceholder: ", videoPlaceholder);
-						//console.log("----------------------------------------video");
-					}
-	
-				} /**----===| END IMAGES ANIMATION: |-------------------------------•**/
+					headerText.fTextQueries( projectContainerWidth, aImageDescriptIds[ i3 ], imgDescSmlFontSize, imgDescMidFontSize, imgDescLrgFontSize );
+					//twoColumnsVideo.fTwoColumnsQueries( projectContainerWidth, aVideoColumnPercent[ i3 ], aVideoWidth[ i3 ], aVideoHeight[ i3 ] );
+				}
 			}
-			// console.log(`
-			// /**|======================================================|**/
-			// /**|                      ANIMATION:                      |**/
-			// /**|                WINDOW RESIZE FUNCTION                |**/
-			// /**|======================================================|**/
-			// `);
-		let fOnWindowResize = function() {
-			gdContainerWidth = ( gdContainer.width() );
-			//console.log(`gdContainerWidth: ${gdContainerWidth}`);
-			//console.log(`window.innerWidth: ${window.innerWidth}`);
-			fEventIntro();
-			fEventHeaders();
-			fEventProjects();
-			fEventVisualContent();
 	
-		}; // End fOnWindowResize
-	
-		/**-----------=====| fInitMediaQueries Function |=====-----------**/
-		/** Function to initialize fMediaQueries function on load
-		 *  TweenMax.ticker is used to add and remove the event listener
-		 *  ix: counter
-		 ****************************************************************/
-		/************ ANIMATION ENGINE ************/
-		//var tMx = TweenMax;
-		//  var easeSine = Sine.easeOut;
-		//  var easePower = Power3.easeOut;
-		//  var animTymSlow = .5;
-		//  var zeroTym = 0;
-		// var ix = 0;
-		// var fInitMediaQueries = function() {
-		//   tMx.ticker.addEventListener("tick", fTimer);
-		//   function fTimer() {
-		//     /**-----===( Load Media Queries )===-----**/
-		//     //fOnWindowResize();
-		//     $(window).on('resize', fOnWindowResize);
-		//     ix++;
-		//     console.log("ix: ", ix);
-		//     if (ix >= 1) {
-		//       fRemoveEvntListnr(fTimer);
-		//     }
-		//   }
-		// };
-		// var fRemoveEvntListnr = function(myFunct) {
-		//   tMx.ticker.removeEventListener("tick", myFunct);
-		// };
-	
-		//fInitMediaQueries();
-		/**-----------=====| End fInitMediaQueries |=====-----------**/
-	
-		$( window ).on( 'resize', fOnWindowResize );
-		//$(window).on('resize', fInitMediaQueries);
-		/**----------=====| End Window Resize Function |=====----------**/
+		}
 	
 		/**-----------=====| EXPORTS |=====-----------**/
-		/** DESCRIPTIONS:
-		 ** TWO COLUMN CALCULATION
-		 ** Webpack: module.exports
-		 **----------------------------------------------------------------**/
-		//module.exports.TwoColumnsQueriesClass = TwoColumnsQueriesClass;
-		//module.exports.sampleFunction = sampleFunction;
+		module.exports.CreateProject = CreateProject;
 	
-	
-		/**-----------=====| EXPORTS |=====-----------**/
-		module.exports.fIntroAjax = fIntroAjax;
 	
 	}() );
 
 
 /***/ },
-/* 3 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**----------===| Created by Odee on 5/17/16.|===----------**/
+	/***********************************************
+	 * Project: GonzalesDesign 2016
+	 * Developer: rolandolloyd@gmail.com
+	 * Copyright © 2016 GonzalesDesign
+	 * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+	 * Module: Project Template
+	 ***********************************************/
 	
-	(function() { //IIFE:Immediately-Invoked Function Expression. Scope Encapsulation
+	( function() { /*IIFE:Immediately-Invoked Function Expression*/
+		"use strict";
 	
-	  "use strict";
+		console.log( "Module: CreateProjectYouTube" );
 	
-	  /**-----------=====| IMPORT | REQUIRE |=====-----------**/
-	  /** DESCRIPTIONS:
-	   ** FILES IMPORTED FROM OTHER JS FILES
-	   ** SEPERATE JS FILES FOR EASIER READABILITY AND MAINTENANCE
-	   **----------------------------------------------------------------**/
-	  let anim = __webpack_require__(1);
+		/**----------===| MODULE: CREATE BASICS |===----------**/
+		const createBasics = __webpack_require__( 3 );
+		const createDiv = new createBasics.CreateBasicElement();
+		const imageBasicDiv = new createBasics.CreateBasicElement();
+		//let createStyle = new createBasics.fBasicDivStyle();
+		const tagElement = new createBasics.CreateElementAny();
 	
-	  //let TwoColumnsClass = require('./codeArchitecture_X'); //.TwoColumnsClass;
-	  //let twoColmn = new TwoColumnsClass();
-	  //let sampleTest = require('./codeArchitecture_X');
-	  //let sample = new sampleTest.sampleFunction();
-	  //sampleTest.sampleFunction();
-	  /**----------------------------------------------------------------**/
-	  console.log(`
-	  Filename: nextPreviousArrows.js
-	  Import || Require: animationFunctions.js
-	  `);
-	  /**----------------------------------------------------------------**/
+		const youTubeVideo = new createBasics.CreateElementVideo();
 	
-	  // class TwoColumnsClass {
-	  //   constructor() { //rightColumn, leftColumn, newHeight, resizePercent) {
-	  //     this.RightColumn; // = rightColumn; // = RightColumn; //right column property that's accessible outside through the Class
-	  //   // this.LeftColumn; // = leftColumn; // = LeftColumn; //left column property
-	  //   // this.NewHeight; // = newHeight;
-	  //   // this.ResizePercent; // = resizePercent;
-	  //   /**---------- To access these properties outside, use classInstance.property ----------**/
-	  //   /**---------- But an instance of the fTwoColumns method has to be invoked first! ----------**/
-	  //   }
-	  //
-	  //   fTwoColumns(rightColumnPercentage, imgOrigWidth, imgOrigHeight) {
-	  //     this.RightColumn = Math.round(gdContainerWidth * (rightColumnPercentage / 100));
-	  //     this.LeftColumn = Math.round(gdContainerWidth - this.RightColumn);
-	  //     this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-	  //     this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-	  //   //this.Stringy = "Hello from TwoColumn";
-	  //   //console.log("nextPreviousImage.Num:2c ", nextPreviousImage.Num); //test
-	  //   //console.log("this.ResizePercent: ", this.ResizePercent);
-	  //   //resizePercent      = fRoundToTwo (resizePercent);
-	  //   //console.log (`Right Column: ${this.RightColumn} | Left Column: ${this.LeftColumn}`);
-	  //   }
-	  // }
-	  //
-	  // // let fTwoColumnsAnimation = function(elem, rightColumnPercentage, parentElemWidth) {
-	  // //   let elemWidth = Math.round(parentElemWidth * (rightColumnPercentage / 100));
-	  // //   elem.css({
-	  // //     "width": elemWidth
-	  // //   })
-	  // // }
+		/**----------===| MODULE: CREATE STYLES |===----------**/
+		const myStyle = __webpack_require__( 4 );
 	
+		/**----------===| MODULE: CREATE TEXT CONTENT |===----------**/
+		const createTextContent = __webpack_require__( 2 );
+		let textDiv = new createTextContent.CreateTextContent();
 	
-	  class NextPrevNavClass {
-	    constructor() {
-	      this.String = "Hello from NextPreviousTwoColumnsClass constructor. Accessible outside when the method is not define.";
-	    // this.RightArrow = rightArrow;
-	    // this.LeftArrow = leftArrow;
-	    // this.ImgContainer = imgContainer;
-	    // this.ImgContainerWidth; // = imgContainerWidth;
-	    // this.fluidContainerWidth = fluidContainerWidth;
-	    }
+		/**----------===| MODULE: OPEN WINDOW FUNCTION |===----------**/
+		const openWindow = __webpack_require__( 6 );
+		//let textDiv = new openWindow.CreateTextContent();
 	
-	    fNextPrevNavigation(
-	      rightArrow, leftArrow, imgContainer, imgContainerWidth, fluidContainerWidth) { //}, rightColumnPercentage, imgOrigWidth, imgOrigHeight) {
-	      this.String = "Hello from fNextPreviousTwoColumnsClass method";
-	      this.RightArrow = rightArrow;
-	      this.LeftArrow = leftArrow;
-	      this.ImgContainer = imgContainer;
-	      this.ImgContainerWidth = imgContainerWidth;
-	      this.fluidContainerWidth = fluidContainerWidth;
+		/**----------=====| anim |=====----------**/
+		const anim = __webpack_require__( 1 );
 	
-	      this.Num = 0;
-	      let num = 0;
-	      let containerXPos = 0;
-	      this.fluidContainerLeftPosition = 0;
-	      let fluidContainerLeftPosition;
+		/**----------===| MODULE: TWO COLUMNS |===----------**/
+		const twoKolumns = __webpack_require__( 5 );
+		let logoText = new twoKolumns.TextQueriesClass();
+		let headerText = new twoKolumns.TextQueriesClass();
+		let twoColumnsImages = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImgProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsParagProjects = new twoKolumns.TwoColumnsQueriesClass();
+		let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
 	
-	      /**-----------=====| Next button function |=====-----------**/
-	      rightArrow.click(() => {
-	        num++;
-	        this.Num = num;
-	        containerXPos = this.ImgContainerWidth * num;
-	        leftArrow.show();
-	        // console.log(`
-	        //     np:${imgContainer}-----------------------------------------
-	        //     image width:                    ${this.ImgContainerWidth}
-	        //     multiplied by numbr of clicks:  ${num}
-	        //                                     ------------------
-	        //     container x position:           ${containerXPos}
-	        //     fluid-container width:          ${this.fluidContainerWidth - (this.ImgContainerWidth * 2)}
-	        //     this.Num: same as clicks        ${this.Num}
-	        //     np:---------------------------------------------------`)
-	        /**-----| If the current x position greater or equals to the fluid-container width |-----**/
-	        this.fluidContainerLeftPosition = (this.fluidContainerWidth - (this.ImgContainerWidth * 2))
-	        if (containerXPos >= this.fluidContainerLeftPosition) {
-	          rightArrow.hide();
-	        }
-	        /**-----| fXSlider: Slides the image container to the left |-----**/
-	        anim.fXSlider(imgContainer, -(containerXPos));
-	      //console.log(rightArrow, num, ":np---------------------------------------------------");
-	      });
+		/**----------=====| MODULE: NEXT PREVIOUS ARROWS |=====----------**/
+		const nextPreviousNav = __webpack_require__( 8 );
 	
-	      /**-----------=====| Previous button function |=====-----------**/
-	      leftArrow.click(() => {
-	        num--;
-	        this.Num = num;
-	        containerXPos = this.ImgContainerWidth * num;
-	        rightArrow.show();
-	        // console.log(`
-	        //     image width:                    ${this.ImgContainerWidth}
-	        //     multiplied by numbr of clicks:  ${num}
-	        //                                     ------------------
-	        //     container x position:           ${containerXPos}
-	        //     fluid-container width:          ${this.fluidContainerWidth - (this.ImgContainerWidth * 2)}
-	        //     this.Num: same as clicks        ${this.Num}
-	        // `)
-	        /**-----| when it hits the beginning of the image container |-----**/
-	        if (containerXPos <= 0) {
-	          leftArrow.hide();
-	        }
-	        /**-----| fXSlider: Slides the image container to the right |-----**/
-	        anim.fXSlider(imgContainer, -(containerXPos));
-	      });
-	    }
-	  }
+		//const nxtPrv = new nextPreviousNav.NextPrevNavClass();
 	
-	  /**-----------=====| EXPORTS |=====-----------**/
-	  /** DESCRIPTIONS:
-	   ** IMAGE NAVIGATION MODULES
-	   ** NEXT & PREVIOUS ARROW NAVS
-	   ** Webpack: module.exports
-	   **----------------------------------------------------------------**/
-	  module.exports.NextPrevNavClass = NextPrevNavClass;
-	  //module.exports.NextPreviousTwoColumnsClass = NextPreviousTwoColumnsClass;
+		/**-----------=====| DOM CACHING |=====-----------**/
+		//let mainContainer = $( ".mainContainer" );
 	
+		/**-----------=====| MISC VARS |=====-----------**/
+		const additionalHeight = 60;
+		const arbitraryNum = 10;
+		//ANIMATION TIME
+		let animTymSlow = 1;
+		let animTymFast = .25;
 	
-	  /**----------------------------------------------------------------**/
-	  console.log(`
-	   Filename: nextPreviousArrows.js
-	   Exports: module.exports.NextPrevNavClass = NextPrevNavClass `);
-	  /**----------------------------------------------------------------**/
+		/**----------===| FONT SIZE VARIABLES |===----------**/
+		const projTitleSmlFontSize = "1.6em";
+		const projTitleMidFontSize = "1.8em";
+		const projTitleLrgFontSize = "2em";
+	
+		const projSubTitleSmlFontSize = "1em";
+		const projSubTitleMidFontSize = "1em";
+		const projSubTitleLrgFontSize = "1.2em";
+	
+		const projDescSmlFontSize = "1em";
+		const projDescMidFontSize = "1em";
+		const projDescLrgFontSize = "1.2em";
+	
+		const imgDescSmlFontSize = "1em";
+		const imgDescMidFontSize = "1em";
+		const imgDescLrgFontSize = "1.2em";
+	
+		let jx = 0;
+		let ji = 0;
+		let i3 = 0;
+	
+		//let projectContainer;
+		//let projectContainerWidth;
+		// let projContainrLeftColDivIds;
+		// let projRightColDivIds;
+		// let fluidContainerIds;
+	
+		/**----------===| ARRAYS |===----------**/
+		let aProjectCount = [];
+		let aProjectRightColumnPercent = [];
+		let aImagesOrigWidth = [];
+		let aImagesOrigHeight = [];
+		let aImageDescriptIds = [];
+		let aProjContainrLeftColDivIds = [];
+		let aProjRightColDivIds = [];
+		let aProjImagesLength = [];
+	
+		let aFluidContainerIds = [];
+		// let aFluidContainerWidth = [];
+		// let aFluidContainerHeight = [];
+	
+		let aLeftShaderIds = [];
+		let aRightShaderIds = [];
+		let aNxtPrv = [];
+	
+		let aProjParagDivIds = [];
+		let aParagLeftColDivIds = [];
+		let aParagRightColDivIds = [];
+		let aParaghProjTitleIds = [];
+		let aParaghProjSubTitleIds = [];
+		let aParaghProjlinkURLs = [];
+		let aProjContainerIds = []; //aVideoContainerIds
+		let aVideoContainerIds = [];
+	
+		// let aParagraphContainer = []; //aProjParagDivIds
+		// let aProjParagLeftDivIds = []; //aParagLeftColDivIds
+		// let aProjParagRightDivIds = []; //aParagRightColDivIds
+	
+		let aParagraphRightColumnPercent = [];
+		let aParagraphLeftColumnWidth = [];
+		//let aParagraphRightColumnWidth = [];
+	
+		//let aParaghProjTitleIds = [];
+		//let aParaghProjSubTitleIds = [];
+		//let aParagraphProjDescription = []; //aParaghProjlinkURLs
+	
+		let aImagesRightColumnPercent = [];
+		let aImagesCount = [];
+		let aImageIds = [];
+		//let aImages = [];
+		let aImagesWidth = [];
+		let aImagesHeight = [];
+		//let aImageDescriptIds = [];
+	
+		let aVideoColumnPercent = [];
+		let aVideoWidth = [];
+		let aVideoHeight = [];
 	
 	
-	}());
-
-
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**----------===| Created by Odee on 06/17/16.|===----------**/
+		class CreateProject {
+			constructor( projContainer, projectJSON ) {
+				this.ProjContainer = projContainer;
+				this.ProjJSON = projectJSON;
+			}
 	
-	(function() { //IIFE:Immediately-Invoked Function Expression
+			fProjectAjax() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
+				let promise = $.get( "./js/json/" + this.ProjJSON );
+				promise.then( function( data ) {
+					for ( let proj of data.ProjectData ) {
+						jx++;
+						//rightShaderIds.hide();
+						aProjectCount[ aProjectCount.length ] = proj; //PUSH
 	
-	  "use strict";
-	  console.log("Filename: twoColumns.js");
+						/**----------===| INVOKE TWO COLUMNS |===----------**/
+						twoColumnsImgProjects.fTwoColumnsQueries( projectContainerWidth, proj.imgRightColumnPercent, proj.imagesWidth, proj.imagesHeight );
+						aProjectRightColumnPercent[ aProjectRightColumnPercent.length ] = proj.imgRightColumnPercent; //PUSH
+						aImagesOrigWidth[ aImagesOrigWidth.length ] = proj.imagesWidth; //PUSH
+						aImagesOrigHeight[ aImagesOrigHeight.length ] = proj.imagesHeight; //PUSH
 	
-	  let anim = __webpack_require__(1);
+						/**----------===| CREATE PROJECT VIDEO CONTAINER |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_VideoContainer", jx, "videoContainerClass", projectContainer );
+						const projContainerIds = $( "#" + proj.title + "_VideoContainer" + jx );
+						aProjContainerIds [ aProjContainerIds.length ] = projContainerIds; //PUSH
+						myStyle.fBasicDivStyle( projContainerIds, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
 	
-	  /**----------=====| fRoundToTwo Function |=====----------**/
-	  /** Description:
-	   ** fRoundToTwo: rounds the decimals to two.
-	   **------------------------------------------------------**/
-	  let fRoundToTwo = function(num) {
-	    return +(Math.round(num + "e+2") + "e-2");
-	  };
+						/**----------===| CREATE VIDEO-PLACEHOLDER |===----------**/
+						youTubeVideo.fCreateVideoDiv( "video-placeholder", projContainerIds);
+						let videoPlaceholder = $( "#video-placeholder" );
+						myStyle.fBasicDivStyle( videoPlaceholder, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
 	
-	  /**----------=====| TwoColumnsQueriesClass Class |=====----------------------------------------------------**/
-	  /** Description:
-	   ** Class to calculate the two columns within the container, in all screen sizes.
-	   ** The right column width uses the "rightColumnPercentage" argument is used when the screen width is
-	   **   small but uses the percentage pulled from json at larger screen width. This is also converted to pixel.
-	   ** The left column will have the container's width minus the right column width.
-	   **--------------------------------------------------------------------------------------------------**/
-	  class TwoColumnsQueriesClass {
-	    constructor() {}
+						/**----------===| PARAGRAPH COLUMNS PERCENTAGE |===----------**/
+						twoColumnsParagProjects.fTwoColumnsQueries( projectContainerWidth, proj.paragraphRightColumnPercent, 0, 0 );
+						aParagraphRightColumnPercent[ aParagraphRightColumnPercent.length ] = proj.paragraphRightColumnPercent;
+						aParagraphLeftColumnWidth[ aParagraphLeftColumnWidth.length ] = twoColumnsParagProjects.LeftColumn;
 	
-	    fTwoColumnsQueries(contnrWidth, rightColumnPercentage, imgOrigWidth, imgOrigHeight) {
-	      if (contnrWidth <= 400) {
-	        this.ColumnPercentage = 100;
-	        this.RightColumn = Math.round(contnrWidth * (this.ColumnPercentage / 100));
-	        this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
-	        this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-	        this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
+						/**----------===| CREATE PARAGRAPH CONTAINER |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_Paragraph", jx, "paragraphContainerClass", projectContainer );
+						let projParagDivIds = $( "#" + proj.title + "_Paragraph" + jx );
+						myStyle.fBasicDivStyle( projParagDivIds, "auto", projectContainerWidth );
+						aProjParagDivIds[ aProjParagDivIds.length ] = projParagDivIds; //PUSH
 	
-	      } else if (contnrWidth > 400 && contnrWidth <= 650) {
-	        this.ColumnPercentage = 100;
-	        this.RightColumn = Math.round(contnrWidth * (this.ColumnPercentage / 100));
-	        this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
-	        this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-	        this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
+						/**----------===| CREATE PARAGRAPH LEFT COLUMNS |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_ParagLeftColmn", jx, "paragraphLeftColumnClass", projParagDivIds );
+						let paragLeftColDivIds = $( "#" + proj.title + "_ParagLeftColmn" + jx );
+						myStyle.fBasicDivStyle( paragLeftColDivIds, arbitraryNum, twoColumnsParagProjects.LeftColumn );
+						aParagLeftColDivIds[ aParagLeftColDivIds.length ] = paragLeftColDivIds; //PUSH
 	
-	      } else {
-	        this.ColumnPercentage = rightColumnPercentage;
-	        this.RightColumn = Math.round(contnrWidth * (this.ColumnPercentage / 100));
-	        this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
-	        this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-	        this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-	      // this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
-	      // this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-	      // this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-	      }
-	    //   this.LeftColumn = Math.round(contnrWidth - this.RightColumn);
-	    //   this.ResizePercent = fRoundToTwo(this.RightColumn / imgOrigWidth);
-	    //   this.NewHeight = Math.round(imgOrigHeight * this.ResizePercent);
-	    //console.log("this.NewHeight: ", this.NewHeight);
-	    }
-	  }
+						/**----------===| CREATE PARAGRAPH RIGHT COLUMNS |===----------**/
+						createDiv.fCreateBasicElement( proj.title + "_ParagRightColmn", jx, "paragraphRightColumnClass", projParagDivIds );
+						let paragRightColDivIds = $( "#" + proj.title + "_ParagRightColmn" + jx );
+						myStyle.fBasicDivStyle( paragRightColDivIds, "auto", twoColumnsParagProjects.RightColumn );
+						aParagRightColDivIds[ aParagRightColDivIds.length ] = paragRightColDivIds; //PUSH
 	
-	  /**--------------------------------------------**/
-	  class ThreeColumnsClass {
-	    constructor() {}
+						/**----------===| CREATE PROJECT TITLES |===----------**/
+						textDiv.fCreateTextDiv( proj.title + "_ProjTitle", jx, "projTitleClass", paragRightColDivIds, proj.title );
+						let paraghProjTitleIds = $( "#" + proj.title + "_ProjTitle" + jx );
+						headerText.fTextQueries( projectContainerWidth, paraghProjTitleIds, projTitleSmlFontSize, projTitleMidFontSize, projTitleLrgFontSize );
+						aParaghProjTitleIds[ aParaghProjTitleIds.length ] = paraghProjTitleIds; //PUSH
 	
-	    fThreeColumns(contnrWidth) {
-	      console.log("contnrWidth: ", contnrWidth);
-	      let oneThird = contnrWidth / 3;
-	      console.log("oneThird: ", oneThird);
-	    }
-	  }
-	  ;
-	  // let oneThirdTest = new ThreeColumnsClass();
-	  // oneThirdTest.fThreeColumns();
-	  /**--------------------------------------------**/
+						/**----------===| CREATE PROJECT SUB-TITLES |===----------**/
+						textDiv.fCreateTextDiv( proj.title + "_ProjSubTitle", jx, "projSubTitleClass", paragRightColDivIds, proj.subTitle );
+						let paraghProjSubTitleIds = $( "#" + proj.title + "_ProjSubTitle" + jx );
+						headerText.fTextQueries( projectContainerWidth, paraghProjSubTitleIds, projSubTitleSmlFontSize, projSubTitleMidFontSize, projSubTitleLrgFontSize );
+						aParaghProjSubTitleIds[ aParaghProjSubTitleIds.length ] = paraghProjSubTitleIds; //PUSH
 	
-	  class TextQueriesClass {
-	    constructor() {
-	      //   this.contnrWidth = contnrWidth;
-	      //   this.elem = elem;
-	      //   this.smlFntSize = smlFntSize;
-	      //   this.midFntSize = midFntSize;
-	      //   this.lrgFntSize = lrgFntSize;
-	    }
+						/**----------===| CREATE PROJECT DESCRIPTIONS |===----------**/
+						textDiv.fCreateTextDiv( proj.title + "_ProjDescription", jx, "projDescriptionClass", paragRightColDivIds, proj.projDescription );
+						let paraghProjlinkURLs = $( "#" + proj.title + "_ProjDescription" + jx );
+						headerText.fTextQueries( projectContainerWidth, paraghProjlinkURLs, projDescSmlFontSize, projDescMidFontSize, projDescLrgFontSize );
+						aParaghProjlinkURLs[ aParaghProjlinkURLs.length ] = paraghProjlinkURLs; //PUSH
+					}
+				} )
+			};
 	
-	    fTextQueries(contnrWidth, elem, smlFntSize, midFntSize, lrgFntSize) {
-	      //console.log("contnrWidth: ", contnrWidth);
-	      //console.log("elem.height(): ", elem.height());
-	      if (contnrWidth <= 400) {
-	        anim.fFontSizer(elem, smlFntSize); //"4em"
-	        elem.css({
-	          "padding-left": "20px"
-	        })
-	      } else if (contnrWidth > 400 && contnrWidth <= 650) {
-	        anim.fFontSizer(elem, midFntSize); //"4em"
-	        elem.css({
-	          "padding-left": "20px"
-	        })
-	      } else {
-	        anim.fFontSizer(elem, lrgFntSize); //"4em"
-	        elem.css({
-	          "padding-left": "0px"
-	        })
-	      }
-	    }
-	  }
+			fProjectQueries() {
+				let projectContainer = this.ProjContainer;
+				let projectContainerWidth = this.ProjContainer.width();
 	
-	  /**-----------=====| EXPORTS |=====-----------**/
-	  /** DESCRIPTIONS:
-	   ** TWO COLUMNS MODULE
-	   ** Webpack: module.exports
-	   **----------------------------------------------------------------**/
-	  module.exports.TwoColumnsQueriesClass = TwoColumnsQueriesClass;
-	  module.exports.TextQueriesClass = TextQueriesClass;
+				for ( let e2 = 0; e2 < aProjectCount.length; e2++ ) {
 	
-	  module.exports.ThreeColumnsClass = ThreeColumnsClass;
+					twoColumnsImgProjects.fTwoColumnsQueries( projectContainerWidth, aProjectRightColumnPercent[ e2 ], aImagesOrigWidth[ e2 ], aImagesOrigHeight[ e2 ] );
+					myStyle.fBasicDivStyle( aProjContainerIds[ e2 ], twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
+					let videoPlaceholder = $( "#video-placeholder" );
+					myStyle.fBasicDivStyle( videoPlaceholder, twoColumnsImgProjects.NewHeight, twoColumnsImgProjects.RightColumn, "relative" );
 	
-	  /**----------------------------------------------------------------**/
-	  console.log(`
-	  Filename: twoColumns.js
-	  module.exports.TwoColumnsQueriesClass = TwoColumnsQueriesClass
-	  `);
-	  /**----------------------------------------------------------------**/
+					/**----------===| Project Paragraph Columns |===----------**/
+					twoColumnsParagProjects.fTwoColumnsQueries( projectContainerWidth, aParagraphRightColumnPercent[ e2 ], 0, 0 );
+					myStyle.fBasicDivStyle( aProjParagDivIds[ e2 ], "auto", projectContainerWidth );
+					myStyle.fBasicDivStyle( aParagLeftColDivIds[ e2 ], arbitraryNum, twoColumnsParagProjects.LeftColumn );
+					myStyle.fBasicDivStyle( aParagRightColDivIds[ e2 ], "auto", twoColumnsParagProjects.RightColumn );
+	
+					headerText.fTextQueries( projectContainerWidth, aParaghProjTitleIds[ e2 ], projTitleSmlFontSize, projTitleMidFontSize, projTitleLrgFontSize );
+					headerText.fTextQueries( projectContainerWidth, aParaghProjSubTitleIds[ e2 ], projSubTitleSmlFontSize, projSubTitleMidFontSize, projSubTitleLrgFontSize );
+					headerText.fTextQueries( projectContainerWidth, aParaghProjlinkURLs[ e2 ], projDescSmlFontSize, projDescMidFontSize, projDescLrgFontSize );
+				}
+			}
+		}
+	
+		/**-----------=====| EXPORTS |=====-----------**/
+		module.exports.CreateProject = CreateProject;
 	
 	
-	}());
+	}() );
+	//);
 
 
 /***/ }

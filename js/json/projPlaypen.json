@@ -1,0 +1,19 @@
+{
+	"ProjectData": [
+		{
+			"title"          : "PlayPen",
+			"subTitle": "Handbuild Crib",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "Adobe Animate application was an attempt to regain the animation market on the html world. It was closely based from the Flash app but after few years in the market only a few uses it's potential. This site is a prototype done in Animate, v2014. An experiment on parallax scrolling featuring a playpen I built for my son. My <a href = 'https://github.com/GonzalesDesign/GDSite_2016/tree/master/autreSites/playPen7'  target = '_blank'>github</a> repo for this project. The 2016 version of Animate is Flash re-launched.",
+			"imagesWidth"    : "1040",
+			"imagesHeight": "768",
+			"imgRightColumnPercent": "80",
+			"displayType": "image",
+			"projectImages": [
+				{"imgName": "PlaypenCover.jpg", "imgTitle": "PlaypenCover", "imgDescription": "Parallax Scrolling <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/playPen7/playPen7b.html", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":"Click to open the link."},
+				{"imgName": "crib-01.jpg", "imgTitle": "crib-01", "imgDescription": "FilipinasMural-03 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "crib-03.jpg", "imgTitle": "crib-03", "imgDescription": "FilipinasMural-04 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+			]
+		}
+	]
+}

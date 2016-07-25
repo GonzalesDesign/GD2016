@@ -33,12 +33,12 @@
 	//let anim = new anim.animationFunctions();
 
 	/**----------------------------------------------------------------**/
-	console.log( `
-    Filename: codeArchitecture_X.js);
-    Import || Require: nextPreviousArrows.js
-    Import || Require: animationFunctions.js
-    Import || Require: twoColumns.js
-    ` );
+	// console.log( `
+	// Filename: codeArchitecture_X.js);
+	// Import || Require: nextPreviousArrows.js
+	// Import || Require: animationFunctions.js
+	// Import || Require: twoColumns.js
+	// ` );
 	/**----------------------------------------------------------------**/
 
 	/*
@@ -401,7 +401,7 @@
 	let twoColumnsImagesAnim = new twoKolumns.TwoColumnsQueriesClass();
 
 	//TEMP: THREE COLUMNS TEST
-	console.log( "inWindowWidth: ", inWindowWidth );
+	//console.log( "inWindowWidth: ", inWindowWidth );
 	let oneThirdTest = new twoKolumns.ThreeColumnsClass();
 	oneThirdTest.fThreeColumns( gdContainerWidth );
 
@@ -898,12 +898,12 @@
 			idName.click( () => {
 				if ( scrnHt === "screen.height" ) {
 					scrnHt = window.screen.height;
-					console.log( "scrnHt: ", scrnHt );
-					console.log( typeof scrnHt );
+					//console.log( "scrnHt: ", scrnHt );
+					//console.log( typeof scrnHt );
 				}
 				if ( scrnWt === "screen.width" ) {
 					scrnWt = window.screen.width;
-					console.log( "scrnWt: ", scrnWt );
+					//console.log( "scrnWt: ", scrnWt );
 				}
 				//console.log("clicked!")
 				// location.href = "http://www.google.com";
@@ -912,13 +912,13 @@
 				if ( fs === "yes" ) {
 					//window.open(pageToOpen, '_blank', 'height=' + screen.height + ', width=' + screen.width);
 					window.open( pageToOpen, '_blank', 'height=' + scrnHt + ', width=' + scrnWt );
-					console.log( "scrnHt: ", scrnHt );
-					console.log( "scrnWt: ", scrnWt );
+					//console.log( "scrnHt: ", scrnHt );
+					//console.log( "scrnWt: ", scrnWt );
 
 				} else {
 					window.open( pageToOpen, '_blank' );
-					console.log( "scrnHt: ", scrnHt );
-					console.log( "scrnWt: ", scrnWt );
+					//console.log( "scrnHt: ", scrnHt );
+					//console.log( "scrnWt: ", scrnWt );
 				}
 			} )
 		}
@@ -926,7 +926,7 @@
 
 	/**----------=====| FUNCTION FOR ROLLOVER AND ROLLOUT |=====----------**/
 	function fRollEvents( elem, origColor ) {
-		console.log( "elem: ", elem );
+		//	console.log( "elem: ", elem );
 		elem.css( {
 			"color": origColor
 		} )
@@ -1026,7 +1026,6 @@
 	let introCalloutId;
 	let toggleBtn;
 	//let codingThisSiteId;
-
 
 	let introImageIds;
 	let myIntroImage;
@@ -1188,12 +1187,12 @@
 				let j2 = 0;
 				let j3 = 0;
 
-				console.log( `
-      /**|===============================|**/
-      /**|      SECTIONS JSON LOOP       |**/
-      /**|===============================|**/
-      data.GDSite: ${data.GDSite[0].projects[0].images[0].linkURL}
-      ` );
+				// 			console.log( `
+				//   /**|===============================|**/
+				//   /**|      SECTIONS JSON LOOP       |**/
+				//   /**|===============================|**/
+				//   data.GDSite: ${data.GDSite[0].projects[0].images[0].linkURL}
+				//   ` );
 				/**----------===| LINKS TO OPEM TO ANOTHER WINDOW |===----------**/
 				//   let nycBikeFlashSampleXX = $('#nycBikeFlashSampleXX');
 				//   //let nycBikeFlashSampleX = $("#" + data.GDSite[0].projects[0].images[0].linkURL);
@@ -1226,7 +1225,7 @@
 				//TEMP fScreenQueries();
 				for ( let sect of data.GDSite ) {
 					j1++;
-					console.log( `Section j1: ${j1} ${sect.title}` );
+					//console.log( `Section j1: ${j1} ${sect.title}` );
 					// /**----------===| LINKS TO OPEM TO ANOTHER WINDOW |===----------**/
 					// let nycBikeFlashSample = $('#nycBikeFlashSample');
 					// fRollEvents(nycBikeFlashSample, "white");
@@ -1283,8 +1282,8 @@
 
 					for ( let proj of sect.projects ) {
 						j2++;
-						console.log( `
-              Project j2: ${j2} ${proj.title}` );
+						// 			console.log( `
+						//   Project j2: ${j2} ${proj.title}` );
 						/**----------===| Divider tag for DOM and style inspection in the browser dev view for testing |===----------**/
 						tagElement.fCreateTag( "i", "Divider:-------------------====•", proj.title, j2, gdContainer );
 						/**----------===| PUSH TO ARRAY: PROJECT COUNT |===----------**/
@@ -1550,7 +1549,7 @@
 					}
 				}
 
-				console.log( "--------------------| AJAX • END •  JSON |--------------------" );
+				//console.log( "--------------------| AJAX • END •  JSON |--------------------" );
 
 			} ) // End Promise
 
@@ -1611,10 +1610,10 @@
 			} )
 			//anim.fAnimateHeightWidth(logoContainerDivId, rightColumnHeightFrTwoColumns, gdContainerWidth, animTymSlow);
 
-		console.log( "logoTitleId.height(): ", logoTitleId.height() );
-		console.log( "logoSubTitleId.height(): ", logoSubTitleId.height() );
-		console.log( "introCalloutId.height(): ", introCalloutId.height() );
-		console.log( "toggleBtn.height(): ", toggleBtn.height() );
+		// console.log( "logoTitleId.height(): ", logoTitleId.height() );
+		// console.log( "logoSubTitleId.height(): ", logoSubTitleId.height() );
+		// console.log( "introCalloutId.height(): ", introCalloutId.height() );
+		// console.log( "toggleBtn.height(): ", toggleBtn.height() );
 
 		/**----------===| SCREEN QUERIES |===----------**/
 		/** logoTitleColumnPercent = introData.logoTitleColumnPercent;

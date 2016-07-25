@@ -7,7 +7,8 @@
     "npm": "2.15.5"
   },
   "main": "js/index.es6",
-  "scripts": {
+
+  "scriptsX": {
     "devX": "webpack-dev-server ./js/index.es6",
     "dev": "./node-modules/webpack-dev-server/bin/webpack-dev-server.js",
     "postinstall": "webpack -p",
@@ -17,6 +18,18 @@
     "build": "babel --presets es2015 js/index.js -d es5",
     "instruction": "switch between the start. npm start to webpacked files then npm run build to babelized webpacked file"
   },
+  "scripts": {
+      "instruction":"run this to deploy. webpack -p npm run build. change html script src",
+      "dev": "./node-modules/webpack-dev-server/bin/webpack-dev-server.js",
+      "start": "node server.js",
+      "build": "babel --presets es2015 js/index.js -d es5"
+  },
+  "scriptsDEV": {
+      "instruction": "run this during dev. npm start, webpack -p --w. change html script src",
+      "start": "webpack-dev-server ./js/index.es6",
+      "build": "babel --presets es2015 js/index.js -d es5"
+  },
+
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",

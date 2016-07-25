@@ -1,0 +1,12 @@
+{
+	"ProjectData": [
+		{
+			"title": "Illustrations",
+            "sectionTitle": "Painting & Digital Illustrations",
+			"headerRightColumnPercent": "80",
+			"headerImage":[
+                {"imgName": "bannerBG.jpg"}
+            ]
+		}
+	]
+}

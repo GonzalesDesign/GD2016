@@ -1,14 +1,19 @@
-/**----------===| Created by Odee on 5/18/16.|===----------**/
-
+/***********************************************
+ * Project: GonzalesDesign 2016
+ * Developer: rolandolloyd@gmail.com
+ * Copyright © 2016 GonzalesDesign
+ * Platform: NodeJS, ES6, Webpack, Babel & Node-Sass
+ * Module: Animation Functions
+ ***********************************************/
 (function() { //IIFE:Immediately-Invoked Function Expression. Scope Encapsulation
-
   "use strict";
-  console.log("Filename: animationFunctions.js");
+
+  console.log("Module: animationFunctions");
+
   /**-----------=====| TweenMax Reference Variables |=====-----------**/
   /** Description:
    ** Animation engine using GSAP TweenMax
    ********************************************************************/
-  //let fTweenMax = function() {
   let tMx = TweenMax;
   let easeSine = Sine.easeOut;
   let power3 = Power3.easeOut;
@@ -19,13 +24,11 @@
   let expo = Expo.easeOut;
   let sloMo = SlowMo.ease.config(0.7, 0.7, false)
   let animTym = 1;
-  let animTymSlow = 1;
+  let animTymSlow = 2;
   let animTymFast = .25;
-  //};
 
   /**-----------=====| fOpacityAnim Function |=====-----------**/
-  /** Description:
-   ** Animates element's opacity from 0% to 100%
+  /** Description: Animates element's opacity from 0% to 100%
    *************************************************************/
   let fOpacityAnim = function(elem) {
     elem.css({
@@ -45,12 +48,10 @@
    ** http://greensock.com/forums/topic/6963-tweenmax-tweening-css-x-vs-left/
    ****************************************************************/
   let fXSlider = function(elem, horizPos) {
-    //fOpacityAnim(elem);
     tMx.to(elem, animTym, {
       left: horizPos,
       ease: back
     });
-  //console.log("elem, horizPos: ", elem, horizPos);
   };
 
   // /**-----------=====| fAnimateHeightWidth Function |=====-----------**/
@@ -65,12 +66,11 @@
   //     ease: power3
   //   });
   // };
+
   /**-----------=====| fAnimateHeightWidth Function |=====-----------**/
-  /** Descriptions:
-   ** Animates element's height and width
+  /** Descriptions: Animates element's height and width
    **----------------------------------------------------------------**/
   let fAnimateHeightWidth = function(elem, eHeight, eWidth, animTym) {
-    //tMx.to (elem, animTym, {css: {height: eHeight, width: eWidth}, ease: power3});
     tMx.to(elem, animTym, {
       height: eHeight,
       width: eWidth,
@@ -95,22 +95,12 @@
 
 
 
-  /**-----------=====| EXPORTS |=====-----------**/
-  /** DESCRIPTIONS:
-   ** ANIMATION MODULES
-   ** Webpack: module.exports
-   **----------------------------------------------------------------**/
-  //module.exports.fTweenMax = fTweenMax;
+  /**-----------=====| MODULE EXPORTS |=====-----------**/
   module.exports.fXSlider = fXSlider;
   module.exports.fAnimateHeightWidth = fAnimateHeightWidth;
   //module.exports.fImageHeightWidth = fImageHeightWidth;
   module.exports.fFontSizer = fFontSizer;
   //module.exports.animTym = animTym;
-  /**----------------------------------------------------------------**/
-  console.log(`
-  Filename: animationFunctions.js
-  module.exports.fXSlider = fXSlider
-  `);
-  /**----------------------------------------------------------------**/
+  /**--------------------------------------------------**/
 
 }());
