@@ -1,0 +1,17 @@
+{
+	"ProjectData": [
+		{
+			"title": "OwnPhonesVideo",
+            "subTitle": "Short Animation Promos",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "Short animations for the introduction of OwnPhones. Modeled and rendered using Cinema4D and composited in FinalCut Pro.",
+            "imagesWidth"    : "1280",
+            "imagesHeight": "720",
+            "imgRightColumnPercent": "100",
+            "displayType": "video",
+			"projectImages":[
+                {"imgName": "AboutOP.jpg"}
+            ]
+		}
+	]
+}

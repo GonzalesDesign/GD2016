@@ -1,0 +1,21 @@
+{
+	"ProjectData": [
+		{
+			"title"          : "Akon",
+			"subTitle": "Konvict Clothing",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "Built this interactive animated intro for Akon's Konvict eStore. Done in Flash using ActionScript3. Click on the image description to open the link in a separate window.",
+			"imagesWidth"    : "1040",
+			"imagesHeight": "768",
+			"imgRightColumnPercent": "80",
+			"displayType": "image",
+			"projectImages": [
+				{"imgName": "konvict01.jpg", "imgTitle": "Akon Konvict", "imgDescription": "Konvict Interactive Intro <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/Akon/", "fullScreen":"yes", "scrnHeight":"850", "scrnWidth":"1400", "hoverTitle":"Click to open the link."},
+				{"imgName": "konvict02.jpg", "imgTitle": "Akon Konvict", "imgDescription": "Konvict Interactive Intro <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/Akon/", "fullScreen":"yes", "scrnHeight":"850", "scrnWidth":"1400", "hoverTitle":"Click to open the link."},
+				{"imgName": "konvict03.jpg", "imgTitle": "Akon Konvict", "imgDescription": "Konvict Interactive Intro <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/Akon/", "fullScreen":"yes", "scrnHeight":"850", "scrnWidth":"1400", "hoverTitle":"Click to open the link."},
+				{"imgName": "konvict04.jpg", "imgTitle": "Akon Konvict", "imgDescription": "Konvict Interactive Intro <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/Akon/", "fullScreen":"yes", "scrnHeight":"850", "scrnWidth":"1400", "hoverTitle":"Click to open the link."},
+				{"imgName": "konvict05.jpg", "imgTitle": "Akon Konvict", "imgDescription": "Konvict Interactive Intro <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/Akon/", "fullScreen":"yes", "scrnHeight":"850", "scrnWidth":"1400", "hoverTitle":"Click to open the link."}
+			]
+		}
+	]
+}

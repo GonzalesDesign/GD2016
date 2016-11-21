@@ -1,0 +1,23 @@
+{
+	"ProjectData": [
+		{
+			"title": "Filipinas",
+      "subTitle": "Kawali Restaurant Painting",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "Mural painting for Kawali Express, a Filipino Restaurant in Voorhees, NJ. The panel is divided into two, left represents the land and the right represents water. These are the two main sources of food supplies in the Philippines. On each side, transports for food and people. The middle has the Balut egg, Philippine map and a clay pot cooking a local dish and the title Filipinas. Behind all that is the Mayon Volcano. 48&#8220; x 96&#8220; Mural, Acrylic on board. ",
+      "imagesWidth"    : "5306",
+      "imagesHeight": "3537",
+      "imgRightColumnPercent": "80",
+      "displayType": "image",
+			"projectImages":[
+						{"imgName": "FilipinasMural_01.jpg", "imgTitle": "FilipinasMural_01", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_02.jpg", "imgTitle": "FilipinasMural_02", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_03.jpg", "imgTitle": "FilipinasMural_03", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_04.jpg", "imgTitle": "FilipinasMural_04", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_05.jpg", "imgTitle": "FilipinasMural_05", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_06.jpg", "imgTitle": "FilipinasMural_06", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_07.jpg", "imgTitle": "FilipinasMural_07", "imgDescription": "Filipinas Mural", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+        ]
+		}
+	]
+}

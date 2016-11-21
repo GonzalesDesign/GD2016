@@ -1,0 +1,21 @@
+{
+	"ProjectData": [
+		{
+			"title": "OwnPhonesX",
+      "subTitle": "Wireless Earbuds",
+			"paragraphRightColumnPercent": "80",
+			"projDescription" : "OwnPhones, custom wireless earbuds is a startup company based in Downtown, San Diego, CA. I was hired to develop and design the website and other promotional graphic elements. Designed the company logo. We generated almost $1 million funding through the KickStarter partnership.",
+            "imagesWidth"    : "1066",
+            "imagesHeight": "593",
+            "imgRightColumnPercent": "80",
+            "displayType": "image",
+			"projectImages":[
+                {"imgName": "AboutOP.jpg", "imgTitle": "About OwnPhones 1", "imgDescription": "About OwnPhones", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+								{"imgName": "Poster_Designer.jpg", "imgTitle": "About OwnPhones 2", "imgDescription": "Designer Collection", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+								{"imgName": "Poster_Jewelry.jpg", "imgTitle": "About OwnPhones 3", "imgDescription": "OwnStyle", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+								{"imgName": "Poster_OwnStyle.jpg", "imgTitle": "About OwnPhones 4", "imgDescription": "Custom Design", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+								{"imgName": "Jewelry.jpg", "imgTitle": "About OwnPhones 5", "imgDescription": "Jewelry Collection", "linkURL":"noLink", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+            ]
+		}
+	]
+}

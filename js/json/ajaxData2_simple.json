@@ -100,12 +100,12 @@
 					"imgRightColumnPercent": "100",
 					"displayType": "image",
 					"images": [
-						{"imgName": "FilipinasMural-01.jpg", "imgTitle": "FilipinasMural-01", "imgDescription": "Me standing in front of my painting.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
-						{"imgName": "FilipinasMural-03.jpg", "imgTitle": "FilipinasMural-03", "imgDescription": "FilipinasMural-03 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
-						{"imgName": "FilipinasMural-04.jpg", "imgTitle": "FilipinasMural-04", "imgDescription": "FilipinasMural-04 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
-						{"imgName": "FilipinasMural-05.jpg", "imgTitle": "FilipinasMural-05", "imgDescription": "FilipinasMural-05 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
-						{"imgName": "FilipinasMural-06.jpg", "imgTitle": "FilipinasMural-06", "imgDescription": "FilipinasMural-06 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
-						{"imgName": "FilipinasMural-07.jpg", "imgTitle": "FilipinasMural-07", "imgDescription": "FilipinasMural-07 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+						{"imgName": "FilipinasMural_01.jpg", "imgTitle": "FilipinasMural_01", "imgDescription": "Me standing in front of my painting.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_03.jpg", "imgTitle": "FilipinasMural_03", "imgDescription": "FilipinasMural_03 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_04.jpg", "imgTitle": "FilipinasMural_04", "imgDescription": "FilipinasMural_04 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_05.jpg", "imgTitle": "FilipinasMural_05", "imgDescription": "FilipinasMural_05 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_06.jpg", "imgTitle": "FilipinasMural_06", "imgDescription": "FilipinasMural_06 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+						{"imgName": "FilipinasMural_07.jpg", "imgTitle": "FilipinasMural_07", "imgDescription": "FilipinasMural_07 description.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
 					]
 				},
 				{

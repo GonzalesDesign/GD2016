@@ -7,28 +7,54 @@
     "npm": "2.15.5"
   },
   "main": "js/index.es6",
+  "scriptsX": {
+    "devX": "webpack-dev-server ./js/index.es6",
+    "dev": "./node-modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "postinstall": "webpack -p",
+    "start": "node server.js",
+    "startX": "webpack ./js/index.es6 ./js/webpacked/index.es6",
+    "buildX": "babel --presets es2015 js/webpacked/index.es6 -d es5",
+    "build": "babel --presets es2015 js/index.js -d es5",
+    "instruction": "switch between the start. npm start to webpacked files then npm run build to babelized webpacked file"
+  },
+  "scriptsPROD": {
+    "instruction": "run this to deploy. webpack -p npm run build. change html script src",
+    "dev": "./node-modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node server.js",
+    "build": "babel --presets es2015 js/index.js -d es5"
+  },
+  "scriptsDEV": {
+    "instruction": "run this during dev. npm start, webpack -p --w. change html script src",
+    "start": "webpack-dev-server ./js/index.es6",
+    "startDist": "webpack-dev-server ./dist/index.es6",
+    "buildJS": "babel --presets es2015 js/index.js -d es5",
+    "build": "babel --presets es2015 dist/index.js -d es5"
+  },
   "scripts": {
-    "startX": "webpack-dev-server ./js/index.es6",
-    "start": "webpack ./js/index.es6 ./js/webpacked/index.es6",
-    "build" : "babel --presets es2015 js/webpacked/index.es6 -d es5",
-    "instruction" : "swithc between the start. npm start to webpacked files then npm run build to babelized webpacked file"
+    "instructionDev": "Two steps: npm run startDist (traspiled the files and put it in dist), npm start to start the server. Make sure to change the link in html",
+    "dev": "./node-modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "startDist": "node_modules/.bin/webpack --w",
+    "start": "node server.js",
+    "instructionES5": "To babelized (hack!): npm run buildApp & npm run buildTestimonials",
+    "buildOrig": "babel --presets es2015 js/index.js -d es5",
+    "buildApp": "babel --presets es2015 distX/index.js -d es5",
+    "test": "echo \"Error: No Test Specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-core": "^6.10.4",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
     "babel-plugin-syntax-flow": "^6.8.0",
-    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015": "^6.16.0",
     "css-loader": "^0.23.1",
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0",
+    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "babel-cli": "^6.10.1"
+    "babel-cli": "^6.16.0"
   },
-
   "author": "john odee",
   "license": "ISC"
 }

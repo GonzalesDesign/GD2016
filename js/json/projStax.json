@@ -1,0 +1,19 @@
+{
+	"ProjectData": [
+		{
+			"title"          : "StaxGallery",
+			"subTitle": "Flash: Stax Gallery",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "Picture gallery built in Flash using ActionScript3. A gallery template that's fed from an XML file. All media content are entered in the xml file. Themes and fonts are also provided. To access the control panel, put the cursor at the bottom of the page. Images automatically advances at set time, left and right arrows are provided to manually see the next or previous image, you can also use the right and left arrow keys in the keyboard. Unfinished personal project. ",
+			"imagesWidth"    : "1925",
+			"imagesHeight": "1004",
+			"imgRightColumnPercent": "80",
+			"displayType": "image",
+			"projectImages": [
+				{"imgName": "ElNido.jpg", "imgTitle": "elnido", "imgDescription": "El Nido Palawan, Philippines <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/StaxGallery/ElNidoPalawan/", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":"Click to open the link."},
+				{"imgName": "Birdcage.jpg", "imgTitle": "birdcage", "imgDescription": "Junkyard Sculpture <span class='glyphicon glyphicon-expand'/>", "linkURL":"autreSites/StaxGallery/MetalBirdcage/", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":"Click to open the link."},
+				{"imgName": "NYCBikeShow.jpg", "imgTitle": "nycmotorshow", "imgDescription": "NYC Motorcycle Show <span class='glyphicon glyphicon-expand'/>", "linkURL":"./autreSites/StaxGallery/NYC_Motorshow2009/", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":"Click to open the link."}
+			]
+		}
+	]
+}

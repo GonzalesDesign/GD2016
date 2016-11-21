@@ -1,0 +1,12 @@
+{
+	"ProjectData": [
+		{
+			"title": "WebGraphicsDesigns",
+            "sectionTitle": "Web & Graphics Designs",
+			"headerRightColumnPercent": "80",
+			"headerImage":[
+                {"imgName": "webBGimage.jpg"}
+            ]
+		}
+	]
+}

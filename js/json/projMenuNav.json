@@ -1,0 +1,22 @@
+{
+	"ProjectData": [
+		{
+			"title": "MenuNav",
+			"introTitle": "Menu Navigation",
+      "introSubTitle": "Not being used",
+			"rightColumnPercent": "80",
+			"companyLogo" : "Logo goes here",
+            "images":[
+                {"image":"image_01.jpg", "imgDescription": "Image 01 Short Description"},
+                {"image":"image_02.jpg", "imgDescription": "Image 02 Short Description"},
+                {"image":"image_03.jpg", "imgDescription": "Image 03 Short Description"}
+            ],
+			"mainMenuNavs": [
+                {"menu": "Home", "link": "home"},
+                {"menu": "Web & Graphics Design", "link": "designs"},
+                {"menu": "Illustrations", "link": "illustrations"},
+                {"menu": "Interactive", "link": "interactive"}
+            ]
+		}
+	]
+}

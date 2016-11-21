@@ -1,0 +1,18 @@
+{
+	"ProjectData": [
+		{
+			"title": "HBCBS",
+      "subTitle": "Horizon Blue Cross Blue Shield",
+			"paragraphRightColumnPercent": "80",
+			"projDescription": "Hired as an Art Director by GraficaGroup. My main account was Horizon Blue Cross Blue Shield of New Jersey and tasked to re-design the site. I worked mostly on the interface design and the standardization of the different graphic elements that went on to the new site.<br> Built the Sections Control Panel using ActionScript3 in Flash, it sits right in the middle of all the main sections landing pages. It controls most of the major navigations of the site. The panel consists of 4 sections and each have 3 drop down columns that have multiple links throughout the site. To make it easier to maintain I had the Flash swf calls an XML file that gets the updates without having to touch the Flash file itself. <br> Designed and built interactive annual reports and numerous banners for the site.",
+      "imagesWidth"    : "544",
+      "imagesHeight": "438",
+      "imgRightColumnPercent": "80",
+      "displayType": "image",
+			"projectImages":[
+				{"imgName": "HBCBS-00.jpg", "imgTitle": "HBCBS-00", "imgDescription": "Horizon Site.", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+				{"imgName": "HBCBS-01.jpg", "imgTitle": "HBCBS-01", "imgDescription": "HBCBS Interactive Annual Report", "linkURL":"noLink", "fullScreen":"yes", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+      ]
+		}
+	]
+}

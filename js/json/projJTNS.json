@@ -1,0 +1,19 @@
+{
+	"ProjectData": [
+		{
+			"title": "JTNS",
+      "subTitle": "Jill Tucker Nursing Services",
+			"paragraphRightColumnPercent": "80",
+			"projDescription" : "JTNS website is a brochure type of site. Some basic information for the services offered. The client designed the look and feel and asked me to build it. Client wanted to create multiple sites and required the ability to update the site for content. I built the site using HTML, CSS and Javascript. The development code is actually written in ES2015, SCSS, Babel, Webpack and NodeJS. I wrote the template with ES2015 pulling content from JSON files which the client can update. I used Webpack and Babel to transpiled the ES6 codes to ES5, gave it to the client and uploaded in their web server. <a href = 'https://github.com/GonzalesDesign/JillTuckerNursingServices'  target = '_blank'>My github repo for this project.</a>",
+            "imagesWidth"    : "1066",
+            "imagesHeight": "593",
+            "imgRightColumnPercent": "80",
+            "displayType": "image",
+			"projectImages":[
+                {"imgName": "jilltuckernursing_image1.jpg", "imgTitle": "JTNS 1", "imgDescription": "JTNS Site <span class='glyphicon glyphicon-expand'/>", "linkURL":"http://tuckernursingtucson.com/", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+								{"imgName": "jilltuckernursing_image2.jpg", "imgTitle": "JTNS 2", "imgDescription": "JTNS Site <span class='glyphicon glyphicon-expand'/>", "linkURL":"http://tuckernursingtucson.com/", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""},
+								{"imgName": "jilltuckernursing_image3.jpg", "imgTitle": "JTNS 3", "imgDescription": "JTNS Site <span class='glyphicon glyphicon-expand'/>", "linkURL":"http://tuckernursingtucson.com/", "fullScreen":"no", "scrnHeight":"screen.height", "scrnWidth":"screen.width", "hoverTitle":""}
+            ]
+		}
+	]
+}

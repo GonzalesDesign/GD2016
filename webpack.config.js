@@ -8,8 +8,8 @@ module.exports = {
 	entry: './js/index.es6',
 	output: {
 		path: __dirname,
-		filename: './js/webpacked/index.es6',
-		//filename: 'index.js',
+		//filename: './js/webpacked/index.es6',
+		filename: './distX/index.js', //this gets created when u=you run webpack -p --w
 		sourceMapFilename: "./bundle.map"
 	},
 	devtool: "#source-map",
@@ -23,7 +23,7 @@ module.exports = {
 			loader: 'style!css!',
 			// Options to configure babel with
 			//   query: {
-			//     plugins: ['transform-runtime'],
+			//     modules: ['transform-runtime'],
 			//     presets: ['es2015'],
 			//   }
 		} ]
